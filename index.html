@@ -36,6 +36,13 @@
       padding: 2rem 0 1rem;
       border-bottom: 2px solid #d4e2d0;
     }
+    /* Logo styling */
+    .logo {
+      max-width: 200px;
+      height: auto;
+      display: block;
+      margin: 0 auto 0.5rem;
+    }
     h1 {
       font-size: 2.2rem;
       letter-spacing: -0.02em;
@@ -159,13 +166,16 @@
       .pillars, .card-grid { flex-direction: column; }
       .container { padding: 1rem; }
       h1 { font-size: 1.8rem; }
+      .logo { max-width: 150px; }
     }
   </style>
 </head>
 <body>
 <div class="container">
   <header>
-    <h1>BAM <span>– Biophilic Anchor Method</span></h1>
+    <!-- Logo added as requested -->
+    <img src="/2bam.png" alt="BAM Logo" class="logo">
+    <h1 style="margin-top: 0.5rem;"><span>– Biophilic Anchor Method</span></h1>
     <div class="tagline">🌿 Living Art for Inner Balance</div>
     <p style="margin-top: 0.5rem;">5 minutes a day to rewire your brain</p>
   </header>
