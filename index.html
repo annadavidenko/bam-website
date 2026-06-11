@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Biophilic Anchor Method | Living Art for Inner Balance</title>
+  <title>BAM – Biophilic Anchor Method | Living Art for Inner Balance</title>
   <meta name="description" content="5 minutes a day with a Biophilic Pet to rewire your brain, conquer fear, and find inner balance. Free community, sensory hacks, Anchor Stones.">
 
   <!-- ***** FAVICONS ***** -->
@@ -22,7 +22,7 @@
     body {
       font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
       background: #fefcf5;
-      color: #2c3e2f;
+      color: #1e1e2a;
       line-height: 1.5;
       scroll-behavior: smooth;
     }
@@ -34,9 +34,8 @@
     header {
       text-align: center;
       padding: 2rem 0 1rem;
-      border-bottom: 2px solid #d4e2d0;
+      border-bottom: 2px solid #a8d058;
     }
-    /* Logo styling */
     .logo {
       max-width: 200px;
       height: auto;
@@ -46,14 +45,16 @@
     h1 {
       font-size: 2.2rem;
       letter-spacing: -0.02em;
+      color: #1e4697;
     }
     h1 span {
       font-weight: normal;
-      color: #6b8c5c;
+      color: #0e75bc;
     }
     .tagline {
       font-size: 1.2rem;
-      color: #4a6741;
+      color: #a8d058;
+      font-weight: 500;
       margin-top: 0.5rem;
     }
     .hero {
@@ -62,7 +63,7 @@
     }
     .btn {
       display: inline-block;
-      background: #4a6741;
+      background: #1e4697;
       color: white;
       padding: 0.8rem 1.8rem;
       border-radius: 40px;
@@ -75,12 +76,17 @@
     }
     .btn-outline {
       background: transparent;
-      border: 2px solid #4a6741;
-      color: #4a6741;
+      border: 2px solid #1e4697;
+      color: #1e4697;
     }
     .btn:hover {
-      background: #2c3e2f;
+      background: #0e75bc;
       transform: scale(1.02);
+    }
+    .btn-outline:hover {
+      background: #0e75bc;
+      border-color: #0e75bc;
+      color: white;
     }
     .card-grid {
       display: flex;
@@ -96,11 +102,12 @@
       flex: 1;
       min-width: 220px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border: 1px solid #e2e8e0;
+      border: 1px solid #dce5f0;
       transition: 0.2s;
     }
     .card:hover {
       transform: translateY(-3px);
+      border-color: #a8d058;
     }
     .pillars {
       display: flex;
@@ -111,9 +118,10 @@
     }
     .pillar {
       flex: 1;
-      background: #f4f8f0;
+      background: #eef3fc;
       border-radius: 32px;
       padding: 1.5rem;
+      border-top: 4px solid #a8d058;
     }
     .emoji-big {
       font-size: 2.8rem;
@@ -123,21 +131,23 @@
     .price {
       font-size: 1.8rem;
       font-weight: bold;
-      color: #2c3e2f;
+      color: #1e4697;
     }
     .sensory-box {
-      background: #f4f8f0;
+      background: #eef3fc;
       border-radius: 32px;
       padding: 2rem;
       margin: 2rem 0;
       text-align: center;
+      border-left: 6px solid #a8d058;
     }
     footer {
-      background: #e6ede2;
+      background: #eef3fc;
       text-align: center;
       padding: 2rem;
       margin-top: 3rem;
       border-radius: 32px 32px 0 0;
+      border-top: 2px solid #a8d058;
     }
     input, button {
       padding: 0.7rem 1rem;
@@ -146,11 +156,14 @@
       font-size: 1rem;
     }
     button {
-      background: #4a6741;
+      background: #1e4697;
       color: white;
       cursor: pointer;
       border: none;
       font-weight: 600;
+    }
+    button:hover {
+      background: #0e75bc;
     }
     form {
       display: flex;
@@ -161,6 +174,14 @@
     }
     input {
       width: 260px;
+    }
+    a {
+      color: #0e75bc;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #1e4697;
+      text-decoration: underline;
     }
     @media (max-width: 700px) {
       .pillars, .card-grid { flex-direction: column; }
@@ -173,7 +194,6 @@
 <body>
 <div class="container">
   <header>
-    <!-- Logo added as requested -->
     <img src="/2bam.png" alt="BAM Logo" class="logo">
     <h1 style="margin-top: 0.5rem;"><span>– Biophilic Anchor Method</span></h1>
     <div class="tagline">🌿 Living Art for Inner Balance</div>
@@ -181,14 +201,14 @@
   </header>
 
   <div class="hero">
-    <!-- YouTube trailer placeholder – replace with your embed code when ready -->
+    <!-- YouTube trailer placeholder -->
     <div style="background:#d4e2d0; border-radius:24px; padding:1rem; max-width:600px; margin:0 auto; font-size:0.9rem;">
       🎥 <strong>Video trailer:</strong> "From bottle to bioactive"<br>
       <em>(coming soon – subscribe on YouTube)</em>
     </div>
     <div>
       <a href="#anchor-club" class="btn">🌱 Join free community →</a>
-      <a href="#shop" class="btn btn-outline">🪨 Shop Anchor Stone</a>
+      <a href="#shop" class="btn btn-outline">⛰️ Shop Anchor Stone</a>
     </div>
   </div>
 
@@ -198,7 +218,7 @@
     <p>A <strong>Biophilic Pet</strong> is a small, manageable living system (or natural object) used as a daily anchor for nervous system regulation. It rewires fear, shame, and craving through sensory grounding.</p>
     <div class="card-grid">
       <div class="card">🌿 <strong>Moss Jar</strong><br>Sealed ecosystem, springtails – zero maintenance, $20–35</div>
-      <div class="card">🪨 <strong>Anchor Stone</strong><br>Polished limestone, portable calm – $12</div>
+      <div class="card">⛰️ <strong>Anchor Stone</strong><br>Polished limestone, portable calm – $12</div>
       <div class="card">🐍 <strong>Calm Snake</strong><br>Russian rat snake or bullsnake – perceptual revision</div>
     </div>
   </section>
@@ -217,7 +237,7 @@
   <div class="sensory-box">
     <h2>⚡ Sensory Emergency Kit (7‑min reset)</h2>
     <p>When craving hits 8/10: <strong>bitter, cold stone, geosmin smell, 5‑senses blast.</strong></p>
-    <a href="#" class="btn" style="background:#6b8c5c; margin-top: 0.5rem;">📄 Download free one‑page PDF →</a>
+    <a href="#" class="btn" style="background:#0e75bc; margin-top: 0.5rem;">📄 Download free one‑page PDF →</a>
     <p style="margin-top:1rem; font-size:0.9rem;">Crisis? <strong>CMHA Ontario: 1-866-531-2600</strong> | If urgent, call 911</p>
   </div>
 
@@ -225,7 +245,7 @@
   <section id="anchor-club">
     <h2>🌱 Anchor Club – Peer community</h2>
     <div class="card-grid">
-      <div class="card"><strong>✨ Free tier</strong><br>#weekly-wins, #help, Discord access<br><span style="color:#4a6741;">$0</span></div>
+      <div class="card"><strong>✨ Free tier</strong><br>#weekly-wins, #help, Discord access<br><span style="color:#1e4697;">$0</span></div>
       <div class="card"><strong>🔒 Anchor Member</strong><br>Live Q&A, blueprint library, accountability pairs<br><span class="price">$8/mo</span> or $80/yr<br><em>sliding scale $5/mo available</em></div>
     </div>
     <div style="text-align:center; margin:1rem 0;">
@@ -237,7 +257,7 @@
   <section id="shop">
     <h2>🛍️ BAM Kits – low cost, high anchor</h2>
     <div class="card-grid">
-      <div class="card">🪨 <strong>Anchor Stone</strong><br>Polished limestone, pocket-sized<br><strong>$12 CAD</strong><br><button onclick="alert('Payment link coming soon – email us for now')">Buy via PayPal / Stripe</button></div>
+      <div class="card">⛰️ <strong>Anchor Stone</strong><br>Polished limestone, pocket-sized<br><strong>$12 CAD</strong><br><button onclick="alert('Payment link coming soon – email us for now')">Buy via PayPal / Stripe</button></div>
       <div class="card">🏺 <strong>Desktop Sanctuary Jar</strong><br>Sealed moss + springtails<br><strong>$35 CAD</strong><br><button onclick="alert('Pre-order – email us to reserve')">Pre-order</button></div>
       <div class="card">🧰 <strong>Portable Crisis Jar</strong><br>Stone + dried moss + tea bag<br><strong>$30 CAD</strong><br><button onclick="alert('Pre-order – email us to reserve')">Pre-order</button></div>
     </div>
@@ -247,7 +267,6 @@
   <!-- Email signup + footer -->
   <footer>
     <h3>📧 Free BAM Lexicon (25 terms that rewire your brain)</h3>
-    <!-- Replace the form action with your actual Formspree endpoint when ready -->
     <form action="#" method="post">
       <input type="email" name="email" placeholder="your@email.com" required>
       <button type="submit" onclick="alert('PDF download will be available soon. Check back!')">Send PDF →</button>
