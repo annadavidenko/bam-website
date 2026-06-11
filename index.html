@@ -188,6 +188,27 @@
       margin-top: 0.5rem;
       color: #4a5568;
     }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: white;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      border: 1px solid #dce5f0;
+      font-weight: 500;
+    }
+    .social-links a:hover {
+      background: #eef3fc;
+      border-color: #a8d058;
+    }
     @media (max-width: 700px) {
       .pillars, .card-grid { flex-direction: column; }
       .container { padding: 1rem; }
@@ -275,9 +296,15 @@
     <div class="waitlist-note">🔒 We respect your privacy. No spam, no selling – only updates about BAM.</div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with social links -->
   <footer>
-    <p style="margin-top:0; font-size:0.9rem;">
+    <div class="social-links">
+      <a href="https://www.facebook.com/groups/893421690458069" target="_blank" rel="noopener noreferrer">📘 Facebook Group</a>
+      <a href="https://www.facebook.com/profile.php?id=61590683461380" target="_blank" rel="noopener noreferrer">📘 BAM Facebook Page</a>
+      <a href="https://www.linkedin.com/company/biophilic-anchor-method/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+      <a href="https://www.youtube.com/@Biophilic-Anchor-Method" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+    </div>
+    <p style="margin-top:1rem; font-size:0.9rem;">
       📧 Questions? <a href="mailto:info_BAM@pm.me?subject=Inquiry%20about%20BAM">info_BAM@pm.me</a><br>
       <a href="#">Ethics Charter</a> | 
       <a href="#">Privacy</a> | 
