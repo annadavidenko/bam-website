@@ -3,370 +3,344 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAM – Biophilic Anchor Method | Structural Autonomic Regulation</title>
-  <meta name="description" content="BAM is a structural methodology for autonomic regulation using hard-asset sensory grounding. A project of Karma Strategic Intelligence Inc.">
+  <title>BAM | Enterprise Bio-Architecture & Autonomic Regulation</title>
+  <meta name="description" content="BAM is a structural methodology for autonomic regulation, engineering the environments where high-stakes human behavior happens.">
 
   <!-- ***** FAVICONS ***** -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <!-- ***************** -->
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg-dark: #0a0f18;
+      --bg-panel: #111827;
+      --bg-card: #1f2937;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent-bio: #10b981; /* Bio Green */
+      --accent-tech: #3b82f6; /* Tech Blue */
+      --border-color: #374151;
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #f7f9fc; /* Slightly cooler, more clinical background */
-      color: #1a202c; /* Darker slate for higher contrast */
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
       line-height: 1.6;
-      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
     }
+
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 0 2rem;
     }
+
+    /* HEADER & HERO */
     header {
-      text-align: center;
-      padding: 3rem 0 2rem;
-      border-bottom: 2px solid #2b6cb0; /* Stronger corporate blue */
+      padding: 4rem 0 2rem;
+      border-bottom: 1px solid var(--border-color);
     }
-    .logo {
-      max-width: 220px;
-      height: auto;
-      display: block;
-      margin: 0 auto 1rem;
+    .status-badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--accent-bio);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(16, 185, 129, 0.2);
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
       letter-spacing: -0.03em;
-      color: #2d3748;
+      margin-bottom: 1.5rem;
     }
     h1 span {
-      font-weight: 700;
-      color: #2b6cb0;
+      background: -webkit-linear-gradient(45deg, var(--accent-tech), var(--accent-bio));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .tagline {
+    .hero-lead {
       font-size: 1.25rem;
-      color: #4a5568;
-      font-weight: 500;
-      margin-top: 0.5rem;
-      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin-bottom: 2rem;
     }
-    .hero {
-      text-align: center;
-      padding: 3rem 0;
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border-color);
     }
-    .video-alert {
-      background: #ebf8fa;
-      border: 1px solid #b2ebf2;
-      border-radius: 8px;
-      padding: 1.5rem;
-      max-width: 650px;
-      margin: 0 auto 2rem;
-      font-size: 1rem;
-      color: #234e52;
-    }
-    .btn {
-      display: inline-block;
-      background: #2b6cb0;
-      color: white;
-      padding: 0.8rem 2rem;
-      border-radius: 4px; /* Sharper, more architectural corners */
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0.5rem;
-      transition: all 0.2s ease;
-      border: 2px solid #2b6cb0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .section-header {
       font-size: 0.9rem;
-    }
-    .btn-outline {
-      background: transparent;
-      color: #2b6cb0;
-    }
-    .btn:hover {
-      background: #1a365d;
-      border-color: #1a365d;
-      color: white;
-    }
-    .btn-outline:hover {
-      background: #edf2f7;
-      color: #1a365d;
-      border-color: #1a365d;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-tech);
+      margin-bottom: 1rem;
+      font-weight: 600;
     }
     h2 {
-      font-size: 1.8rem;
-      color: #2d3748;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #edf2f7;
-      padding-bottom: 0.5rem;
-      display: inline-block;
+      font-size: 2.25rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
     }
-    section {
-      margin: 4rem 0;
-    }
-    .text-block p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      color: #4a5568;
-    }
-    .card-grid {
+
+    /* GRID LAYOUTS */
+    .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
     }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    /* CARDS */
     .card {
-      background: white;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      border: 1px solid #e2e8f0;
-      transition: transform 0.2s ease;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2.5rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+      border-color: var(--accent-tech);
     }
     .card h3 {
-      font-size: 1.25rem;
-      color: #2b6cb0;
-      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
     }
-    .pillars {
+    .card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+    .highlight-box {
+      background: rgba(59, 130, 246, 0.05);
+      border-left: 3px solid var(--accent-tech);
+      padding: 1rem 1.5rem;
+      font-size: 0.95rem;
+      color: #d1d5db;
+    }
+
+    /* COMPARISON TABLE */
+    .comparison-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
       margin-top: 2rem;
     }
-    .pillar {
-      background: white;
-      border-left: 4px solid #2b6cb0;
-      padding: 1.5rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    .pillar-num {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #cbd5e0;
-      margin-bottom: 0.5rem;
-    }
-    .sensory-box {
-      background: #fff5f5;
-      border: 1px solid #feb2b2;
-      border-left: 6px solid #e53e3e;
-      border-radius: 8px;
+    .comp-col {
+      background: var(--bg-panel);
       padding: 2rem;
-      margin: 3rem 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
     }
-    .sensory-box h2 {
-      color: #c53030;
+    .comp-col.new {
+      border-color: var(--accent-bio);
+      background: rgba(16, 185, 129, 0.03);
+    }
+    .comp-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .comp-item:last-child {
       border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .comp-item h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
+
+    /* FOOTER */
     footer {
-      background: #2d3748;
-      color: #a0aec0;
+      background: var(--bg-panel);
+      padding: 4rem 0;
       text-align: center;
-      padding: 3rem 2rem;
-      margin-top: 4rem;
+      border-top: 1px solid var(--border-color);
     }
-    footer a {
-      color: #63b3ed;
+    .footer-links a {
+      color: var(--text-muted);
       text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.2s;
     }
-    footer a:hover {
-      color: white;
-    }
-    input[type="email"] {
-      padding: 1rem;
-      border-radius: 4px;
-      border: 1px solid #cbd5e0;
-      font-size: 1rem;
-      width: 100%;
-      max-width: 350px;
-      margin-right: 0.5rem;
-    }
-    .form-group {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
-    .waitlist-note {
-      font-size: 0.85rem;
-      margin-top: 1rem;
-      color: #718096;
-    }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
+    .footer-links a:hover { color: var(--accent-bio); }
+
     @media (max-width: 768px) {
-      .form-group {
-        flex-direction: column;
-        align-items: center;
-      }
-      input[type="email"] {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
+      .grid-2, .comparison-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.5rem; }
     }
   </style>
 </head>
 <body>
+
 <div class="container">
   
   <header>
-    <!-- <img src="/2bam.png" alt="BAM Logo" class="logo"> --> <!-- Uncomment when logo is ready -->
-    <h1>BAM <span>//</span> Biophilic Anchor Method</h1>
-    <div class="tagline">Structural Autonomic Regulation</div>
-    <p style="margin-top: 0.5rem; color: #718096;">Hard-asset sensory grounding to physically rewire the nervous system.</p>
+    <div class="status-badge">Phase: Launch Mode</div>
+    <h1>BAM <span>//</span> The Mothership</h1>
+    <p class="hero-lead">We are not selling a consumer wellness product. We are engineering the actual physical environments where high-stakes human behavior happens. Welcome to structural autonomic regulation.</p>
   </header>
 
-  <div class="hero">
-    <div class="video-alert">
-      <strong>🎥 Watch the Briefing: "The BAM Protocol"</strong><br>
-      <em>(Deployment pending – Subscribe on YouTube for transmission)</em>
-    </div>
-    <div>
-      <a href="#join" class="btn">Deploy Comms →</a>
-      <a href="#architecture" class="btn btn-outline">Review Architecture</a>
-    </div>
-  </div>
-
-  <section class="text-block">
-    <h2>1. The Core Thesis</h2>
-    <p><strong>BAM is a structural methodology for autonomic regulation.</strong> It uses contained, low-entropy living ecosystems—<em>Biophilic Anchors</em>—to force physical grounding and nervous system stabilization.</p>
-    <p>Engineered by a forensic intelligence architect and grounded in addiction recovery resilience, BAM is <strong>not therapy</strong>. It is an environmental zero-trust architecture for the nervous system. By bypassing cognitive overload and utilizing tactile, visual, and olfactory inputs, BAM rewires fear responses, builds autonomic self-efficacy, and provides a physical disruption to high-entropy stress loops.</p>
-  </section>
-
+  <!-- THE THESIS & MARKET -->
   <section>
-    <h2>2. The Execution Loop (5-Minute Protocol)</h2>
-    <p style="color: #4a5568; margin-bottom: 1rem;">Abstract mindfulness fails when executive function shuts down. BAM forces regulation through physical action.</p>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pillar-num">01</div>
-        <strong>Anchor (2 min)</strong><br>
-        Visual lock. No digital interfaces. Pure observation of a closed-loop living system.
+    <div class="section-header">The Core Thesis</div>
+    <div class="grid-2">
+      <div>
+        <h2>Moving past abstract wellness and mindset "fluff."</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
+          BAM is a structural methodology that builds autonomic stability and nervous system rewiring using hard-asset sensory grounding—living micro-ecosystems, isopods, terraria, and geological tactile elements.
+        </p>
       </div>
-      <div class="pillar">
-        <div class="pillar-num">02</div>
-        <strong>Execute (3 min)</strong><br>
-        Micro-mending. Tactile engagement (misting a biome, removing a dead leaf, handling a mineral anchor).
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">03</div>
-        <strong>Calibrate (Weekly)</strong><br>
-        Data sharing and baseline calibration within the Anchor Club network.
+      <div class="card" style="padding: 2rem;">
+        <h3 style="font-size: 1.25rem; color: var(--accent-tech);">The $10 Trillion Target</h3>
+        <p>We are building a new category and movement in the global wellness industry—a market that reached $6.8 trillion in 2024 and is projected to hit nearly $10 trillion by 2029. We capture this by bypassing product commoditization and scaling physical, structural methodology.</p>
       </div>
     </div>
   </section>
 
+  <!-- CATEGORY DESIGN: OLD VS NEW -->
   <section>
-    <h2>3. Structural Anchors (Hardware)</h2>
-    <p style="color: #4a5568;">An anchor is any physical node that brings the user into present-moment contact with a living or geological system.</p>
-    <div class="card-grid">
-      <div class="card">
-        <h3>🌱 Closed-Loop Ecosystems</h3>
-        <p>Moss jars and isopod cultures. Sealed, zero-maintenance biomes serving as constant visual regulators.</p>
-      </div>
-      <div class="card">
-        <h3>⛰️ Geological Tactile Anchors</h3>
-        <p>Polished limestone and high-density minerals for portable, physical nervous-system interruption.</p>
-      </div>
-      <div class="card">
-        <h3>🐍 Managed Biomes</h3>
-        <p>High-fidelity enclosures (Russian Rat Snakes, Bullsnakes, Aquatic species) utilized for advanced perceptual revision and controlled aversive exposure.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="architecture">
-    <h2>4. Core Capabilities (The Architecture of Resilience)</h2>
-    <p style="color: #4a5568; margin-bottom: 1.5rem;">BAM integrates evidence-informed systems design into daily structural routines.</p>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Autonomic Down-Regulation</h3>
-        <p>5-minute tactical rituals that lower cortisol physically, bypassing the need for abstract "talk."</p>
-      </div>
-      <div class="card">
-        <h3>Addiction Resilience</h3>
-        <p>Low-dopamine sensory rituals that intercept craving loops and rebuild behavioral baselines.</p>
-      </div>
-      <div class="card">
-        <h3>Perceptual Revision</h3>
-        <p>Systematically rewiring fear and disgust responses through controlled exposure to misunderstood biomes.</p>
-      </div>
-      <div class="card">
-        <h3>Enterprise Bio-Architecture</h3>
-        <p>Accessible environmental grounding integrated into workspaces and clinical settings—no backyard required; just the physical anchor node.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>5. The Commercial Roadmap</h2>
-    <div class="card-grid" style="grid-template-columns: 1fr;">
-      <div class="card" style="padding: 1.5rem;">
-        <ul style="list-style: none; color: #4a5568;">
-          <li style="margin-bottom: 0.8rem;">📺 <strong>BAM Media Network:</strong> High-fidelity documentaries on structural biomes (moss jars, 200-gal aquatic architectures, bioactive reptile setups). Launching 5 core episodes.</li>
-          <li style="margin-bottom: 0.8rem;">🔗 <strong>The Anchor Club:</strong> Peer-supported community architecture for baseline tracking and accountability. Early access pending.</li>
-          <li style="margin-bottom: 0.8rem;">🧰 <strong>BAM Hardware:</strong> Hand-polished geological anchors, Desktop biomes, and hardscape bundles. Production active.</li>
-          <li style="margin-bottom: 0.8rem;">🏛️ <strong>Enterprise Consulting:</strong> Physical corporate/rehab tank deployments and structural anxiety audits for high-stress operators.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <div class="sensory-box">
-    <h2>⚡ High-Entropy Crisis Protocol (7-Min Reset)</h2>
-    <p style="color: #742a2a; margin-bottom: 1rem;"><strong>When cognitive load and cravings hit critical (8/10):</strong> Deploy bitter taste, cold geological stone, geosmin olfactory anchor, and full 5-sense blast. <em>(Protocol guide dropping soon)</em>.</p>
-    <p style="font-size: 0.9rem; font-weight: bold;">Immediate Crisis Routing: CMHA Ontario (1-866-531-2600) | Critical Emergency: 911</p>
-  </div>
-
-  <section id="join" style="text-align: center;">
-    <h2>Join the Infrastructure</h2>
-    <p style="color: #4a5568; max-width: 600px; margin: 0 auto;">No transactional products yet. No digital fluff. We are building the foundational community for structural biophilic regulation. Secure your position.</p>
+    <div class="section-header">Category Design</div>
+    <h2>The BAM Transformation</h2>
+    <p style="color: var(--text-muted); max-width: 700px;">To capture a share of this multi-trillion-dollar market, BAM does not compete in the existing wellness space; it redefines the rules of engagement.</p>
     
-    <form class="form-group" action="#" method="post">
-      <input type="email" name="email" placeholder="Enter transmission email" required>
-      <button type="submit" class="btn" onclick="alert('Email secured. Awaiting deployment. — BAM')">Join Waitlist</button>
-    </form>
-    <div class="waitlist-note">🔒 Zero-Trust Privacy Protocol. No spam, no data brokering. Strictly BAM operational updates.</div>
+    <div class="comparison-grid">
+      <div class="comp-col">
+        <h3 style="color: #ef4444; margin-bottom: 2rem;">The Old Industry</h3>
+        <div class="comp-item">
+          <h4>The Approach</h4>
+          <p>Relies on cognitive reframing, talk therapy, and thinking.</p>
+        </div>
+        <div class="comp-item">
+          <h4>The Medium</h4>
+          <p>Apps, journals, and books.</p>
+        </div>
+        <div class="comp-item">
+          <h4>Motivation & Access</h4>
+          <p>Requires sheer willpower, high motivation, and a dedicated place/time to "do therapy."</p>
+        </div>
+        <div class="comp-item">
+          <h4>Business Model</h4>
+          <p>Transactional. Sells inventory and competes on price.</p>
+        </div>
+      </div>
+
+      <div class="comp-col new">
+        <h3 style="color: var(--accent-bio); margin-bottom: 2rem;">The BAM Methodology</h3>
+        <div class="comp-item">
+          <h4>The Approach</h4>
+          <p>Forces physical grounding by engaging the nervous system directly through the physical senses.</p>
+        </div>
+        <div class="comp-item">
+          <h4>The Medium</h4>
+          <p>Tangible, living micro-systems where the user actively creates and sustains a new miniature world.</p>
+        </div>
+        <div class="comp-item">
+          <h4>Motivation & Access</h4>
+          <p>Leverages automatic, fun motivation (caring for life/pets—even rocks). Works anywhere via physical anchors (keychains, pocket minerals) for constant passive stress relief.</p>
+        </div>
+        <div class="comp-item">
+          <h4>Business Model</h4>
+          <p>Relational. Sells transformation and competes strictly on methodology.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-</div> <!-- End Container -->
+  <!-- THE MEGA-CORP VISION -->
+  <section>
+    <div class="section-header">Cross-Industry Scaling</div>
+    <h2>The Mega-Corp Vision</h2>
+    <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 3rem; font-size: 1.1rem;">
+      Because BAM relies on physical hardware, it scales directly into furniture, architecture, and enterprise infrastructure. We turn passive residential and corporate environments into active nervous system regulators.
+    </p>
+
+    <div class="grid-3">
+      <!-- Pillar 1 -->
+      <div class="card">
+        <h3>1. Enterprise Bio-Architecture</h3>
+        <p>Integrating directly into the structural blueprint of commercial buildings and corporate headquarters to design "Zero-Entropy Spaces."</p>
+        <div class="highlight-box">
+          <strong>The Execution:</strong> Instead of a potted plant in a lobby, we engineer massive, self-sustaining aquatic biotopes running on advanced enterprise-grade filtration systems, built directly into the walls and HVAC systems of financial headquarters to force autonomic regulation.
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="card">
+        <h3>2. Tactical Ergonomics & Clinical</h3>
+        <p>Combining risk mitigation with nervous system regulation to dominate workspace design for high-stress operators (intelligence analysts, day traders, 911 dispatchers).</p>
+        <div class="highlight-box">
+          <strong>The Execution:</strong> Workstations embedded with localized micro-ecosystems and heavy, tactile geological anchors (integrated magnetic or streak-plate mineral stations) for passive sensory grounding without breaking screen focus.
+        </div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="card">
+        <h3>3. Advanced Bio-Genetics</h3>
+        <p>Establishing a high-end breeding, genetics, and fabrication arm to capture the ultra-luxury market with high-ticket "living art."</p>
+        <div class="highlight-box">
+          <strong>The Execution:</strong> Engineering specialized genetics for high-visual-impact species (selectively bred California Red-Sided garter snakes, rare Blue Electric Acaras) paired with zero-maintenance, automated Oase-style filtration for luxury suites.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT OPERATIONS -->
+  <section>
+    <div class="section-header">Active Operations</div>
+    <h2>Current Launch Pipeline</h2>
+    <div class="grid-3" style="margin-top: 2rem;">
+      <div style="background: var(--bg-panel); padding: 2rem; border-left: 3px solid var(--accent-tech);">
+        <h4 style="color: #fff; margin-bottom: 0.5rem;">Pilot Testing & Clinical Distribution</h4>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Navigating pathways to deploy the BAM methodology and intake questionnaire into academic wellness centers, rehab programs, and corporate cognitive-load reduction frameworks.</p>
+      </div>
+      <div style="background: var(--bg-panel); padding: 2rem; border-left: 3px solid var(--accent-tech);">
+        <h4 style="color: #fff; margin-bottom: 0.5rem;">Investor & Grant Alignment</h4>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Connecting this hybrid hardware/wellness IP to regional early-stage capital syndicates, OCI channels, and non-dilutive innovation grants.</p>
+      </div>
+      <div style="background: var(--bg-panel); padding: 2rem; border-left: 3px solid var(--accent-tech);">
+        <h4 style="color: #fff; margin-bottom: 0.5rem;">IP Hardening & Scale</h4>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Stress-testing the commercial licensing model to ensure the methodology scales as a structural global movement, not a localized service.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
 
 <footer>
-  <div class="social-links">
-    <a href="https://www.facebook.com/groups/893421690458069" target="_blank">Facebook Group</a>
-    <a href="https://www.facebook.com/profile.php?id=61590683461380" target="_blank">Facebook Page</a>
-    <a href="https://www.linkedin.com/company/biophilic-anchor-method/" target="_blank">LinkedIn</a>
-    <a href="https://www.youtube.com/@Biophilic-Anchor-Method" target="_blank">YouTube</a>
+  <div class="container">
+    <div class="footer-links" style="margin-bottom: 2rem;">
+      <a href="https://www.ksi-intel.com/" target="_blank">Parent Entity: KSI Strategic Intelligence</a>
+      <a href="mailto:info_BAM@pm.me">Secure Comms: info_BAM@pm.me</a>
+    </div>
+    <p style="color: #4b5563; font-size: 0.85rem;">
+      © 2026 Karma Strategic Intelligence Inc. [Federal Corp #1001472307][cite: 1]<br>
+      Biophilic Anchor Method™ is a trademark pending. All rights reserved.
+    </p>
   </div>
-  
-  <p style="margin-bottom: 1rem;">
-    Comms: <a href="mailto:info_BAM@pm.me">info_BAM@pm.me</a>
-  </p>
-  <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #718096;">
-    <a href="#">Ethics Charter</a> | <a href="#">Privacy Architecture</a> | <a href="#">Clinical Directory Routing</a>
-  </p>
-  <p style="font-size: 0.8rem; color: #4a5568;">
-    © 2026 Karma Strategic Intelligence Inc. [Federal Corp #1001472307] <br>
-    Biophilic Anchor™ is a trademark pending. <br>
-    <em>Disclaimer: BAM is a structural methodology and peer-support framework, not a substitute for licensed medical therapy.</em>
-  </p>
 </footer>
 
 </body>
