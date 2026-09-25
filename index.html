@@ -7,13 +7,11 @@
   <meta name="description" content="BAM engineers living bio-architectural systems that regulate the human nervous system. Structural wellness infrastructure for enterprise, clinical, and luxury environments.">
   <meta name="theme-color" content="#060910">
 
-  <!-- Open Graph for investor link previews -->
   <meta property="og:title" content="BAM | Enterprise Bio-Architecture">
-  <meta property="og:description" content="We don't sell calm. We engineer the biological conditions for it.">
+  <meta property="og:description" content="We don't sell feelings. We engineer the conditions that produce them.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/2bam.png">
 
-  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -23,10 +21,7 @@
   <style>
     :root {
       --bg-dark: #060910;
-      --bg-deep: #0a0f18;
       --bg-panel: #111827;
-      --bg-card: #1a2332;
-      --bg-elevated: #1f2937;
       --text-main: #f3f4f6;
       --text-muted: #9ca3af;
       --text-dim: #6b7280;
@@ -40,7 +35,6 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -53,7 +47,6 @@
       position: relative;
     }
 
-    /* Ambient background */
     body::before {
       content: '';
       position: fixed;
@@ -65,7 +58,6 @@
       z-index: 0;
     }
 
-    /* Grid overlay */
     body::after {
       content: '';
       position: fixed;
@@ -80,1120 +72,239 @@
       -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
     }
 
-    .container {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-      z-index: 1;
-    }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
 
-    /* ============ NAV ============ */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem 0 1.5rem;
-      border-bottom: 1px solid var(--border-color);
-      margin-bottom: 5rem;
-    }
+    /* NAV */
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0 1.5rem; border-bottom: 1px solid var(--border-color); margin-bottom: 5rem; }
+    .logo { display: flex; align-items: center; gap: 0.85rem; font-weight: 800; letter-spacing: 0.03em; font-size: 0.95rem; text-decoration: none; color: var(--text-main); }
+    .logo-img { width: 44px; height: 44px; object-fit: contain; display: block; flex-shrink: 0;
+      filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.35)) drop-shadow(0 0 4px rgba(59, 130, 246, 0.25));
+      transition: filter 0.3s ease, transform 0.3s ease; }
+    .logo:hover .logo-img { filter: drop-shadow(0 0 18px rgba(16, 185, 129, 0.55)) drop-shadow(0 0 8px rgba(59, 130, 246, 0.4)); transform: scale(1.04); }
+    .logo-text { display: flex; align-items: baseline; gap: 0.15rem; }
+    .logo-text .sep { color: var(--text-dim); font-weight: 400; margin: 0 0.1rem; }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      font-size: 0.95rem;
-      text-decoration: none;
-      color: var(--text-main);
-    }
-
-    .logo-img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-      display: block;
-      flex-shrink: 0;
-      filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.35))
-              drop-shadow(0 0 4px rgba(59, 130, 246, 0.25));
-      transition: filter 0.3s ease, transform 0.3s ease;
-    }
-
-    .logo:hover .logo-img {
-      filter: drop-shadow(0 0 18px rgba(16, 185, 129, 0.55))
-              drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
-      transform: scale(1.04);
-    }
-
-    .logo-text {
-      display: flex;
-      align-items: baseline;
-      gap: 0.15rem;
-    }
-
-    .logo-text .sep {
-      color: var(--text-dim);
-      font-weight: 400;
-      margin: 0 0.1rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      font-size: 0.85rem;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-      font-weight: 500;
-    }
-
+    .nav-links { display: flex; gap: 1.4rem; font-size: 0.85rem; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; font-weight: 500; }
     .nav-links a:hover { color: var(--accent-bio); }
+    .nav-cta { padding: 0.45rem 0.9rem; border: 1px solid var(--border-bright); border-radius: 8px; color: var(--text-main) !important; font-weight: 600 !important; }
+    .nav-cta:hover { border-color: var(--accent-bio); color: var(--accent-bio) !important; }
 
-    .nav-cta {
-      padding: 0.45rem 0.9rem;
-      border: 1px solid var(--border-bright);
-      border-radius: 8px;
-      color: var(--text-main) !important;
-      font-weight: 600 !important;
-    }
+    /* HERO */
+    header { padding-bottom: 5rem; position: relative; }
+    .status-badge { display: inline-block; background: rgba(16, 185, 129, 0.08); color: var(--accent-bio); padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2rem; border: 1px solid rgba(16, 185, 129, 0.25); backdrop-filter: blur(8px); }
+    .status-badge::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-bio); margin-right: 0.5rem; box-shadow: 0 0 8px var(--accent-bio); animation: pulse 2s ease-in-out infinite; vertical-align: middle; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-    .nav-cta:hover {
-      border-color: var(--accent-bio);
-      color: var(--accent-bio) !important;
-    }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.25rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.035em; margin-bottom: 1.75rem; max-width: 900px; }
+    h1 span.gradient { background: linear-gradient(135deg, var(--accent-tech) 0%, var(--accent-bio) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-    /* ============ HERO ============ */
-    header {
-      padding-bottom: 5rem;
-      position: relative;
-    }
+    .hero-lead { font-size: 1.15rem; color: var(--text-muted); max-width: 720px; margin-bottom: 1.25rem; line-height: 1.7; }
+    .hero-lead strong { color: var(--text-main); font-weight: 600; }
 
-    .status-badge {
-      display: inline-block;
-      background: rgba(16, 185, 129, 0.08);
-      color: var(--accent-bio);
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-      border: 1px solid rgba(16, 185, 129, 0.25);
-      backdrop-filter: blur(8px);
-    }
+    .metrics-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid var(--border-color); }
+    .metric { display: flex; flex-direction: column; gap: 0.35rem; }
+    .metric-value { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; background: linear-gradient(135deg, #fff 0%, var(--text-muted) 120%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; }
+    .metric-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-dim); font-weight: 600; }
 
-    .status-badge::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent-bio);
-      margin-right: 0.5rem;
-      box-shadow: 0 0 8px var(--accent-bio);
-      animation: pulse 2s ease-in-out infinite;
-      vertical-align: middle;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.25rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.035em;
-      margin-bottom: 1.75rem;
-      max-width: 900px;
-    }
-
-    h1 span.gradient {
-      background: linear-gradient(135deg, var(--accent-tech) 0%, var(--accent-bio) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-lead {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 720px;
-      margin-bottom: 1.25rem;
-      line-height: 1.7;
-    }
-
-    .hero-lead strong {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .metrics-strip {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-      padding-top: 3rem;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .metric {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .metric-value {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #fff 0%, var(--text-muted) 120%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.1;
-    }
-
-    .metric-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: var(--text-dim);
-      font-weight: 600;
-    }
-
-    /* ============ SECTIONS ============ */
-    section {
-      padding: 6rem 0;
-      border-bottom: 1px solid var(--border-color);
-      position: relative;
-    }
-
-    .section-header {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      color: var(--accent-tech);
-      margin-bottom: 1rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .section-header::before {
-      content: '';
-      width: 24px;
-      height: 1px;
-      background: var(--accent-tech);
-    }
-
-    h2 {
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-
+    /* SECTIONS */
+    section { padding: 6rem 0; border-bottom: 1px solid var(--border-color); position: relative; }
+    .section-header { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent-tech); margin-bottom: 1rem; font-weight: 700; display: flex; align-items: center; gap: 0.75rem; }
+    .section-header::before { content: ''; width: 24px; height: 1px; background: var(--accent-tech); }
+    h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 1.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
     h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; }
+    .section-lead { color: var(--text-muted); max-width: 780px; font-size: 1.05rem; margin-bottom: 3rem; line-height: 1.7; }
 
-    .section-lead {
-      color: var(--text-muted);
-      max-width: 780px;
-      font-size: 1.05rem;
-      margin-bottom: 3rem;
-      line-height: 1.7;
-    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 2rem;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      backdrop-filter: blur(12px);
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--border-bright);
-      box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3);
-    }
-
+    /* CARDS */
+    .card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; backdrop-filter: blur(12px); }
+    .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent); opacity: 0; transition: opacity 0.3s; }
+    .card:hover { transform: translateY(-4px); border-color: var(--border-bright); box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3); }
     .card:hover::before { opacity: 1; }
+    .card.bio:hover { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 20px 40px -20px var(--accent-bio-glow); }
+    .card p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.75rem; }
+    .card-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1.25rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); color: var(--accent-tech); }
+    .card.bio .card-icon { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.2); color: var(--accent-bio); }
 
-    .card.bio:hover {
-      border-color: rgba(16, 185, 129, 0.4);
-      box-shadow: 0 20px 40px -20px var(--accent-bio-glow);
-    }
+    .highlight-box { background: rgba(59, 130, 246, 0.05); border-left: 3px solid var(--accent-tech); padding: 1rem 1.25rem; font-size: 0.88rem; color: #d1d5db; margin-top: 1.25rem; border-radius: 0 8px 8px 0; line-height: 1.6; }
+    .highlight-box.bio { background: rgba(16, 185, 129, 0.05); border-left-color: var(--accent-bio); }
+    .highlight-box strong { color: var(--text-main); font-weight: 600; }
 
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-top: 0.75rem;
-    }
+    .plain-callout { background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(59, 130, 246, 0.06) 100%); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 14px; padding: 1.75rem 2rem; margin-top: 2rem; }
+    .plain-callout h4 { font-size: 0.95rem; font-weight: 700; color: var(--accent-bio); margin-bottom: 0.75rem; letter-spacing: 0.5px; }
+    .plain-callout p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0; }
 
-    .card-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      margin-bottom: 1.25rem;
-      background: rgba(59, 130, 246, 0.1);
-      border: 1px solid rgba(59, 130, 246, 0.2);
-      color: var(--accent-tech);
-    }
+    /* HOW IT WORKS — PILLARS */
+    .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .pillar-card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.7) 0%, rgba(17, 24, 39, 0.7) 100%); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.25rem 2rem; text-align: left; position: relative; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+    .pillar-card:hover { transform: translateY(-4px); border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 20px 40px -20px var(--accent-bio-glow); }
+    .pillar-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-tech); margin-bottom: 1.5rem; }
+    .pillar-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.5rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); color: var(--accent-bio); }
+    .pillar-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .pillar-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-top: 0.75rem; }
+    .pillar-time { display: inline-block; margin-top: 1.25rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: var(--accent-bio); background: rgba(16, 185, 129, 0.08); padding: 0.35rem 0.85rem; border-radius: 999px; border: 1px solid rgba(16, 185, 129, 0.2); }
 
-    .card.bio .card-icon {
-      background: rgba(16, 185, 129, 0.1);
-      border-color: rgba(16, 185, 129, 0.2);
-      color: var(--accent-bio);
-    }
-
-    .highlight-box {
-      background: rgba(59, 130, 246, 0.05);
-      border-left: 3px solid var(--accent-tech);
-      padding: 1rem 1.25rem;
-      font-size: 0.88rem;
-      color: #d1d5db;
-      margin-top: 1.25rem;
-      border-radius: 0 8px 8px 0;
-      line-height: 1.6;
-    }
-
-    .highlight-box.bio {
-      background: rgba(16, 185, 129, 0.05);
-      border-left-color: var(--accent-bio);
-    }
-
-    .highlight-box strong {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .plain-callout {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(59, 130, 246, 0.06) 100%);
-      border: 1px solid rgba(16, 185, 129, 0.25);
-      border-radius: 14px;
-      padding: 1.75rem 2rem;
-      margin-top: 2rem;
-      position: relative;
-    }
-
-    .plain-callout h4 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--accent-bio);
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.5px;
-    }
-
-    .plain-callout p {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .comp-col {
-      background: rgba(17, 24, 39, 0.6);
-      padding: 2.25rem;
-      border-radius: 14px;
-      border: 1px solid var(--border-color);
-      backdrop-filter: blur(12px);
-    }
-
-    .comp-col.new {
-      border-color: rgba(16, 185, 129, 0.3);
-      background: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, rgba(17, 24, 39, 0.6) 100%);
-      box-shadow: 0 0 60px -30px var(--accent-bio-glow);
-    }
-
-    .comp-col h3 {
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 2rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    .comp-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .comp-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .comp-item h4 {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--text-dim);
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-    }
-
-    .comp-item p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
+    /* COMPARISON */
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+    .comp-col { background: rgba(17, 24, 39, 0.6); padding: 2.25rem; border-radius: 14px; border: 1px solid var(--border-color); backdrop-filter: blur(12px); }
+    .comp-col.new { border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, rgba(17, 24, 39, 0.6) 100%); box-shadow: 0 0 60px -30px var(--accent-bio-glow); }
+    .comp-col h3 { text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 2rem; font-size: 0.85rem; font-weight: 700; }
+    .comp-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); }
+    .comp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .comp-item h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-dim); margin-bottom: 0.5rem; font-weight: 700; }
+    .comp-item p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
     .comp-col.new .comp-item p { color: #d1d5db; }
 
-    .traction-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
+    /* TRACTION */
+    .traction-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .traction-item { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.75rem; position: relative; }
+    .traction-item .tag { position: absolute; top: 1rem; right: 1rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(16, 185, 129, 0.1); color: var(--accent-bio); border: 1px solid rgba(16, 185, 129, 0.2); }
+    .traction-item .tag.amber { background: rgba(245, 158, 11, 0.1); color: var(--accent-gold); border-color: rgba(245, 158, 11, 0.2); }
+    .traction-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main); padding-right: 5rem; }
+    .traction-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
 
-    .traction-item {
-      background: var(--bg-panel);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 1.75rem;
-      position: relative;
-    }
+    /* FOUNDER */
+    .founder-card { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: start; padding: 3rem; background: linear-gradient(135deg, rgba(26, 35, 50, 0.6) 0%, rgba(17, 24, 39, 0.4) 100%); border: 1px solid var(--border-color); border-radius: 16px; backdrop-filter: blur(12px); }
+    .founder-avatar { width: 100%; aspect-ratio: 1; border-radius: 14px; position: relative; overflow: hidden; background: linear-gradient(135deg, var(--accent-tech), var(--accent-bio)); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; font-weight: 900; color: #fff; letter-spacing: -0.05em; box-shadow: 0 20px 60px -20px var(--accent-tech-glow); }
+    .founder-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.98) contrast(1.03) brightness(0.98); position: relative; z-index: 1; }
+    .founder-avatar::before { content: 'AD'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; font-weight: 900; color: #fff; letter-spacing: -0.05em; z-index: 0; }
+    .founder-avatar::after { content: ''; position: absolute; inset: 0; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3); pointer-events: none; z-index: 2; }
+    .founder-info h3 { font-size: 1.5rem; margin-bottom: 0.35rem; }
+    .founder-role { color: var(--accent-bio); font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .founder-bio { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem; }
+    .credential-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .credential { font-size: 0.72rem; padding: 0.4rem 0.8rem; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 6px; color: #bfdbfe; font-weight: 500; }
 
-    .traction-item .tag {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(16, 185, 129, 0.1);
-      color: var(--accent-bio);
-      border: 1px solid rgba(16, 185, 129, 0.2);
-    }
-
-    .traction-item .tag.amber {
-      background: rgba(245, 158, 11, 0.1);
-      color: var(--accent-gold);
-      border-color: rgba(245, 158, 11, 0.2);
-    }
-
-    .traction-item h4 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--text-main);
-      padding-right: 5rem;
-    }
-
-    .traction-item p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    .founder-card {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 3rem;
-      align-items: start;
-      padding: 3rem;
-      background: linear-gradient(135deg, rgba(26, 35, 50, 0.6) 0%, rgba(17, 24, 39, 0.4) 100%);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      backdrop-filter: blur(12px);
-    }
-
-    .founder-avatar {
-      width: 100%;
-      aspect-ratio: 1;
-      border-radius: 14px;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, var(--accent-tech), var(--accent-bio));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: -0.05em;
-      box-shadow: 0 20px 60px -20px var(--accent-tech-glow);
-    }
-
-    .founder-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(0.98) contrast(1.03) brightness(0.98);
-      position: relative;
-      z-index: 1;
-    }
-
-    .founder-avatar::before {
-      content: 'AD';
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: -0.05em;
-      z-index: 0;
-    }
-
-    .founder-avatar::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3);
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    .founder-info h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .founder-role {
-      color: var(--accent-bio);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
-
-    .founder-bio {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 1.25rem;
-    }
-
-    .credential-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .credential {
-      font-size: 0.72rem;
-      padding: 0.4rem 0.8rem;
-      background: rgba(59, 130, 246, 0.08);
-      border: 1px solid rgba(59, 130, 246, 0.2);
-      border-radius: 6px;
-      color: #bfdbfe;
-      font-weight: 500;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 0.75rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-color);
-      flex-wrap: wrap;
-    }
-
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.65rem 1rem;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-bright);
-      border-radius: 10px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: all 0.25s ease;
-    }
-
-    .social-link svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-      transition: transform 0.25s ease;
-    }
-
-    .social-link:hover {
-      color: var(--text-main);
-      border-color: var(--accent-bio);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px -12px var(--accent-bio-glow);
-      background: rgba(16, 185, 129, 0.06);
-    }
-
+    /* SOCIAL */
+    .social-links { display: flex; gap: 0.75rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; }
+    .social-link { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.65rem 1rem; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-bright); border-radius: 10px; color: var(--text-muted); text-decoration: none; font-size: 0.82rem; font-weight: 600; transition: all 0.25s ease; }
+    .social-link svg { width: 18px; height: 18px; flex-shrink: 0; transition: transform 0.25s ease; }
+    .social-link:hover { color: var(--text-main); border-color: var(--accent-bio); transform: translateY(-2px); box-shadow: 0 10px 24px -12px var(--accent-bio-glow); background: rgba(16, 185, 129, 0.06); }
     .social-link:hover svg { transform: scale(1.1); }
+    .social-link.linkedin:hover { border-color: #0a66c2; box-shadow: 0 10px 24px -12px rgba(10, 102, 194, 0.6); background: rgba(10, 102, 194, 0.08); }
+    .social-link.instagram:hover { border-color: #e1306c; box-shadow: 0 10px 24px -12px rgba(225, 48, 108, 0.5); background: rgba(225, 48, 108, 0.08); }
+    .social-link.facebook:hover { border-color: #1877f2; box-shadow: 0 10px 24px -12px rgba(24, 119, 242, 0.6); background: rgba(24, 119, 242, 0.08); }
 
-    .social-link.linkedin:hover {
-      border-color: #0a66c2;
-      box-shadow: 0 10px 24px -12px rgba(10, 102, 194, 0.6);
-      background: rgba(10, 102, 194, 0.08);
-    }
-
-    .social-link.instagram:hover {
-      border-color: #e1306c;
-      box-shadow: 0 10px 24px -12px rgba(225, 48, 108, 0.5);
-      background: rgba(225, 48, 108, 0.08);
-    }
-
-    .social-link.facebook:hover {
-      border-color: #1877f2;
-      box-shadow: 0 10px 24px -12px rgba(24, 119, 242, 0.6);
-      background: rgba(24, 119, 242, 0.08);
-    }
-
-    .social-links-compact {
-      display: flex;
-      gap: 0.6rem;
-      margin-top: 1rem;
-    }
-
-    .social-icon {
-      width: 38px;
-      height: 38px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 9px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-bright);
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    .social-icon svg {
-      width: 18px;
-      height: 18px;
-      transition: transform 0.25s ease;
-    }
-
-    .social-icon:hover {
-      color: var(--text-main);
-      transform: translateY(-2px);
-      background: rgba(16, 185, 129, 0.06);
-      border-color: var(--accent-bio);
-      box-shadow: 0 8px 20px -10px var(--accent-bio-glow);
-    }
-
+    .social-links-compact { display: flex; gap: 0.6rem; margin-top: 1rem; }
+    .social-icon { width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-bright); color: var(--text-muted); text-decoration: none; transition: all 0.25s ease; }
+    .social-icon svg { width: 18px; height: 18px; transition: transform 0.25s ease; }
+    .social-icon:hover { color: var(--text-main); transform: translateY(-2px); background: rgba(16, 185, 129, 0.06); border-color: var(--accent-bio); box-shadow: 0 8px 20px -10px var(--accent-bio-glow); }
     .social-icon:hover svg { transform: scale(1.12); }
+    .social-icon.linkedin:hover { border-color: #0a66c2; background: rgba(10, 102, 194, 0.08); box-shadow: 0 8px 20px -10px rgba(10, 102, 194, 0.6); }
+    .social-icon.instagram:hover { border-color: #e1306c; background: rgba(225, 48, 108, 0.08); box-shadow: 0 8px 20px -10px rgba(225, 48, 108, 0.5); }
+    .social-icon.facebook:hover { border-color: #1877f2; background: rgba(24, 119, 242, 0.08); box-shadow: 0 8px 20px -10px rgba(24, 119, 242, 0.6); }
 
-    .social-icon.linkedin:hover {
-      border-color: #0a66c2;
-      background: rgba(10, 102, 194, 0.08);
-      box-shadow: 0 8px 20px -10px rgba(10, 102, 194, 0.6);
-    }
-
-    .social-icon.instagram:hover {
-      border-color: #e1306c;
-      background: rgba(225, 48, 108, 0.08);
-      box-shadow: 0 8px 20px -10px rgba(225, 48, 108, 0.5);
-    }
-
-    .social-icon.facebook:hover {
-      border-color: #1877f2;
-      background: rgba(24, 119, 242, 0.08);
-      box-shadow: 0 8px 20px -10px rgba(24, 119, 242, 0.6);
-    }
-
-    .roadmap {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .phase {
-      padding: 1.75rem;
-      background: var(--bg-panel);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      position: relative;
-    }
-
-    .phase.active {
-      border-color: var(--accent-bio);
-      background: linear-gradient(180deg, rgba(16, 185, 129, 0.06) 0%, var(--bg-panel) 100%);
-    }
-
-    .phase-num {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent-tech);
-      margin-bottom: 0.75rem;
-    }
-
+    /* ROADMAP */
+    .roadmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .phase { padding: 1.75rem; background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 12px; position: relative; }
+    .phase.active { border-color: var(--accent-bio); background: linear-gradient(180deg, rgba(16, 185, 129, 0.06) 0%, var(--bg-panel) 100%); }
+    .phase-num { font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-tech); margin-bottom: 0.75rem; }
     .phase.active .phase-num { color: var(--accent-bio); }
+    .phase h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .phase p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
 
-    .phase h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
+    /* SUPPORT */
+    .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 3rem; }
+    .support-card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; position: relative; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; backdrop-filter: blur(12px); overflow: hidden; }
+    .support-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent-tech), var(--accent-bio)); opacity: 0.6; }
+    .support-card:hover { transform: translateY(-4px); border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 20px 40px -20px var(--accent-bio-glow); }
+    .support-amount { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; background: linear-gradient(135deg, #fff 0%, var(--accent-bio) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 0.75rem; }
+    .support-title { font-size: 1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.6rem; }
+    .support-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin: 0; }
+    .support-cta { text-align: center; padding: 2.5rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 16px; position: relative; overflow: hidden; }
+    .support-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.12), transparent 60%); pointer-events: none; }
+    .support-cta .btn { position: relative; }
+    .support-note { margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-dim); line-height: 1.6; max-width: 580px; margin-left: auto; margin-right: auto; position: relative; }
 
-    .phase p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
+    /* PARTNER DOCUMENTS */
+    .partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .partner-card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.7) 0%, rgba(17, 24, 39, 0.7) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+    .partner-card:hover { transform: translateY(-4px); border-color: var(--border-bright); box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3); }
+    .partner-card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .partner-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.5rem; flex-grow: 1; }
+    .partner-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px; background: rgba(59, 130, 246, 0.1); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.2); margin-bottom: 1rem; align-self: flex-start; }
+    .partner-tag.bio { background: rgba(16, 185, 129, 0.1); color: var(--accent-bio); border-color: rgba(16, 185, 129, 0.2); }
+    .partner-tag.gold { background: rgba(245, 158, 11, 0.1); color: var(--accent-gold); border-color: rgba(245, 158, 11, 0.2); }
+    .partner-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--text-main); text-decoration: none; padding: 0.65rem 1rem; border: 1px solid var(--border-bright); border-radius: 8px; transition: all 0.2s; background: rgba(255, 255, 255, 0.02); align-self: flex-start; }
+    .partner-download:hover { border-color: var(--accent-bio); color: var(--accent-bio); background: rgba(16, 185, 129, 0.05); }
 
-    /* ============ SUPPORT THE MISSION ============ */
-    .support-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 3rem;
-    }
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .contact-card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; backdrop-filter: blur(12px); }
+    .contact-card h3 { font-size: 1.15rem; margin-bottom: 1.25rem; color: var(--text-main); }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-item .label { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-dim); min-width: 100px; flex-shrink: 0; padding-top: 0.15rem; }
+    .contact-item .value { font-size: 0.92rem; color: var(--text-main); word-break: break-word; }
+    .contact-item .value a { color: var(--accent-bio); text-decoration: none; }
+    .contact-item .value a:hover { text-decoration: underline; }
+    .contact-note { margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(16, 185, 129, 0.05); border-left: 3px solid var(--accent-bio); border-radius: 0 8px 8px 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
 
-    .support-card {
-      background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 2rem;
-      position: relative;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(12px);
-      overflow: hidden;
-    }
+    /* ASK */
+    .ask-card { background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 16px; padding: 3rem; text-align: center; position: relative; overflow: hidden; }
+    .ask-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15), transparent 60%); pointer-events: none; }
+    .ask-card h2 { position: relative; margin-bottom: 1rem; }
+    .ask-card p { color: var(--text-muted); max-width: 640px; margin: 0 auto 2rem; position: relative; font-size: 1.05rem; }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 1.75rem; border-radius: 10px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.2s ease; border: 1px solid transparent; cursor: pointer; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent-tech), var(--accent-bio)); color: #fff; box-shadow: 0 10px 30px -10px var(--accent-tech-glow); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 40px -10px var(--accent-tech-glow); }
+    .btn-ghost { background: rgba(255, 255, 255, 0.03); color: var(--text-main); border-color: var(--border-bright); }
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--text-muted); }
+    .ask-details { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-color); display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; text-align: left; position: relative; }
+    .ask-detail-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-dim); font-weight: 600; }
+    .ask-detail-value { font-weight: 700; margin-top: 0.35rem; font-size: 0.95rem; }
+    .ask-detail-sub { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.15rem; }
 
-    .support-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent-tech), var(--accent-bio));
-      opacity: 0.6;
-    }
+    /* INVESTOR PANEL */
+    .investor-panel { background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(10, 15, 24, 0.9) 100%); border: 1px solid var(--border-bright); border-radius: 16px; padding: 3rem; position: relative; overflow: hidden; }
+    .investor-panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent-tech), var(--accent-bio)); }
+    .investor-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; margin-top: 2rem; }
+    .investor-summary h3 { font-size: 1.35rem; margin-bottom: 1rem; color: var(--text-main); }
+    .investor-summary p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 1rem; }
+    .investor-facts { display: grid; gap: 0.75rem; margin-top: 1.75rem; }
+    .investor-fact { display: flex; align-items: baseline; gap: 1rem; padding: 0.85rem 1rem; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 10px; }
+    .investor-fact .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); font-weight: 600; min-width: 130px; flex-shrink: 0; }
+    .investor-fact .value { font-size: 0.92rem; color: var(--text-main); font-weight: 600; }
+    .deck-download { background: linear-gradient(180deg, rgba(26, 35, 50, 0.6) 0%, rgba(17, 24, 39, 0.4) 100%); border: 1px solid var(--border-bright); border-radius: 14px; padding: 2.25rem; text-align: center; position: relative; }
+    .deck-download h4 { font-size: 1.15rem; margin-bottom: 0.75rem; color: var(--text-main); }
+    .deck-download p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.75rem; }
+    .deck-download .btn-primary { width: 100%; justify-content: center; }
+    .deck-note { margin-top: 1.25rem; font-size: 0.75rem; color: var(--text-dim); line-height: 1.55; }
 
-    .support-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(16, 185, 129, 0.4);
-      box-shadow: 0 20px 40px -20px var(--accent-bio-glow);
-    }
-
-    .support-amount {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      background: linear-gradient(135deg, #fff 0%, var(--accent-bio) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-      margin-bottom: 0.75rem;
-    }
-
-    .support-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 0.6rem;
-    }
-
-    .support-card p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      line-height: 1.65;
-      margin: 0;
-    }
-
-    .support-cta {
-      text-align: center;
-      padding: 2.5rem;
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      border-radius: 16px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .support-cta::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.12), transparent 60%);
-      pointer-events: none;
-    }
-
-    .support-cta .btn {
-      position: relative;
-    }
-
-    .support-note {
-      margin-top: 1.5rem;
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      line-height: 1.6;
-      max-width: 580px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-    }
-
-    .ask-card {
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 16px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .ask-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15), transparent 60%);
-      pointer-events: none;
-    }
-
-    .ask-card h2 {
-      position: relative;
-      margin-bottom: 1rem;
-    }
-
-    .ask-card p {
-      color: var(--text-muted);
-      max-width: 640px;
-      margin: 0 auto 2rem;
-      position: relative;
-      font-size: 1.05rem;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      position: relative;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.9rem 1.75rem;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent-tech), var(--accent-bio));
-      color: #fff;
-      box-shadow: 0 10px 30px -10px var(--accent-tech-glow);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 40px -10px var(--accent-tech-glow);
-    }
-
-    .btn-ghost {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-main);
-      border-color: var(--border-bright);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: var(--text-muted);
-    }
-
-    .ask-details {
-      margin-top: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-color);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.5rem;
-      text-align: left;
-      position: relative;
-    }
-
-    .ask-detail-label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: var(--text-dim);
-      font-weight: 600;
-    }
-
-    .ask-detail-value {
-      font-weight: 700;
-      margin-top: 0.35rem;
-      font-size: 0.95rem;
-    }
-
-    .ask-detail-sub {
-      font-size: 0.78rem;
-      color: var(--text-dim);
-      margin-top: 0.15rem;
-    }
-
-    .investor-panel {
-      background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(10, 15, 24, 0.9) 100%);
-      border: 1px solid var(--border-bright);
-      border-radius: 16px;
-      padding: 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .investor-panel::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent-tech), var(--accent-bio));
-    }
-
-    .investor-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-      margin-top: 2rem;
-    }
-
-    .investor-summary h3 {
-      font-size: 1.35rem;
-      margin-bottom: 1rem;
-      color: var(--text-main);
-    }
-
-    .investor-summary p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.75;
-      margin-bottom: 1rem;
-    }
-
-    .investor-facts {
-      display: grid;
-      gap: 0.75rem;
-      margin-top: 1.75rem;
-    }
-
-    .investor-fact {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      padding: 0.85rem 1rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-    }
-
-    .investor-fact .label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-dim);
-      font-weight: 600;
-      min-width: 130px;
-      flex-shrink: 0;
-    }
-
-    .investor-fact .value {
-      font-size: 0.92rem;
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .deck-download {
-      background: linear-gradient(180deg, rgba(26, 35, 50, 0.6) 0%, rgba(17, 24, 39, 0.4) 100%);
-      border: 1px solid var(--border-bright);
-      border-radius: 14px;
-      padding: 2.25rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .deck-download h4 {
-      font-size: 1.15rem;
-      margin-bottom: 0.75rem;
-      color: var(--text-main);
-    }
-
-    .deck-download p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.65;
-      margin-bottom: 1.75rem;
-    }
-
-    .deck-download .btn-primary {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .deck-note {
-      margin-top: 1.25rem;
-      font-size: 0.75rem;
-      color: var(--text-dim);
-      line-height: 1.55;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border-color);
-      padding: 1.5rem 0;
-    }
-
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; }
     .faq-item:last-child { border-bottom: none; }
+    .faq-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-main); }
+    .faq-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
-    .faq-item h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      color: var(--text-main);
-    }
-
-    .faq-item p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    footer {
-      background: var(--bg-panel);
-      padding: 4rem 0 2.5rem;
-      border-top: 1px solid var(--border-color);
-      position: relative;
-      z-index: 1;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
-    }
-
-    .footer-brand p {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-top: 1rem;
-      max-width: 340px;
-      line-height: 1.6;
-    }
-
-    .footer-col h5 {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--text-dim);
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    .footer-col a {
-      display: block;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-      margin-bottom: 0.6rem;
-      transition: color 0.2s;
-    }
-
+    /* FOOTER */
+    footer { background: var(--bg-panel); padding: 4rem 0 2.5rem; border-top: 1px solid var(--border-color); position: relative; z-index: 1; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
+    .footer-brand p { color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; max-width: 320px; line-height: 1.6; }
+    .footer-col h5 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-dim); margin-bottom: 1rem; font-weight: 700; }
+    .footer-col a { display: block; color: var(--text-muted); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.6rem; transition: color 0.2s; }
     .footer-col a:hover { color: var(--accent-bio); }
+    .footer-bottom { padding-top: 2rem; border-top: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 1rem; }
+    .footer-legal-links { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.78rem; }
+    .footer-legal-links a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    .footer-legal-links a:hover { color: var(--accent-bio); }
+    .footer-disclaimer { font-size: 0.72rem; color: var(--text-dim); line-height: 1.6; max-width: 900px; padding: 1rem 1.25rem; background: rgba(255, 255, 255, 0.02); border-left: 2px solid var(--border-bright); border-radius: 0 6px 6px 0; }
+    .footer-copyright { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; color: var(--text-dim); font-size: 0.75rem; padding-top: 0.5rem; }
 
-    .footer-bottom {
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      color: var(--text-dim);
-      font-size: 0.75rem;
+    /* ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     @media (max-width: 900px) {
-      .grid-2, .comparison-grid, .founder-card, .footer-grid, .investor-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid { gap: 2rem; }
+      .grid-2, .comparison-grid, .founder-card, .investor-grid, .contact-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .founder-avatar { max-width: 220px; }
       section { padding: 4rem 0; }
@@ -1203,7 +314,6 @@
       .investor-fact .label { min-width: 0; }
       .support-cta { padding: 2rem 1.5rem; }
     }
-
     @media (max-width: 600px) {
       .container { padding: 0 1.25rem; }
       .metrics-strip { grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -1217,6 +327,7 @@
       .social-link svg { width: 16px; height: 16px; }
       .plain-callout { padding: 1.25rem 1.5rem; }
       .support-amount { font-size: 2rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
   </style>
 </head>
@@ -1224,35 +335,34 @@
 
 <div class="container">
 
-  <!-- ============ NAV ============ -->
+  <!-- NAV -->
   <nav class="nav">
     <a href="#" class="logo">
       <img src="2bam.png" alt="BAM Logo" class="logo-img">
-      <span class="logo-text">
-        BAM<span class="sep">//</span>Biophilic Anchor Method
-      </span>
+      <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
     </a>
     <div class="nav-links">
-      <a href="#thesis">Thesis</a>
+      <a href="#how">How It Works</a>
       <a href="#method">Method</a>
       <a href="#market">Market</a>
       <a href="#model">Model</a>
       <a href="#investors">Investors</a>
       <a href="#support">Support</a>
+      <a href="#partners">Partners</a>
       <a href="#founder">Founder</a>
-      <a href="#ask" class="nav-cta">The Ask</a>
+      <a href="#contact" class="nav-cta">Contact</a>
     </div>
   </nav>
 
-  <!-- ============ HERO ============ -->
+  <!-- HERO -->
   <header>
     <div class="status-badge">Launch Mode · HELIX Cohort 2026</div>
     <h1>
-      We don't sell calm.<br>
-      We <span class="gradient">engineer the biological conditions</span> for it.
+      We don't sell feelings.<br>
+      We <span class="gradient">engineer the conditions that produce them.</span>
     </h1>
     <p class="hero-lead">
-      BAM is a <strong>structural method</strong> for nervous system regulation. We design, install, and license living systems — small ecosystems, polished stones, and bioactive habitats — that calm the human body at the point of contact.
+      BAM is a <strong>structural method</strong> for nervous system regulation. We design, install, and license living systems — small ecosystems, polished stones, and bioactive habitats — that regulate the human body at the point of contact.
     </p>
     <p class="hero-lead">
       Not therapy. Not a pet shop. <strong>Infrastructure for a stable nervous system</strong> — built for offices, clinics, and high-pressure workspaces.
@@ -1278,7 +388,7 @@
     </div>
   </header>
 
-  <!-- ============ THESIS ============ -->
+  <!-- THESIS -->
   <section id="thesis" class="fade-up">
     <div class="section-header">The Core Idea</div>
     <div class="grid-2">
@@ -1288,9 +398,8 @@
           The $6.8 trillion wellness industry is built on apps, journals, and willpower. It asks people to <em>think</em> their way out of stress. That does not work for most people.
         </p>
         <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; margin-top: 1rem;">
-          BAM takes a different path. We build <strong style="color: var(--text-main);">physical, living environments</strong> that calm the nervous system through the senses — without needing willpower. You do not have to try to be calm. The space does the work.
+          BAM takes a different path. We build <strong style="color: var(--text-main);">physical, living environments</strong> that regulate the nervous system through the senses — without needing willpower. You do not have to try to be calm. The space does the work.
         </p>
-
         <div class="plain-callout">
           <h4>IN PLAIN WORDS</h4>
           <p>You sit near a small living system. You watch it, care for it, touch a smooth stone. Your body slows down. This is the whole method. No complicated therapy. No prescriptions. Just a simple daily practice that anyone can learn in a few minutes.</p>
@@ -1307,7 +416,47 @@
     </div>
   </section>
 
-  <!-- ============ CATEGORY DESIGN ============ -->
+  <!-- HOW IT WORKS -->
+  <section id="how" class="fade-up">
+    <div class="section-header">How It Works</div>
+    <h2>Three pillars. Five minutes a day.</h2>
+    <p class="section-lead">
+      The Biophilic Anchor Method is a structured, sensory-first protocol. It does not require willpower, belief, or a quiet mind. It requires five minutes and a living system to observe.
+    </p>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-num">Pillar 01</div>
+        <div class="pillar-icon">◉</div>
+        <h3>Observe</h3>
+        <p>Watch your Biophilic Pet. No phone. No agenda. No judgment. Just two minutes of soft attention on movement, colour, and breath.</p>
+        <div class="pillar-time">2 minutes / day</div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">Pillar 02</div>
+        <div class="pillar-icon">◈</div>
+        <h3>Tend</h3>
+        <p>Mist, feed, remove waste, log one observation. A small, predictable ritual of care. Low dopamine. No crash. Just steady reward.</p>
+        <div class="pillar-time">3 minutes / day</div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">Pillar 03</div>
+        <div class="pillar-icon">◇</div>
+        <h3>Share</h3>
+        <p>Post one small win in the Anchor Club. No matter how small. Social acknowledgment — dopamine that does not come from substances.</p>
+        <div class="pillar-time">5 minutes / week</div>
+      </div>
+    </div>
+
+    <div class="plain-callout" style="margin-top: 3rem;">
+      <h4>WHY IT WORKS</h4>
+      <p>The brain has two reward systems. One spikes and crashes — that is the addiction loop. The other plateaus and holds — that is serotonin. BAM is designed to build the second. Small daily tending becomes a keystone habit that ripples into everything else. Over weeks, the nervous system learns a new baseline: low, steady, and self-sustaining.</p>
+    </div>
+  </section>
+
+  <!-- METHOD / COMPARISON -->
   <section id="method" class="fade-up">
     <div class="section-header">How We Are Different</div>
     <h2>The BAM Difference</h2>
@@ -1340,7 +489,7 @@
         <h3 style="color: var(--accent-bio);">The BAM Way</h3>
         <div class="comp-item">
           <h4>How It Works</h4>
-          <p>Uses touch, smell, sight, and sound to calm the body directly. No thinking required.</p>
+          <p>Uses touch, smell, sight, and sound to regulate the body directly. No thinking required.</p>
         </div>
         <div class="comp-item">
           <h4>The Tools</h4>
@@ -1358,7 +507,7 @@
     </div>
   </section>
 
-  <!-- ============ MEGA-CORP VISION ============ -->
+  <!-- MEGA-CORP VISION -->
   <section class="fade-up">
     <div class="section-header">Where This Grows</div>
     <h2>The Long-Term Vision</h2>
@@ -1372,7 +521,7 @@
         <h3>1. Enterprise Bio-Architecture</h3>
         <p>Built directly into commercial buildings and corporate headquarters to create <strong style="color: var(--text-main);">Zero-Entropy Spaces</strong>.</p>
         <div class="highlight-box">
-          <strong>How it works:</strong> Instead of a plant in the lobby, we install large self-sustaining aquatic systems using enterprise-grade filtration — built into the walls and HVAC systems of corporate offices to calm everyone who walks in.
+          <strong>How it works:</strong> Instead of a plant in the lobby, we install large self-sustaining aquatic systems using enterprise-grade filtration — built into the walls and HVAC systems of corporate offices to regulate everyone who walks in.
         </div>
       </div>
 
@@ -1381,7 +530,7 @@
         <h3>2. Tactical Ergonomics & Clinical</h3>
         <p>Combining risk reduction with nervous-system regulation for high-stress workers — intelligence analysts, traders, 911 dispatchers, and surgical teams.</p>
         <div class="highlight-box">
-          <strong>How it works:</strong> Desks with small built-in ecosystems and heavy tactile stone anchors. Passive calming without breaking focus.
+          <strong>How it works:</strong> Desks with small built-in ecosystems and heavy tactile stone anchors. Passive regulation without breaking focus.
         </div>
       </div>
 
@@ -1396,7 +545,7 @@
     </div>
   </section>
 
-  <!-- ============ MARKET ============ -->
+  <!-- MARKET -->
   <section id="market" class="fade-up">
     <div class="section-header">Market Opportunity</div>
     <h2>Three big markets. One product layer.</h2>
@@ -1425,7 +574,7 @@
     </div>
   </section>
 
-  <!-- ============ BUSINESS MODEL ============ -->
+  <!-- BUSINESS MODEL -->
   <section id="model" class="fade-up">
     <div class="section-header">Business Model</div>
     <h2>Three engines. No inventory risk. Recurring revenue.</h2>
@@ -1496,7 +645,7 @@
     </div>
   </section>
 
-  <!-- ============ TRACTION ============ -->
+  <!-- TRACTION -->
   <section id="traction" class="fade-up">
     <div class="section-header">Current Status</div>
     <h2>Where We Are Now</h2>
@@ -1543,12 +692,12 @@
     </div>
   </section>
 
-  <!-- ============ FOR INVESTORS ============ -->
+  <!-- FOR INVESTORS -->
   <section id="investors" class="fade-up">
     <div class="section-header">For Investors</div>
     <h2>Who We Are, In Numbers</h2>
     <p class="section-lead">
-      BAM is a bootstrapped company. We do not need equity investment to launch. We are looking for non-dilutive grants, in-kind partnerships, and clinical pilot opportunities. Below is a plain-English summary of the business for partners reviewing us.
+      BAM is a bootstrapped company. We do not need equity investment to launch. We are looking for non-dilutive grants, in-kind partnerships, and clinical pilot opportunities. Below is a plain-English summary for partners reviewing us.
     </p>
 
     <div class="investor-panel">
@@ -1556,10 +705,10 @@
         <div class="investor-summary">
           <h3>Summary for Review</h3>
           <p>
-            BAM is a method company. We design and install living bio-architectural systems that regulate the nervous system. The business has three revenue engines — media, community, and events — plus physical products and B2B licensing.
+            BAM reaches operational break-even at Month 10 with <strong style="color: var(--text-main);">$0 upfront capital</strong>. Costs stay low because we use a zero-cost supply chain (local stone yards, foraged materials) and pre-sell expo tables to fund events upfront.
           </p>
           <p>
-            Our costs are low because we use a zero-cost supply chain (local stone yards, foraged materials) and we pre-sell expo tables to fund events upfront. First-year revenue is projected at $3,250. By Year 3, we project $71,000 in revenue and about $56,000 in net profit.
+            Year 3 projections show $71,000 in revenue and $56,000 in net profit — funding the charity arm's first clinical programs. The model is deliberately capital-efficient: media builds awareness, community builds recurring revenue, and expos provide the large cash injections that fund everything else.
           </p>
 
           <div class="investor-facts">
@@ -1572,8 +721,12 @@
               <span class="value">Hybrid: for-profit + charity (in progress) + facilitator co-op</span>
             </div>
             <div class="investor-fact">
-              <span class="label">Year 1 Revenue</span>
-              <span class="value">~$3,250</span>
+              <span class="label">Break-Even</span>
+              <span class="value">Month 10</span>
+            </div>
+            <div class="investor-fact">
+              <span class="label">Upfront Capital Needed</span>
+              <span class="value">$0 — funded by vendor deposits and paid services</span>
             </div>
             <div class="investor-fact">
               <span class="label">Year 3 Revenue</span>
@@ -1584,12 +737,8 @@
               <span class="value">~$56,000</span>
             </div>
             <div class="investor-fact">
-              <span class="label">Break-Even</span>
-              <span class="value">Month 10</span>
-            </div>
-            <div class="investor-fact">
-              <span class="label">Upfront Capital Needed</span>
-              <span class="value">$0 — funded by vendor deposits and paid services</span>
+              <span class="label">Gross Margin</span>
+              <span class="value">80–97% on physical products</span>
             </div>
             <div class="investor-fact">
               <span class="label">Funding Sought</span>
@@ -1614,7 +763,7 @@
     </div>
   </section>
 
-  <!-- ============ FOUNDER ============ -->
+  <!-- FOUNDER -->
   <section id="founder" class="fade-up">
     <div class="section-header">Founder</div>
     <h2>The Architect</h2>
@@ -1649,23 +798,15 @@
 
         <div class="social-links">
           <a href="https://www.linkedin.com/in/anna-davidenko/" target="_blank" rel="noopener noreferrer" class="social-link linkedin" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
             <span>LinkedIn</span>
           </a>
-
           <a href="https://www.instagram.com/biophilic_anchor_method/" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             <span>Instagram</span>
           </a>
-
           <a href="https://www.facebook.com/anna.davidenko.27135" target="_blank" rel="noopener noreferrer" class="social-link facebook" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             <span>Facebook</span>
           </a>
         </div>
@@ -1673,7 +814,7 @@
     </div>
   </section>
 
-  <!-- ============ ROADMAP ============ -->
+  <!-- ROADMAP -->
   <section class="fade-up">
     <div class="section-header">Roadmap</div>
     <h2>18-Month Plan</h2>
@@ -1687,19 +828,16 @@
         <h4>Foundation</h4>
         <p>YouTube launch, Discord community, first 6 episodes, trademark filing, corporate structure set up.</p>
       </div>
-
       <div class="phase">
         <div class="phase-num">Phase 1 · Month 4–9</div>
         <h4>Growth</h4>
         <p>Paid tier launch, first 10 breeder/store features, Anchor Stone product line, first grants submitted.</p>
       </div>
-
       <div class="phase">
         <div class="phase-num">Phase 2 · Month 10–12</div>
         <h4>Cash Engine</h4>
         <p>Expo #1 hosted (net about $5,800), charity incorporated, first clinical pilot with a community partner.</p>
       </div>
-
       <div class="phase">
         <div class="phase-num">Phase 3 · Month 13–18</div>
         <h4>Scale</h4>
@@ -1708,12 +846,12 @@
     </div>
   </section>
 
-  <!-- ============ SUPPORT THE MISSION ============ -->
+  <!-- SUPPORT THE MISSION -->
   <section id="support" class="fade-up">
     <div class="section-header">Support the Mission</div>
     <h2>Every Dollar Builds Infrastructure</h2>
     <p class="section-lead">
-      BAM is bootstrapped. We do not take equity investment. Every dollar goes directly to the mission — free community access, clinical pilot programs, and the charity arm that brings this method to people in recovery. Here is what your support actually buys.
+      BAM is bootstrapped. We do not take equity investment. Every dollar goes directly to the mission — free community access, clinical pilot programs, and the charity arm that brings this method to people in recovery.
     </p>
 
     <div class="support-grid">
@@ -1744,7 +882,81 @@
     </div>
   </section>
 
-  <!-- ============ THE ASK ============ -->
+  <!-- PARTNER DOCUMENTS -->
+  <section id="partners" class="fade-up">
+    <div class="section-header">Partner Documents</div>
+    <h2>Contracts, Templates, and Downloads</h2>
+    <p class="section-lead">
+      BAM works with breeders, retailers, venues, and clinical partners. Below are the standard documents used across all engagements. Each is available for download ahead of any transaction or partnership discussion.
+    </p>
+
+    <div class="partner-grid">
+
+      <div class="partner-card">
+        <span class="partner-tag bio">Breeders</span>
+        <h3>Live Animal Purchase & Bill of Sale</h3>
+        <p>Standard transaction contract for any live animal purchase, with 48-hour inspection window, 7-day congenital health warranty, and refund policy.</p>
+        <a href="/documents/bam-bill-of-sale.pdf" class="partner-download" download>Download PDF →</a>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-tag bio">Breeders</span>
+        <h3>Breeding Loan & Co-Ownership</h3>
+        <p>Governs placing animals with another breeder. Covers clutch split, veterinary care responsibility, and return deadlines.</p>
+        <a href="/documents/bam-breeding-loan.pdf" class="partner-download" download>Download PDF →</a>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-tag bio">Retailers</span>
+        <h3>Consignment Agreement</h3>
+        <p>For placing animals or products in a physical store. Sets minimum payout, commission split, care responsibility, and return timeframe.</p>
+        <a href="/documents/bam-consignment.pdf" class="partner-download" download>Download PDF →</a>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-tag gold">Events</span>
+        <h3>Vendor Expo Application & Hold-Harmless</h3>
+        <p>Required for every vendor at a Biophilic Expo. Assumes full liability for animals, prohibits venomous and giant constrictor species.</p>
+        <a href="/documents/bam-vendor-application.pdf" class="partner-download" download>Download PDF →</a>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-tag gold">Clients</span>
+        <h3>In-Home Setup Waiver</h3>
+        <p>For on-site tank setup services. Covers property damage, animal health after handover, and allergy disclosure.</p>
+        <a href="/documents/bam-setup-waiver.pdf" class="partner-download" download>Download PDF →</a>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-tag gold">Clients</span>
+        <h3>Consultation Disclaimer</h3>
+        <p>Included with every paid consultation. States that BAM is not a veterinary or medical service and that advice is not a substitute for professional care.</p>
+        <a href="/documents/bam-consultation-disclaimer.pdf" class="partner-download" download>Download PDF →</a>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-tag">Investors</span>
+        <h3>Investor Deck</h3>
+        <p>Full business plan, financial model, market analysis, and founder credentials. Available on request for verified investors and grant officers.</p>
+        <a href="mailto:info_BAM@pm.me?subject=Investor%20Deck%20Request" class="partner-download">Request by Email →</a>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-tag">Partners</span>
+        <h3>Clinical Pilot MOU</h3>
+        <p>Memorandum of Understanding template for community health organizations, rehab centres, and clinical partners running a BAM pilot program.</p>
+        <a href="mailto:info_BAM@pm.me?subject=Clinical%20Pilot%20MOU%20Request" class="partner-download">Request by Email →</a>
+      </div>
+
+    </div>
+
+    <div class="plain-callout" style="margin-top: 3rem;">
+      <h4>ABOUT THESE DOCUMENTS</h4>
+      <p>All contracts are templates and must be reviewed by a licensed lawyer before execution in any specific jurisdiction. BAM is a Canadian company. Contracts are governed by Ontario law unless otherwise stated. For U.S. or international partners, additional riders may apply.</p>
+    </div>
+  </section>
+
+  <!-- THE ASK -->
   <section id="ask" class="fade-up">
     <div class="section-header">What We Need</div>
     <div class="ask-card">
@@ -1754,12 +966,8 @@
       </p>
 
       <div class="cta-row">
-        <a href="mailto:info_BAM@pm.me" class="btn btn-primary">
-          Request the Full Business Plan →
-        </a>
-        <a href="mailto:info_BAM@pm.me?subject=HELIX%20Intro%20Call" class="btn btn-ghost">
-          Schedule a Conversation
-        </a>
+        <a href="mailto:info_BAM@pm.me" class="btn btn-primary">Request the Full Business Plan →</a>
+        <a href="mailto:info_BAM@pm.me?subject=HELIX%20Intro%20Call" class="btn btn-ghost">Schedule a Conversation</a>
       </div>
 
       <div class="ask-details">
@@ -1787,7 +995,7 @@
     </div>
   </section>
 
-  <!-- ============ FAQ ============ -->
+  <!-- FAQ -->
   <section class="fade-up">
     <div class="section-header">Common Questions</div>
     <h2>FAQ</h2>
@@ -1820,36 +1028,85 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
+  <section id="contact" class="fade-up">
+    <div class="section-header">Contact</div>
+    <h2>Get in Touch</h2>
+    <p class="section-lead">
+      For investor inquiries, clinical partnerships, breeder collaborations, or press requests — reach out directly. We respond to all serious messages within 2 business days.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Direct Contact</h3>
+        <div class="contact-item">
+          <span class="label">Email</span>
+          <span class="value"><a href="mailto:info_BAM@pm.me">info_BAM@pm.me</a></span>
+        </div>
+        <div class="contact-item">
+          <span class="label">Parent Co.</span>
+          <span class="value"><a href="https://www.ksi-intel.com/" target="_blank" rel="noopener noreferrer">Karma Strategic Intelligence Inc.</a></span>
+        </div>
+        <div class="contact-item">
+          <span class="label">Location</span>
+          <span class="value">Midhurst, Ontario, Canada</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">Service Area</span>
+          <span class="value">Simcoe County & Greater Toronto Area</span>
+        </div>
+        <div class="contact-note">
+          For donor inquiries: please include "Donation" in the subject line. For investor deck requests: include your name, organization, and purpose of review.
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Follow the Work</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.7;">
+          The best way to follow BAM is through our social channels. We post weekly on Instagram, share long-form updates on LinkedIn, and announce new programs on Facebook.
+        </p>
+
+        <div class="social-links-compact" style="margin-top: 1rem;">
+          <a href="https://www.linkedin.com/in/anna-davidenko/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/biophilic_anchor_method/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/anna.davidenko.27135" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+
+        <div class="contact-note" style="margin-top: 2rem;">
+          Prefer email? Send directly to <a href="mailto:info_BAM@pm.me" style="color: var(--accent-bio); text-decoration: none;">info_BAM@pm.me</a> with a subject line describing your inquiry.
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
-<!-- ============ FOOTER ============ -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#" class="logo">
           <img src="2bam.png" alt="BAM Logo" class="logo-img">
-          <span class="logo-text">
-            BAM<span class="sep">//</span>Biophilic Anchor Method
-          </span>
+          <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
         </a>
         <p>Enterprise bio-architecture and nervous-system regulation. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario. Serving Simcoe County and the Greater Toronto Area.</p>
 
         <div class="social-links-compact">
           <a href="https://www.linkedin.com/in/anna-davidenko/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
           </a>
           <a href="https://www.instagram.com/biophilic_anchor_method/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
           <a href="https://www.facebook.com/anna.davidenko.27135" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
         </div>
       </div>
@@ -1857,26 +1114,45 @@
       <div class="footer-col">
         <h5>Company</h5>
         <a href="#thesis">Core Idea</a>
-        <a href="#method">How We Are Different</a>
+        <a href="#how">How It Works</a>
         <a href="#market">Market</a>
         <a href="#model">Business Model</a>
         <a href="#traction">Current Status</a>
       </div>
 
       <div class="footer-col">
-        <h5>Connect</h5>
-        <a href="mailto:info_BAM@pm.me">info_BAM@pm.me</a>
-        <a href="https://www.ksi-intel.com/" target="_blank" rel="noopener noreferrer">Parent Entity: KSI</a>
+        <h5>Engage</h5>
         <a href="#investors">For Investors</a>
         <a href="#support">Support the Mission</a>
+        <a href="#partners">Partner Documents</a>
         <a href="#ask">What We Need</a>
-        <a href="#founder">Founder</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Legal & Ethics</h5>
+        <a href="/ethics.html">Ethics Charter</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div>© 2026 Karma Strategic Intelligence Inc. · Federal Corp #1001472307</div>
-      <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
+      <div class="footer-legal-links">
+        <a href="/ethics.html">Ethics Charter</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+        <a href="mailto:info_BAM@pm.me">info_BAM@pm.me</a>
+      </div>
+
+      <div class="footer-disclaimer">
+        <strong style="color: var(--text-muted);">Wellness Disclaimer:</strong> BAM is a peer-supported wellness practice, not a licensed medical, psychological, or veterinary provider. Nothing on this site constitutes medical advice. Animals carry naturally occurring bacteria — always follow the hygiene protocol. Consult a qualified professional for any health concern.
+      </div>
+
+      <div class="footer-copyright">
+        <div>© 2026 Karma Strategic Intelligence Inc. · Federal Corp #1001472307</div>
+        <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
+      </div>
     </div>
   </div>
 </footer>
