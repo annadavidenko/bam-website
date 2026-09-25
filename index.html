@@ -109,7 +109,6 @@
       color: var(--text-main);
     }
 
-    /* Logo image styling — used in both nav and footer */
     .logo-img {
       width: 44px;
       height: 44px;
@@ -141,7 +140,7 @@
 
     .nav-links {
       display: flex;
-      gap: 1.75rem;
+      gap: 1.5rem;
       font-size: 0.85rem;
     }
 
@@ -235,7 +234,6 @@
       font-weight: 600;
     }
 
-    /* Hero metrics strip */
     .metrics-strip {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -314,7 +312,6 @@
       line-height: 1.7;
     }
 
-    /* ============ GRIDS ============ */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -327,7 +324,6 @@
       gap: 1.5rem;
     }
 
-    /* ============ CARDS ============ */
     .card {
       background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%);
       border: 1px solid var(--border-color);
@@ -411,7 +407,6 @@
       font-weight: 600;
     }
 
-    /* ============ PLAIN LANGUAGE CALLOUT ============ */
     .plain-callout {
       background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(59, 130, 246, 0.06) 100%);
       border: 1px solid rgba(16, 185, 129, 0.25);
@@ -436,7 +431,6 @@
       margin: 0;
     }
 
-    /* ============ COMPARISON ============ */
     .comparison-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -495,7 +489,6 @@
 
     .comp-col.new .comp-item p { color: #d1d5db; }
 
-    /* ============ TRACTION ============ */
     .traction-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -545,7 +538,6 @@
       line-height: 1.55;
     }
 
-    /* ============ FOUNDER ============ */
     .founder-card {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -585,7 +577,6 @@
       z-index: 1;
     }
 
-    /* Fallback initials shown behind the image if it fails to load */
     .founder-avatar::before {
       content: 'AD';
       position: absolute;
@@ -600,7 +591,6 @@
       z-index: 0;
     }
 
-    /* Subtle inner ring for cohesion with the dark theme */
     .founder-avatar::after {
       content: '';
       position: absolute;
@@ -650,7 +640,6 @@
       font-weight: 500;
     }
 
-    /* ============ SOCIAL LINKS ============ */
     .social-links {
       display: flex;
       gap: 0.75rem;
@@ -710,7 +699,6 @@
       background: rgba(24, 119, 242, 0.08);
     }
 
-    /* Compact icon-only variant for footer */
     .social-links-compact {
       display: flex;
       gap: 0.6rem;
@@ -765,7 +753,6 @@
       box-shadow: 0 8px 20px -10px rgba(24, 119, 242, 0.6);
     }
 
-    /* ============ ROADMAP ============ */
     .roadmap {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -809,7 +796,101 @@
       line-height: 1.6;
     }
 
-    /* ============ ASK ============ */
+    /* ============ SUPPORT THE MISSION ============ */
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .support-card {
+      background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 2rem;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+    }
+
+    .support-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-tech), var(--accent-bio));
+      opacity: 0.6;
+    }
+
+    .support-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(16, 185, 129, 0.4);
+      box-shadow: 0 20px 40px -20px var(--accent-bio-glow);
+    }
+
+    .support-amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fff 0%, var(--accent-bio) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .support-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.6rem;
+    }
+
+    .support-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .support-cta {
+      text-align: center;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .support-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.12), transparent 60%);
+      pointer-events: none;
+    }
+
+    .support-cta .btn {
+      position: relative;
+    }
+
+    .support-note {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
     .ask-card {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%);
       border: 1px solid rgba(59, 130, 246, 0.3);
@@ -916,7 +997,6 @@
       margin-top: 0.15rem;
     }
 
-    /* ============ INVESTOR SECTION ============ */
     .investor-panel {
       background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(10, 15, 24, 0.9) 100%);
       border: 1px solid var(--border-bright);
@@ -1023,7 +1103,6 @@
       line-height: 1.55;
     }
 
-    /* ============ FAQ ============ */
     .faq-item {
       border-bottom: 1px solid var(--border-color);
       padding: 1.5rem 0;
@@ -1044,7 +1123,6 @@
       line-height: 1.65;
     }
 
-    /* ============ FOOTER ============ */
     footer {
       background: var(--bg-panel);
       padding: 4rem 0 2.5rem;
@@ -1100,7 +1178,6 @@
       font-size: 0.75rem;
     }
 
-    /* ============ ANIMATIONS ============ */
     .fade-up {
       opacity: 0;
       transform: translateY(24px);
@@ -1112,7 +1189,6 @@
       transform: translateY(0);
     }
 
-    /* ============ RESPONSIVE ============ */
     @media (max-width: 900px) {
       .grid-2, .comparison-grid, .founder-card, .footer-grid, .investor-grid {
         grid-template-columns: 1fr;
@@ -1125,6 +1201,7 @@
       .investor-panel { padding: 2rem 1.5rem; }
       .investor-fact { flex-direction: column; gap: 0.35rem; }
       .investor-fact .label { min-width: 0; }
+      .support-cta { padding: 2rem 1.5rem; }
     }
 
     @media (max-width: 600px) {
@@ -1139,6 +1216,7 @@
       .social-link { padding: 0.55rem 0.85rem; font-size: 0.75rem; }
       .social-link svg { width: 16px; height: 16px; }
       .plain-callout { padding: 1.25rem 1.5rem; }
+      .support-amount { font-size: 2rem; }
     }
   </style>
 </head>
@@ -1160,6 +1238,7 @@
       <a href="#market">Market</a>
       <a href="#model">Model</a>
       <a href="#investors">Investors</a>
+      <a href="#support">Support</a>
       <a href="#founder">Founder</a>
       <a href="#ask" class="nav-cta">The Ask</a>
     </div>
@@ -1568,7 +1647,6 @@
           <span class="credential">Forensic Intelligence Analyst</span>
         </div>
 
-        <!-- Social Links -->
         <div class="social-links">
           <a href="https://www.linkedin.com/in/anna-davidenko/" target="_blank" rel="noopener noreferrer" class="social-link linkedin" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -1627,6 +1705,42 @@
         <h4>Scale</h4>
         <p>Expo #2, Certified Facilitator program, white-label B2B licensing, 20+ episodes, $25K+ cumulative revenue.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ SUPPORT THE MISSION ============ -->
+  <section id="support" class="fade-up">
+    <div class="section-header">Support the Mission</div>
+    <h2>Every Dollar Builds Infrastructure</h2>
+    <p class="section-lead">
+      BAM is bootstrapped. We do not take equity investment. Every dollar goes directly to the mission — free community access, clinical pilot programs, and the charity arm that brings this method to people in recovery. Here is what your support actually buys.
+    </p>
+
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-amount">$10</div>
+        <div class="support-title">Supplies one Anchor Stone</div>
+        <p>A hand-polished limestone stone for a recovery program participant. Includes the mindfulness guide and ritual card.</p>
+      </div>
+      <div class="support-card">
+        <div class="support-amount">$50</div>
+        <div class="support-title">Funds a week of Anchor Club</div>
+        <p>Free community access for one member — weekly wins, accountability pairs, live Q&As, and the full blueprint library.</p>
+      </div>
+      <div class="support-card">
+        <div class="support-amount">$250</div>
+        <div class="support-title">Sponsors a Desktop Sanctuary</div>
+        <p>A complete bioactive jar for a clinical pilot participant. Sealed moss ecosystem, springtails, Anchor Stone, and printed guide. Materials only — no overhead.</p>
+      </div>
+    </div>
+
+    <div class="support-cta">
+      <a href="https://ko-fi.com/biophilic_anchor_method/goal?g=0" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Donate on Ko-fi →
+      </a>
+      <p class="support-note">
+        Donations processed securely through Ko-fi. Every gift goes to the mission. Charitable tax receipts will be available once the Biophilic Anchor Foundation receives CRA charitable status.
+      </p>
     </div>
   </section>
 
@@ -1721,7 +1835,6 @@
         </a>
         <p>Enterprise bio-architecture and nervous-system regulation. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario. Serving Simcoe County and the Greater Toronto Area.</p>
 
-        <!-- Footer social icons -->
         <div class="social-links-compact">
           <a href="https://www.linkedin.com/in/anna-davidenko/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -1755,6 +1868,7 @@
         <a href="mailto:info_BAM@pm.me">info_BAM@pm.me</a>
         <a href="https://www.ksi-intel.com/" target="_blank" rel="noopener noreferrer">Parent Entity: KSI</a>
         <a href="#investors">For Investors</a>
+        <a href="#support">Support the Mission</a>
         <a href="#ask">What We Need</a>
         <a href="#founder">Founder</a>
       </div>
@@ -1768,7 +1882,6 @@
 </footer>
 
 <script>
-  // Fade-up on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1779,7 +1892,6 @@
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Smooth scroll for nav links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
