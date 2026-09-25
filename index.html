@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BAM | Enterprise Bio-Architecture & Autonomic Regulation</title>
   <meta name="description" content="BAM engineers living bio-architectural systems that regulate the human nervous system. Structural wellness infrastructure for enterprise, clinical, and luxury environments.">
-  <meta name="theme-color" content="#0a0f18">
+  <meta name="theme-color" content="#060910">
 
   <!-- Open Graph for investor link previews -->
   <meta property="og:title" content="BAM | Enterprise Bio-Architecture">
@@ -76,6 +76,7 @@
       pointer-events: none;
       z-index: 0;
       mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
     }
 
     .container {
@@ -86,19 +87,14 @@
       z-index: 1;
     }
 
-    /* ============ HEADER / HERO ============ */
-    header {
-      padding: 3rem 0 5rem;
-      position: relative;
-    }
-
+    /* ============ NAV ============ */
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 5rem;
-      padding-bottom: 1.5rem;
+      padding: 2.5rem 0 1.5rem;
       border-bottom: 1px solid var(--border-color);
+      margin-bottom: 5rem;
     }
 
     .logo {
@@ -106,8 +102,8 @@
       align-items: center;
       gap: 0.75rem;
       font-weight: 800;
-      letter-spacing: 0.05em;
-      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      font-size: 0.95rem;
     }
 
     .logo-mark {
@@ -127,7 +123,7 @@
     .nav-links {
       display: flex;
       gap: 2rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .nav-links a {
@@ -139,13 +135,19 @@
 
     .nav-links a:hover { color: var(--accent-bio); }
 
+    /* ============ HERO ============ */
+    header {
+      padding-bottom: 5rem;
+      position: relative;
+    }
+
     .status-badge {
       display: inline-block;
       background: rgba(16, 185, 129, 0.08);
       color: var(--accent-bio);
       padding: 0.4rem 1rem;
       border-radius: 999px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -189,10 +191,10 @@
     }
 
     .hero-lead {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
       max-width: 720px;
-      margin-bottom: 3rem;
+      margin-bottom: 1.25rem;
       line-height: 1.7;
     }
 
@@ -206,7 +208,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1.5rem;
-      margin-top: 3rem;
+      margin-top: 3.5rem;
       padding-top: 3rem;
       border-top: 1px solid var(--border-color);
     }
@@ -225,10 +227,11 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      line-height: 1.1;
     }
 
     .metric-label {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 1.2px;
       color: var(--text-dim);
@@ -243,7 +246,7 @@
     }
 
     .section-header {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 2.5px;
       color: var(--accent-tech);
@@ -274,7 +277,7 @@
     .section-lead {
       color: var(--text-muted);
       max-width: 780px;
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       margin-bottom: 3rem;
       line-height: 1.7;
     }
@@ -290,11 +293,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
-    }
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
     }
 
     /* ============ CARDS ============ */
@@ -351,11 +349,13 @@
       margin-bottom: 1.25rem;
       background: rgba(59, 130, 246, 0.1);
       border: 1px solid rgba(59, 130, 246, 0.2);
+      color: var(--accent-tech);
     }
 
     .card.bio .card-icon {
       background: rgba(16, 185, 129, 0.1);
       border-color: rgba(16, 185, 129, 0.2);
+      color: var(--accent-bio);
     }
 
     .highlight-box {
@@ -379,7 +379,7 @@
       font-weight: 600;
     }
 
-    /* ============ COMPARISON GRID ============ */
+    /* ============ COMPARISON ============ */
     .comparison-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -402,7 +402,6 @@
     }
 
     .comp-col h3 {
-      font-size: 1.1rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin-bottom: 2rem;
@@ -439,10 +438,10 @@
 
     .comp-col.new .comp-item p { color: #d1d5db; }
 
-    /* ============ TRACTION / FUNDING ============ */
+    /* ============ TRACTION ============ */
     .traction-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
     }
 
@@ -480,6 +479,7 @@
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: var(--text-main);
+      padding-right: 5rem;
     }
 
     .traction-item p {
@@ -523,7 +523,7 @@
 
     .founder-role {
       color: var(--accent-bio);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -534,17 +534,18 @@
       color: var(--text-muted);
       font-size: 0.95rem;
       line-height: 1.7;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .credential-list {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
+      margin-top: 1.5rem;
     }
 
     .credential {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       padding: 0.4rem 0.8rem;
       background: rgba(59, 130, 246, 0.08);
       border: 1px solid rgba(59, 130, 246, 0.2);
@@ -556,7 +557,7 @@
     /* ============ ROADMAP ============ */
     .roadmap {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
       margin-top: 2rem;
     }
@@ -575,7 +576,7 @@
     }
 
     .phase-num {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -597,7 +598,7 @@
       line-height: 1.6;
     }
 
-    /* ============ ASK / CTA ============ */
+    /* ============ ASK ============ */
     .ask-card {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%);
       border: 1px solid rgba(59, 130, 246, 0.3);
@@ -673,6 +674,37 @@
       border-color: var(--text-muted);
     }
 
+    .ask-details {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+      position: relative;
+    }
+
+    .ask-detail-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .ask-detail-value {
+      font-weight: 700;
+      margin-top: 0.35rem;
+      font-size: 0.95rem;
+    }
+
+    .ask-detail-sub {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-top: 0.15rem;
+    }
+
     /* ============ FAQ ============ */
     .faq-item {
       border-bottom: 1px solid var(--border-color);
@@ -714,12 +746,12 @@
       color: var(--text-muted);
       font-size: 0.85rem;
       margin-top: 1rem;
-      max-width: 320px;
+      max-width: 340px;
       line-height: 1.6;
     }
 
     .footer-col h5 {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: var(--text-dim);
@@ -747,7 +779,7 @@
       flex-wrap: wrap;
       gap: 1rem;
       color: var(--text-dim);
-      font-size: 0.78rem;
+      font-size: 0.75rem;
     }
 
     /* ============ ANIMATIONS ============ */
@@ -764,8 +796,10 @@
 
     /* ============ RESPONSIVE ============ */
     @media (max-width: 900px) {
-      .grid-2, .comparison-grid, .founder-card { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .grid-2, .comparison-grid, .founder-card, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid { gap: 2rem; }
       .nav-links { display: none; }
       .founder-avatar { max-width: 160px; }
       section { padding: 4rem 0; }
@@ -776,6 +810,7 @@
       .container { padding: 0 1.25rem; }
       .metrics-strip { grid-template-columns: 1fr 1fr; gap: 1rem; }
       .metric-value { font-size: 1.5rem; }
+      .nav { padding: 1.5rem 0 1rem; margin-bottom: 3rem; }
     }
   </style>
 </head>
@@ -810,26 +845,26 @@
     <p class="hero-lead">
       BAM is a <strong>structural methodology</strong> for autonomic regulation. We design, deploy, and license living bio-architectural systems — micro-ecosystems, geological tactile anchors, and bioactive habitats — that regulate the human nervous system at the point of contact.
     </p>
-    <p class="hero-lead" style="margin-top: -1.5rem;">
+    <p class="hero-lead">
       Not therapy. Not a pet channel. <strong>Infrastructure for nervous system stability</strong> — engineered for enterprise, clinical, and high-stakes environments.
     </p>
 
     <div class="metrics-strip">
       <div class="metric">
-        <div class="metric-value" data-count="10">$0T</div>
+        <div class="metric-value">$10T</div>
         <div class="metric-label">Wellness Market by 2029</div>
       </div>
       <div class="metric">
-        <div class="metric-value">3</div>
-        <div class="metric-label">Revenue Engines</div>
+        <div class="metric-value">80–97%</div>
+        <div class="metric-label">Gross Margins</div>
       </div>
       <div class="metric">
-        <div class="metric-value">95%</div>
-        <div class="metric-label">Efficacy Rate</div>
+        <div class="metric-value">M10</div>
+        <div class="metric-label">Projected Break-Even</div>
       </div>
       <div class="metric">
-        <div class="metric-value">0</div>
-        <div class="metric-label">Inventory Risk</div>
+        <div class="metric-value">$0</div>
+        <div class="metric-label">Upfront Capital Required</div>
       </div>
     </div>
   </header>
@@ -1178,26 +1213,26 @@
         </a>
       </div>
 
-      <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-color); display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; text-align: left; position: relative;">
+      <div class="ask-details">
         <div>
-          <div class="metric-label">Target Grant</div>
-          <div style="font-weight: 700; margin-top: 0.35rem;">Starter Company Plus</div>
-          <div style="font-size: 0.8rem; color: var(--text-dim);">$5,000 · Apply Month 2</div>
+          <div class="ask-detail-label">Target Grant</div>
+          <div class="ask-detail-value">Starter Company Plus</div>
+          <div class="ask-detail-sub">$5,000 · Apply Month 2</div>
         </div>
         <div>
-          <div class="metric-label">Target Grant</div>
-          <div style="font-weight: 700; margin-top: 0.35rem;">Ontario Trillium Foundation</div>
-          <div style="font-size: 0.8rem; color: var(--text-dim);">$10K–$25K · Apply Year 2</div>
+          <div class="ask-detail-label">Target Grant</div>
+          <div class="ask-detail-value">Ontario Trillium Foundation</div>
+          <div class="ask-detail-sub">$10K–$25K · Apply Year 2</div>
         </div>
         <div>
-          <div class="metric-label">Partnership</div>
-          <div style="font-weight: 700; margin-top: 0.35rem;">Clinical Pilot</div>
-          <div style="font-size: 0.8rem; color: var(--text-dim);">CMHA Simcoe / Youth Haven</div>
+          <div class="ask-detail-label">Partnership</div>
+          <div class="ask-detail-value">Clinical Pilot</div>
+          <div class="ask-detail-sub">CMHA Simcoe / Youth Haven</div>
         </div>
         <div>
-          <div class="metric-label">Partnership</div>
-          <div style="font-weight: 700; margin-top: 0.35rem;">Corporate Wellness</div>
-          <div style="font-size: 0.8rem; color: var(--text-dim);">5 local businesses · $10K+ contract</div>
+          <div class="ask-detail-label">Partnership</div>
+          <div class="ask-detail-value">Corporate Wellness</div>
+          <div class="ask-detail-sub">5 local businesses · $10K+ contract</div>
         </div>
       </div>
     </div>
