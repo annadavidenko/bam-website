@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAM | Enterprise Bio-Architecture & Autonomic Regulation</title>
-  <meta name="description" content="BAM engineers living bio-architectural systems that regulate the human nervous system. Structural wellness infrastructure for enterprise, clinical, and luxury environments.">
-  <meta name="theme-color" content="#060910">
+  <title>BAM | Nervous System Regulation Through Living Systems</title>
+  <meta name="description" content="Nervous system regulation, engineered through living systems. Custom-matched plants, polished minerals, peaceful reptiles, and curious insects inside a bioactive ecosystem. Any age. Any stage. Real change.">
+  <meta name="theme-color" content="#0a0d12">
 
-  <meta property="og:title" content="BAM | Enterprise Bio-Architecture">
-  <meta property="og:description" content="We don't sell feelings. We engineer the conditions that produce them.">
+  <meta property="og:title" content="BAM | Nervous System Regulation Through Living Systems">
+  <meta property="og:description" content="Custom-matched plants, polished minerals, peaceful reptiles, and curious insects. Any age. Any stage. Real change.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/2bam.png">
 
@@ -20,8 +20,8 @@
 
   <style>
     :root {
-      --bg-dark: #060910;
-      --bg-panel: #111827;
+      --bg-dark: #0a0d12;
+      --bg-panel: #131a24;
       --text-main: #f3f4f6;
       --text-muted: #9ca3af;
       --text-dim: #6b7280;
@@ -30,7 +30,7 @@
       --accent-tech: #3b82f6;
       --accent-tech-glow: rgba(59, 130, 246, 0.4);
       --accent-gold: #f59e0b;
-      --border-color: #1f2937;
+      --border-color: #1c2530;
       --border-bright: #374151;
     }
 
@@ -52,8 +52,8 @@
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(circle at 20% 10%, rgba(59, 130, 246, 0.08), transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.06), transparent 45%);
+        radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.10), transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.07), transparent 50%);
       pointer-events: none;
       z-index: 0;
     }
@@ -63,8 +63,8 @@
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
       z-index: 0;
@@ -75,7 +75,7 @@
     .container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
 
     /* NAV */
-    .nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0 1.5rem; border-bottom: 1px solid var(--border-color); margin-bottom: 5rem; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1.75rem 0 1.5rem; border-bottom: 1px solid var(--border-color); margin-bottom: 4rem; }
     .logo { display: flex; align-items: center; gap: 0.85rem; font-weight: 800; letter-spacing: 0.03em; font-size: 0.95rem; text-decoration: none; color: var(--text-main); }
     .logo-img { width: 44px; height: 44px; object-fit: contain; display: block; flex-shrink: 0;
       filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.35)) drop-shadow(0 0 4px rgba(59, 130, 246, 0.25));
@@ -92,15 +92,28 @@
 
     /* HERO */
     header { padding-bottom: 5rem; position: relative; }
-    .status-badge { display: inline-block; background: rgba(16, 185, 129, 0.08); color: var(--accent-bio); padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2rem; border: 1px solid rgba(16, 185, 129, 0.25); backdrop-filter: blur(8px); }
+    .status-badge { display: inline-block; background: rgba(16, 185, 129, 0.10); color: var(--accent-bio); padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.75rem; border: 1px solid rgba(16, 185, 129, 0.28); backdrop-filter: blur(8px); }
     .status-badge::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-bio); margin-right: 0.5rem; box-shadow: 0 0 8px var(--accent-bio); animation: pulse 2s ease-in-out infinite; vertical-align: middle; }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-    h1 { font-size: clamp(2.5rem, 6vw, 4.25rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.035em; margin-bottom: 1.75rem; max-width: 900px; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.25rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.035em; margin-bottom: 2rem; max-width: 900px; }
     h1 span.gradient { background: linear-gradient(135deg, var(--accent-tech) 0%, var(--accent-bio) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-    .hero-lead { font-size: 1.15rem; color: var(--text-muted); max-width: 720px; margin-bottom: 1.25rem; line-height: 1.7; }
+    .hero-lead { font-size: 1.2rem; color: var(--text-muted); max-width: 820px; margin-bottom: 1.25rem; line-height: 1.7; }
     .hero-lead strong { color: var(--text-main); font-weight: 600; }
+
+    .hero-outcome {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+      max-width: 820px;
+      margin-top: 2rem;
+      letter-spacing: -0.01em;
+      background: linear-gradient(135deg, #ffffff 0%, var(--accent-bio) 120%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
     .metrics-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid var(--border-color); }
     .metric { display: flex; flex-direction: column; gap: 0.35rem; }
@@ -117,10 +130,8 @@
 
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
 
-    /* CARDS */
-    .card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; backdrop-filter: blur(12px); }
+    .card { background: linear-gradient(180deg, rgba(28, 37, 48, 0.8) 0%, rgba(19, 26, 36, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; backdrop-filter: blur(12px); }
     .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent); opacity: 0; transition: opacity 0.3s; }
     .card:hover { transform: translateY(-4px); border-color: var(--border-bright); box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3); }
     .card:hover::before { opacity: 1; }
@@ -137,9 +148,8 @@
     .plain-callout h4 { font-size: 0.95rem; font-weight: 700; color: var(--accent-bio); margin-bottom: 0.75rem; letter-spacing: 0.5px; }
     .plain-callout p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0; }
 
-    /* HOW IT WORKS — PILLARS */
     .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .pillar-card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.7) 0%, rgba(17, 24, 39, 0.7) 100%); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.25rem 2rem; text-align: left; position: relative; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+    .pillar-card { background: linear-gradient(180deg, rgba(28, 37, 48, 0.7) 0%, rgba(19, 26, 36, 0.7) 100%); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.25rem 2rem; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
     .pillar-card:hover { transform: translateY(-4px); border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 20px 40px -20px var(--accent-bio-glow); }
     .pillar-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-tech); margin-bottom: 1.5rem; }
     .pillar-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.5rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); color: var(--accent-bio); }
@@ -147,10 +157,9 @@
     .pillar-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-top: 0.75rem; }
     .pillar-time { display: inline-block; margin-top: 1.25rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: var(--accent-bio); background: rgba(16, 185, 129, 0.08); padding: 0.35rem 0.85rem; border-radius: 999px; border: 1px solid rgba(16, 185, 129, 0.2); }
 
-    /* COMPARISON */
     .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-    .comp-col { background: rgba(17, 24, 39, 0.6); padding: 2.25rem; border-radius: 14px; border: 1px solid var(--border-color); backdrop-filter: blur(12px); }
-    .comp-col.new { border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, rgba(17, 24, 39, 0.6) 100%); box-shadow: 0 0 60px -30px var(--accent-bio-glow); }
+    .comp-col { background: rgba(19, 26, 36, 0.6); padding: 2.25rem; border-radius: 14px; border: 1px solid var(--border-color); backdrop-filter: blur(12px); }
+    .comp-col.new { border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, rgba(19, 26, 36, 0.6) 100%); box-shadow: 0 0 60px -30px var(--accent-bio-glow); }
     .comp-col h3 { text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 2rem; font-size: 0.85rem; font-weight: 700; }
     .comp-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); }
     .comp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
@@ -158,7 +167,6 @@
     .comp-item p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
     .comp-col.new .comp-item p { color: #d1d5db; }
 
-    /* TRACTION */
     .traction-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
     .traction-item { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.75rem; position: relative; }
     .traction-item .tag { position: absolute; top: 1rem; right: 1rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(16, 185, 129, 0.1); color: var(--accent-bio); border: 1px solid rgba(16, 185, 129, 0.2); }
@@ -166,9 +174,8 @@
     .traction-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main); padding-right: 5rem; }
     .traction-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
 
-    /* FOUNDER */
-    .founder-card { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: start; padding: 3rem; background: linear-gradient(135deg, rgba(26, 35, 50, 0.6) 0%, rgba(17, 24, 39, 0.4) 100%); border: 1px solid var(--border-color); border-radius: 16px; backdrop-filter: blur(12px); }
-    .founder-avatar { width: 100%; aspect-ratio: 1; border-radius: 14px; position: relative; overflow: hidden; background: linear-gradient(135deg, var(--accent-tech), var(--accent-bio)); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; font-weight: 900; color: #fff; letter-spacing: -0.05em; box-shadow: 0 20px 60px -20px var(--accent-tech-glow); }
+    .founder-card { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: start; padding: 3rem; background: linear-gradient(135deg, rgba(28, 37, 48, 0.6) 0%, rgba(19, 26, 36, 0.4) 100%); border: 1px solid var(--border-color); border-radius: 16px; backdrop-filter: blur(12px); }
+    .founder-avatar { width: 100%; aspect-ratio: 1; border-radius: 14px; position: relative; overflow: hidden; background: linear-gradient(135deg, var(--accent-tech), var(--accent-bio)); display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px -20px var(--accent-tech-glow); }
     .founder-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.98) contrast(1.03) brightness(0.98); position: relative; z-index: 1; }
     .founder-avatar::before { content: 'AD'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; font-weight: 900; color: #fff; letter-spacing: -0.05em; z-index: 0; }
     .founder-avatar::after { content: ''; position: absolute; inset: 0; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.3); pointer-events: none; z-index: 2; }
@@ -178,7 +185,6 @@
     .credential-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
     .credential { font-size: 0.72rem; padding: 0.4rem 0.8rem; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 6px; color: #bfdbfe; font-weight: 500; }
 
-    /* SOCIAL */
     .social-links { display: flex; gap: 0.75rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; }
     .social-link { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.65rem 1rem; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-bright); border-radius: 10px; color: var(--text-muted); text-decoration: none; font-size: 0.82rem; font-weight: 600; transition: all 0.25s ease; }
     .social-link svg { width: 18px; height: 18px; flex-shrink: 0; transition: transform 0.25s ease; }
@@ -197,7 +203,6 @@
     .social-icon.instagram:hover { border-color: #e1306c; background: rgba(225, 48, 108, 0.08); box-shadow: 0 8px 20px -10px rgba(225, 48, 108, 0.5); }
     .social-icon.facebook:hover { border-color: #1877f2; background: rgba(24, 119, 242, 0.08); box-shadow: 0 8px 20px -10px rgba(24, 119, 242, 0.6); }
 
-    /* ROADMAP */
     .roadmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 2rem; }
     .phase { padding: 1.75rem; background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 12px; position: relative; }
     .phase.active { border-color: var(--accent-bio); background: linear-gradient(180deg, rgba(16, 185, 129, 0.06) 0%, var(--bg-panel) 100%); }
@@ -206,9 +211,8 @@
     .phase h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
     .phase p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
 
-    /* SUPPORT */
     .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 3rem; }
-    .support-card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; position: relative; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; backdrop-filter: blur(12px); overflow: hidden; }
+    .support-card { background: linear-gradient(180deg, rgba(28, 37, 48, 0.8) 0%, rgba(19, 26, 36, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; position: relative; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; backdrop-filter: blur(12px); overflow: hidden; }
     .support-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent-tech), var(--accent-bio)); opacity: 0.6; }
     .support-card:hover { transform: translateY(-4px); border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 20px 40px -20px var(--accent-bio-glow); }
     .support-amount { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; background: linear-gradient(135deg, #fff 0%, var(--accent-bio) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 0.75rem; }
@@ -219,9 +223,8 @@
     .support-cta .btn { position: relative; }
     .support-note { margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-dim); line-height: 1.6; max-width: 580px; margin-left: auto; margin-right: auto; position: relative; }
 
-    /* PARTNER DOCUMENTS */
     .partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
-    .partner-card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.7) 0%, rgba(17, 24, 39, 0.7) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+    .partner-card { background: linear-gradient(180deg, rgba(28, 37, 48, 0.7) 0%, rgba(19, 26, 36, 0.7) 100%); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
     .partner-card:hover { transform: translateY(-4px); border-color: var(--border-bright); box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3); }
     .partner-card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; }
     .partner-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.5rem; flex-grow: 1; }
@@ -231,9 +234,8 @@
     .partner-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--text-main); text-decoration: none; padding: 0.65rem 1rem; border: 1px solid var(--border-bright); border-radius: 8px; transition: all 0.2s; background: rgba(255, 255, 255, 0.02); align-self: flex-start; }
     .partner-download:hover { border-color: var(--accent-bio); color: var(--accent-bio); background: rgba(16, 185, 129, 0.05); }
 
-    /* CONTACT */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-    .contact-card { background: linear-gradient(180deg, rgba(26, 35, 50, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; backdrop-filter: blur(12px); }
+    .contact-card { background: linear-gradient(180deg, rgba(28, 37, 48, 0.8) 0%, rgba(19, 26, 36, 0.8) 100%); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; backdrop-filter: blur(12px); }
     .contact-card h3 { font-size: 1.15rem; margin-bottom: 1.25rem; color: var(--text-main); }
     .contact-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
     .contact-item:last-child { border-bottom: none; }
@@ -243,7 +245,6 @@
     .contact-item .value a:hover { text-decoration: underline; }
     .contact-note { margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(16, 185, 129, 0.05); border-left: 3px solid var(--accent-bio); border-radius: 0 8px 8px 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
 
-    /* ASK */
     .ask-card { background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 16px; padding: 3rem; text-align: center; position: relative; overflow: hidden; }
     .ask-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15), transparent 60%); pointer-events: none; }
     .ask-card h2 { position: relative; margin-bottom: 1rem; }
@@ -259,8 +260,7 @@
     .ask-detail-value { font-weight: 700; margin-top: 0.35rem; font-size: 0.95rem; }
     .ask-detail-sub { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.15rem; }
 
-    /* INVESTOR PANEL */
-    .investor-panel { background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(10, 15, 24, 0.9) 100%); border: 1px solid var(--border-bright); border-radius: 16px; padding: 3rem; position: relative; overflow: hidden; }
+    .investor-panel { background: linear-gradient(135deg, rgba(19, 26, 36, 0.9) 0%, rgba(10, 13, 18, 0.9) 100%); border: 1px solid var(--border-bright); border-radius: 16px; padding: 3rem; position: relative; overflow: hidden; }
     .investor-panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent-tech), var(--accent-bio)); }
     .investor-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: start; margin-top: 2rem; }
     .investor-summary h3 { font-size: 1.35rem; margin-bottom: 1rem; color: var(--text-main); }
@@ -269,19 +269,17 @@
     .investor-fact { display: flex; align-items: baseline; gap: 1rem; padding: 0.85rem 1rem; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 10px; }
     .investor-fact .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); font-weight: 600; min-width: 130px; flex-shrink: 0; }
     .investor-fact .value { font-size: 0.92rem; color: var(--text-main); font-weight: 600; }
-    .deck-download { background: linear-gradient(180deg, rgba(26, 35, 50, 0.6) 0%, rgba(17, 24, 39, 0.4) 100%); border: 1px solid var(--border-bright); border-radius: 14px; padding: 2.25rem; text-align: center; position: relative; }
+    .deck-download { background: linear-gradient(180deg, rgba(28, 37, 48, 0.6) 0%, rgba(19, 26, 36, 0.4) 100%); border: 1px solid var(--border-bright); border-radius: 14px; padding: 2.25rem; text-align: center; position: relative; }
     .deck-download h4 { font-size: 1.15rem; margin-bottom: 0.75rem; color: var(--text-main); }
     .deck-download p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.75rem; }
     .deck-download .btn-primary { width: 100%; justify-content: center; }
     .deck-note { margin-top: 1.25rem; font-size: 0.75rem; color: var(--text-dim); line-height: 1.55; }
 
-    /* FAQ */
     .faq-item { border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; }
     .faq-item:last-child { border-bottom: none; }
     .faq-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-main); }
     .faq-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
 
-    /* FOOTER */
     footer { background: var(--bg-panel); padding: 4rem 0 2.5rem; border-top: 1px solid var(--border-color); position: relative; z-index: 1; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
     .footer-brand p { color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; max-width: 320px; line-height: 1.6; }
@@ -295,14 +293,10 @@
     .footer-disclaimer { font-size: 0.72rem; color: var(--text-dim); line-height: 1.6; max-width: 900px; padding: 1rem 1.25rem; background: rgba(255, 255, 255, 0.02); border-left: 2px solid var(--border-bright); border-radius: 0 6px 6px 0; }
     .footer-copyright { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; color: var(--text-dim); font-size: 0.75rem; padding-top: 0.5rem; }
 
-    /* ANIMATIONS */
     .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    /* RESPONSIVE */
-    @media (max-width: 1000px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-    }
+    @media (max-width: 1000px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
     @media (max-width: 900px) {
       .grid-2, .comparison-grid, .founder-card, .investor-grid, .contact-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
@@ -314,20 +308,27 @@
       .investor-fact .label { min-width: 0; }
       .support-cta { padding: 2rem 1.5rem; }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .container { padding: 0 1.25rem; }
-      .metrics-strip { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .nav { padding: 1.25rem 0 1rem; margin-bottom: 2.5rem; }
+      header { padding-bottom: 3rem; }
+      .status-badge { font-size: 0.65rem; padding: 0.35rem 0.85rem; margin-bottom: 1.25rem; letter-spacing: 1.2px; }
+      h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); line-height: 1.1; margin-bottom: 1.5rem; }
+      .hero-lead { font-size: 1rem; }
+      .hero-outcome { font-size: 1.15rem; margin-top: 1.5rem; }
+      .metrics-strip { grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; padding-top: 2rem; }
       .metric-value { font-size: 1.5rem; }
-      .nav { padding: 1.5rem 0 1rem; margin-bottom: 3rem; }
-      .founder-card { padding: 2rem; gap: 2rem; }
+      .metric-label { font-size: 0.65rem; }
+      .founder-card { padding: 1.75rem; gap: 1.5rem; }
       .logo-img { width: 36px; height: 36px; }
-      .logo { font-size: 0.85rem; }
+      .logo { font-size: 0.8rem; }
       .social-links { gap: 0.5rem; }
       .social-link { padding: 0.55rem 0.85rem; font-size: 0.75rem; }
       .social-link svg { width: 16px; height: 16px; }
       .plain-callout { padding: 1.25rem 1.5rem; }
       .support-amount { font-size: 2rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      section { padding: 3.5rem 0; }
     }
   </style>
 </head>
@@ -335,7 +336,6 @@
 
 <div class="container">
 
-  <!-- NAV -->
   <nav class="nav">
     <a href="#" class="logo">
       <img src="2bam.png" alt="BAM Logo" class="logo-img">
@@ -358,15 +358,13 @@
   <header>
     <div class="status-badge">Launch Mode · HELIX Cohort 2026</div>
     <h1>
-      We don't sell feelings.<br>
-      We <span class="gradient">engineer the conditions that produce them.</span>
+      Nervous system regulation,<br>
+      <span class="gradient">engineered through living systems.</span>
     </h1>
     <p class="hero-lead">
-      BAM is a <strong>structural method</strong> for nervous system regulation. We design, install, and license living systems — small ecosystems, polished stones, and bioactive habitats — that regulate the human body at the point of contact.
+      Custom-matched plants, polished minerals, peaceful reptiles, and curious insects — all inside a bioactive ecosystem.
     </p>
-    <p class="hero-lead">
-      Not therapy. Not a pet shop. <strong>Infrastructure for a stable nervous system</strong> — built for offices, clinics, and high-pressure workspaces.
-    </p>
+    <p class="hero-outcome">Any age. Any stage. Real change.</p>
 
     <div class="metrics-strip">
       <div class="metric">
@@ -402,7 +400,7 @@
         </p>
         <div class="plain-callout">
           <h4>IN PLAIN WORDS</h4>
-          <p>You sit near a small living system. You watch it, care for it, touch a smooth stone. Your body slows down. This is the whole method. No complicated therapy. No prescriptions. Just a simple daily practice that anyone can learn in a few minutes.</p>
+          <p>You sit near a small living system. You watch it, care for it, touch a smooth stone. Your body slows down. This is the whole method. No complicated therapy. No prescriptions. Just a simple daily practice that anyone can learn.</p>
         </div>
       </div>
       <div class="card" style="padding: 2rem;">
@@ -410,7 +408,7 @@
         <h3 style="color: var(--accent-tech); font-size: 1.1rem;">The $10 Trillion Target</h3>
         <p>The global wellness market reached $6.8 trillion in 2024. By 2029, it is expected to reach almost <strong style="color: var(--text-main);">$10 trillion</strong>. BAM enters this market with a physical product — not another app.</p>
         <div class="highlight-box">
-          <strong>Where we fit:</strong> Not a consumer app. Not a pet store. A bio-architecture company with recurring license revenue.
+          <strong>Where we fit:</strong> A bio-architecture company with recurring license revenue. Not a consumer app. Not a pet store.
         </div>
       </div>
     </div>
@@ -419,9 +417,9 @@
   <!-- HOW IT WORKS -->
   <section id="how" class="fade-up">
     <div class="section-header">How It Works</div>
-    <h2>Three pillars. Five minutes a day.</h2>
+    <h2>Three pillars. Starts at one minute a day.</h2>
     <p class="section-lead">
-      The Biophilic Anchor Method is a structured, sensory-first protocol. It does not require willpower, belief, or a quiet mind. It requires five minutes and a living system to observe.
+      The Biophilic Anchor Method is a structured, sensory-first protocol. It does not require willpower, belief, or a quiet mind. It starts small, then grows with you.
     </p>
 
     <div class="pillars-grid">
@@ -429,8 +427,8 @@
         <div class="pillar-num">Pillar 01</div>
         <div class="pillar-icon">◉</div>
         <h3>Observe</h3>
-        <p>Watch your Biophilic Pet. No phone. No agenda. No judgment. Just two minutes of soft attention on movement, colour, and breath.</p>
-        <div class="pillar-time">2 minutes / day</div>
+        <p>Watch your Biophilic Pet. No phone. No agenda. No judgment. Just soft attention on movement, colour, and breath.</p>
+        <div class="pillar-time">Starts at 1 minute</div>
       </div>
 
       <div class="pillar-card">
@@ -438,7 +436,7 @@
         <div class="pillar-icon">◈</div>
         <h3>Tend</h3>
         <p>Mist, feed, remove waste, log one observation. A small, predictable ritual of care. Low dopamine. No crash. Just steady reward.</p>
-        <div class="pillar-time">3 minutes / day</div>
+        <div class="pillar-time">Grows naturally</div>
       </div>
 
       <div class="pillar-card">
@@ -446,13 +444,23 @@
         <div class="pillar-icon">◇</div>
         <h3>Share</h3>
         <p>Post one small win in the Anchor Club. No matter how small. Social acknowledgment — dopamine that does not come from substances.</p>
-        <div class="pillar-time">5 minutes / week</div>
+        <div class="pillar-time">When you're ready</div>
       </div>
     </div>
 
     <div class="plain-callout" style="margin-top: 3rem;">
       <h4>WHY IT WORKS</h4>
       <p>The brain has two reward systems. One spikes and crashes — that is the addiction loop. The other plateaus and holds — that is serotonin. BAM is designed to build the second. Small daily tending becomes a keystone habit that ripples into everything else. Over weeks, the nervous system learns a new baseline: low, steady, and self-sustaining.</p>
+    </div>
+
+    <div class="plain-callout" style="margin-top: 1rem;">
+      <h4>MATCHED TO YOU</h4>
+      <p>Every system is matched to you — your space, your capacity, your nervous system — before installation. That is how the same method works for a 6-year-old with a moss jar, a CEO with a stone on his desk, and a recovery participant with a sealed bioactive habitat. The method stays the same. The system is matched to you.</p>
+    </div>
+
+    <div class="plain-callout" style="margin-top: 1rem;">
+      <h4>NO PRESSURE. EVER.</h4>
+      <p>No timer. No rush. No ceiling. Start where you are. The practice grows at the pace your nervous system can hold. That is not a marketing promise — it is how the method is designed.</p>
     </div>
   </section>
 
@@ -497,7 +505,7 @@
         </div>
         <div class="comp-item">
           <h4>What It Requires</h4>
-          <p>Only 5 minutes a day. Works anywhere. Even a small stone in your pocket can anchor you.</p>
+          <p>Starts at one minute a day. Works anywhere. Even a small stone in your pocket can anchor you.</p>
         </div>
         <div class="comp-item">
           <h4>Business Model</h4>
@@ -846,7 +854,7 @@
     </div>
   </section>
 
-  <!-- SUPPORT THE MISSION -->
+  <!-- SUPPORT -->
   <section id="support" class="fade-up">
     <div class="section-header">Support the Mission</div>
     <h2>Every Dollar Builds Infrastructure</h2>
@@ -1008,7 +1016,7 @@
 
       <div class="faq-item">
         <h4>How do you avoid legal risk in the wellness industry?</h4>
-        <p>We are not a clinical therapy. We are a peer-supported wellness practice. Every video, product, and consultation includes a clear disclaimer. We do not diagnose, treat, or cure anything. We do not interview people in active addiction or in crisis. Our Ethics Charter is public and enforced. This keeps us outside the rules that apply to licensed medical practice.</p>
+        <p>We are a peer-supported wellness practice. Every video, product, and consultation includes a clear disclaimer. We do not diagnose, treat, or cure anything. We do not interview people in active addiction or in crisis. Our Ethics Charter is public and enforced. This keeps us outside the rules that apply to licensed medical practice.</p>
       </div>
 
       <div class="faq-item">
@@ -1096,7 +1104,7 @@
           <img src="2bam.png" alt="BAM Logo" class="logo-img">
           <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
         </a>
-        <p>Enterprise bio-architecture and nervous-system regulation. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario. Serving Simcoe County and the Greater Toronto Area.</p>
+        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario. Serving Simcoe County and the Greater Toronto Area.</p>
 
         <div class="social-links-compact">
           <a href="https://www.linkedin.com/in/anna-davidenko/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn">
