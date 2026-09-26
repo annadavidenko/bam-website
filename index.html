@@ -18,23 +18,14 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <style>
-    /* ============================================
-       REFINED PALETTE — added warm anchors
-       ============================================ */
     :root{
-      /* Dark backgrounds */
       --bg-dark:#0a0d12;
       --bg-panel:#131a24;
-      --bg-warm:#1a1512;
-
-      /* Text hierarchy */
       --text-main:#f3f4f6;
       --text-body:#d4d7dc;
       --text-muted:#9ca3af;
       --text-dim:#6b7280;
       --text-warm:#e8e4d9;
-
-      /* Accents */
       --accent-bio:#10b981;
       --accent-bio-glow:rgba(16,185,129,.4);
       --accent-tech:#3b82f6;
@@ -42,8 +33,7 @@
       --accent-clay:#c8765a;
       --accent-clay-glow:rgba(200,118,90,.35);
       --accent-sand:#d4a574;
-
-      /* Borders */
+      --accent-gold:#f59e0b;
       --border-color:#1c2530;
       --border-bright:#374151;
     }
@@ -79,9 +69,7 @@
 
     .container{max-width:1240px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
 
-    /* ============================================
-       NAV — compact, 5 anchors + CTA
-       ============================================ */
+    /* NAV */
     .nav{display:flex;justify-content:space-between;align-items:center;padding:1.75rem 0 1.5rem;border-bottom:1px solid var(--border-color);margin-bottom:4rem;}
     .logo{display:flex;align-items:center;gap:.85rem;font-weight:800;letter-spacing:.03em;font-size:.95rem;text-decoration:none;color:var(--text-main);}
     .logo-img{width:44px;height:44px;object-fit:contain;display:block;flex-shrink:0;
@@ -96,9 +84,7 @@
     .nav-cta{padding:.5rem 1rem;border:1px solid var(--accent-bio);border-radius:8px;color:var(--accent-bio)!important;font-weight:600!important;background:rgba(16,185,129,.06);}
     .nav-cta:hover{background:rgba(16,185,129,.12);}
 
-    /* ============================================
-       HERO
-       ============================================ */
+    /* HERO */
     header{padding-bottom:5rem;position:relative;}
     .hero-visual{position:absolute;top:0;right:-10%;width:55%;height:100%;pointer-events:none;z-index:0;opacity:.35;
       background:radial-gradient(circle at 70% 40%,rgba(16,185,129,.35),transparent 45%),
@@ -129,9 +115,7 @@
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;}
     .metric-label{font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-dim);font-weight:600;}
 
-    /* ============================================
-       SECTIONS
-       ============================================ */
+    /* SECTIONS */
     section{padding:6rem 0;border-bottom:1px solid var(--border-color);position:relative;}
     .section-header{font-size:.72rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent-tech);margin-bottom:1rem;font-weight:700;display:flex;align-items:center;gap:.75rem;}
     .section-header::before{content:'';width:24px;height:1px;background:var(--accent-tech);}
@@ -142,9 +126,6 @@
     h3{font-size:1.25rem;font-weight:700;letter-spacing:-.01em;}
     .section-lead{color:var(--text-body);max-width:780px;font-size:1.05rem;margin-bottom:3rem;line-height:1.7;}
 
-    /* ============================================
-       GRIDS & CARDS
-       ============================================ */
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
     .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
 
@@ -159,9 +140,6 @@
     .highlight-box.bio{background:rgba(16,185,129,.05);border-left-color:var(--accent-bio);}
     .highlight-box strong{color:var(--text-main);font-weight:600;}
 
-    /* ============================================
-       CALLOUTS
-       ============================================ */
     .plain-callout{background:linear-gradient(135deg,rgba(16,185,129,.06) 0%,rgba(59,130,246,.06) 100%);border:1px solid rgba(16,185,129,.25);border-radius:14px;padding:1.75rem 2rem;margin-top:2rem;}
     .plain-callout h4{font-size:.95rem;font-weight:700;color:var(--accent-bio);margin-bottom:.75rem;letter-spacing:.5px;}
     .plain-callout p{color:var(--text-body);font-size:.92rem;line-height:1.7;margin:0;}
@@ -171,9 +149,6 @@
     .plain-callout.clay{background:linear-gradient(135deg,rgba(200,118,90,.06) 0%,rgba(212,165,116,.06) 100%);border-color:rgba(200,118,90,.3);}
     .plain-callout.clay h4{color:var(--accent-clay);}
 
-    /* ============================================
-       SENSES GRID
-       ============================================ */
     .senses-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.5rem;margin-top:1rem;font-size:.88rem;color:var(--text-body);}
     .senses-grid .sense{display:flex;gap:.75rem;align-items:baseline;}
     .senses-grid .sense strong{color:var(--accent-bio);font-weight:700;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;min-width:130px;flex-shrink:0;}
@@ -182,9 +157,6 @@
     .senses-grid .sense.group-header strong{color:var(--accent-tech);font-size:.72rem;letter-spacing:1.8px;min-width:0;}
     .senses-footnote{margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.06);font-size:.78rem;color:var(--text-dim);font-style:italic;line-height:1.55;}
 
-    /* ============================================
-       PILLARS
-       ============================================ */
     .pillars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem;}
     .pillar-card{background:linear-gradient(180deg,rgba(28,37,48,.7) 0%,rgba(19,26,36,.7) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2.25rem 2rem;transition:transform .3s,border-color .3s,box-shadow .3s;}
     .pillar-card:hover{transform:translateY(-4px);border-color:rgba(16,185,129,.4);box-shadow:0 20px 40px -20px var(--accent-bio-glow);}
@@ -195,9 +167,6 @@
     .pillar-card p{color:var(--text-body);font-size:.95rem;line-height:1.65;margin-top:.75rem;}
     .pillar-time{display:inline-block;margin-top:1.25rem;font-size:.78rem;font-weight:700;letter-spacing:1px;color:var(--accent-bio);background:rgba(16,185,129,.08);padding:.35rem .85rem;border-radius:999px;border:1px solid rgba(16,185,129,.2);}
 
-    /* ============================================
-       PERSONA / COMPOSITE PROFILES — clay accent
-       ============================================ */
     .persona-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem;}
     .persona-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2.25rem;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;backdrop-filter:blur(12px);}
     .persona-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-clay),var(--accent-sand));}
@@ -214,17 +183,14 @@
     .persona-text.after{color:var(--text-warm);}
     .persona-text strong{color:var(--accent-clay);font-weight:600;}
 
-    /* ============================================
-       QUESTIONNAIRE WAITLIST BANNER
-       ============================================ */
     .quiz-banner{background:linear-gradient(135deg,rgba(16,185,129,.14) 0%,rgba(59,130,246,.14) 100%);border:2px solid rgba(16,185,129,.4);border-radius:20px;padding:3.5rem 3rem;text-align:center;position:relative;overflow:hidden;}
     .quiz-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
       background:radial-gradient(circle at 30% 30%,rgba(16,185,129,.2),transparent 40%),
                  radial-gradient(circle at 70% 70%,rgba(59,130,246,.15),transparent 40%);
       animation:quizAurora 15s ease-in-out infinite alternate;pointer-events:none;}
     @keyframes quizAurora{0%{transform:rotate(0deg);}100%{transform:rotate(15deg);}}
-    .quiz-status{position:relative;display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.12);color:#f59e0b;padding:.5rem 1.1rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;border:1px solid rgba(245,158,11,.35);backdrop-filter:blur(8px);}
-    .quiz-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#f59e0b;box-shadow:0 0 8px #f59e0b;animation:pulse 2s ease-in-out infinite;}
+    .quiz-status{position:relative;display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.12);color:var(--accent-gold);padding:.5rem 1.1rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;border:1px solid rgba(245,158,11,.35);backdrop-filter:blur(8px);}
+    .quiz-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent-gold);box-shadow:0 0 8px var(--accent-gold);animation:pulse 2s ease-in-out infinite;}
     .quiz-banner h2{position:relative;font-size:clamp(2rem,4vw,2.75rem);margin-bottom:1rem;}
     .quiz-banner p{position:relative;color:var(--text-warm);max-width:680px;margin:0 auto 2.5rem;font-size:1.1rem;line-height:1.7;}
     .quiz-cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
@@ -232,9 +198,6 @@
     .quiz-launch{position:relative;margin-top:1.5rem;font-size:.8rem;color:#94A3B8;letter-spacing:.02em;font-weight:500;}
     .quiz-launch strong{color:var(--accent-bio);font-weight:700;}
 
-    /* ============================================
-       PORTALS — hub cards for four audiences
-       ============================================ */
     .portal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:2rem;}
     .portal-card{display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(28,37,48,.7) 0%,rgba(19,26,36,.7) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2rem;text-decoration:none;color:var(--text-main);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;position:relative;overflow:hidden;}
     .portal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent-tech),var(--accent-bio));opacity:.5;transition:opacity .3s;}
@@ -251,9 +214,6 @@
     .portal-card.clay .portal-cta{color:var(--accent-clay);}
     .portal-card:hover .portal-cta{gap:.65rem;}
 
-    /* ============================================
-       FOUNDER
-       ============================================ */
     .founder-card{display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:start;padding:3rem;background:linear-gradient(135deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-color);border-radius:16px;backdrop-filter:blur(12px);}
     .founder-avatar{width:100%;aspect-ratio:1;border-radius:14px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--accent-tech),var(--accent-bio));display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px -20px var(--accent-tech-glow);}
     .founder-avatar img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.98) contrast(1.03) brightness(.98);position:relative;z-index:1;}
@@ -266,9 +226,6 @@
     .credential-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
     .credential{font-size:.72rem;padding:.4rem .8rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:6px;color:#bfdbfe;font-weight:500;}
 
-    /* ============================================
-       SOCIAL
-       ============================================ */
     .social-links{display:flex;gap:.75rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);flex-wrap:wrap;}
     .social-link{display:inline-flex;align-items:center;gap:.6rem;padding:.65rem 1rem;background:rgba(255,255,255,.03);border:1px solid var(--border-bright);border-radius:10px;color:var(--text-muted);text-decoration:none;font-size:.82rem;font-weight:600;transition:all .25s ease;}
     .social-link svg{width:18px;height:18px;flex-shrink:0;transition:transform .25s ease;}
@@ -286,9 +243,6 @@
     .social-icon.instagram:hover{border-color:#e1306c;background:rgba(225,48,108,.08);box-shadow:0 8px 20px -10px rgba(225,48,108,.5);}
     .social-icon.facebook:hover{border-color:#1877f2;background:rgba(24,119,242,.08);box-shadow:0 8px 20px -10px rgba(24,119,242,.6);}
 
-    /* ============================================
-       SUPPORT
-       ============================================ */
     .support-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2rem;}
     .support-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:14px;padding:2rem;position:relative;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;backdrop-filter:blur(12px);overflow:hidden;}
     .support-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent-tech),var(--accent-bio));opacity:.6;}
@@ -312,18 +266,12 @@
     @keyframes supportPulse{0%,100%{box-shadow:0 4px 24px rgba(45,212,191,.3);}50%{box-shadow:0 4px 32px rgba(45,212,191,.55);}}
     .support-note{position:relative;margin-top:1.5rem;font-size:13px;line-height:1.65;color:#94A3B8;max-width:580px;margin-left:auto;margin-right:auto;font-weight:400;}
 
-    /* ============================================
-       BUTTONS
-       ============================================ */
     .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.75rem;border-radius:10px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s ease;border:1px solid transparent;cursor:pointer;}
     .btn-primary{background:linear-gradient(135deg,var(--accent-tech),var(--accent-bio));color:#fff;box-shadow:0 10px 30px -10px var(--accent-tech-glow);}
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 15px 40px -10px var(--accent-tech-glow);}
     .btn-ghost{background:rgba(255,255,255,.03);color:var(--text-main);border-color:var(--border-bright);}
     .btn-ghost:hover{background:rgba(255,255,255,.06);border-color:var(--text-muted);}
 
-    /* ============================================
-       CONTACT (COMPACT)
-       ============================================ */
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
     .contact-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2.25rem;backdrop-filter:blur(12px);}
     .contact-card h3{font-size:1.05rem;margin-bottom:1.25rem;color:var(--text-main);}
@@ -335,9 +283,6 @@
     .contact-item .value a:hover{text-decoration:underline;}
     .contact-note{margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(16,185,129,.05);border-left:3px solid var(--accent-bio);border-radius:0 8px 8px 0;font-size:.85rem;color:var(--text-body);line-height:1.6;}
 
-    /* ============================================
-       FOOTER
-       ============================================ */
     footer{background:var(--bg-panel);padding:4rem 0 2.5rem;border-top:1px solid var(--border-color);position:relative;z-index:1;}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem;}
     .footer-brand p{color:var(--text-body);font-size:.85rem;margin-top:1rem;max-width:320px;line-height:1.6;}
@@ -351,15 +296,9 @@
     .footer-disclaimer{font-size:.72rem;color:var(--text-dim);line-height:1.6;max-width:900px;padding:1rem 1.25rem;background:rgba(255,255,255,.02);border-left:2px solid var(--border-bright);border-radius:0 6px 6px 0;}
     .footer-copyright{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;color:var(--text-dim);font-size:.75rem;padding-top:.5rem;}
 
-    /* ============================================
-       ANIMATIONS
-       ============================================ */
     .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
     .fade-up.visible{opacity:1;transform:translateY(0);}
 
-    /* ============================================
-       RESPONSIVE
-       ============================================ */
     @media(max-width:1000px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
     @media(max-width:900px){
       .grid-2,.founder-card,.contact-grid{grid-template-columns:1fr;}
@@ -411,7 +350,7 @@
 
 <div class="container">
 
-  <!-- NAV -->
+  <!-- NAV — Investors link added -->
   <nav class="nav">
     <a href="#" class="logo">
       <img src="2bam.png" alt="BAM Logo" class="logo-img">
@@ -420,8 +359,8 @@
     <div class="nav-links">
       <a href="#how">Method</a>
       <a href="#profiles">Profiles</a>
+      <a href="investors/">Investors</a>
       <a href="#questionnaire">Questionnaire</a>
-      <a href="#founder">Founder</a>
       <a href="#contact">Contact</a>
       <a href="#questionnaire" class="nav-cta">Join Waitlist</a>
     </div>
@@ -620,7 +559,7 @@
     </div>
   </section>
 
-  <!-- QUESTIONNAIRE WAITLIST — PRIMARY CTA -->
+  <!-- QUESTIONNAIRE WAITLIST -->
   <section id="questionnaire" class="fade-up">
     <div class="quiz-banner">
       <div class="quiz-status">Coming Soon · In Lab Trials</div>
@@ -646,7 +585,7 @@
     </div>
   </section>
 
-  <!-- PORTALS — route to subpages -->
+  <!-- PORTALS — Investors card now links to investors/ page -->
   <section id="portals" class="fade-up">
     <div class="section-header">Choose Your Path</div>
     <h2>Where Would You Like to Go?</h2>
@@ -655,13 +594,13 @@
     </p>
 
     <div class="portal-grid">
-      <a href="mailto:info_BAM@pm.me?subject=Investor%20Inquiry" class="portal-card">
+      <a href="investors/" class="portal-card">
         <div class="portal-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 4 4 5-5"/></svg>
         </div>
         <h3>For Investors</h3>
         <p>Full business plan, financial model, market analysis, and founder credentials.</p>
-        <span class="portal-cta">Request the deck →</span>
+        <span class="portal-cta">Open the page →</span>
       </a>
 
       <a href="mailto:info_BAM@pm.me?subject=Clinical%20Inquiry" class="portal-card">
@@ -785,7 +724,7 @@
     </div>
   </section>
 
-  <!-- CONTACT (COMPACT) -->
+  <!-- CONTACT -->
   <section id="contact" class="fade-up">
     <div class="section-header">Contact</div>
     <h2>Get in Touch</h2>
@@ -845,25 +784,25 @@
 
       <div class="footer-col">
         <h5>Audiences</h5>
-        <a href="mailto:info_BAM@pm.me?subject=Investor%20Inquiry">Investors</a>
+        <a href="investors/">Investors</a>
         <a href="mailto:info_BAM@pm.me?subject=Clinical%20Inquiry">Clinicians</a>
         <a href="mailto:info_BAM@pm.me?subject=Facilitator%20Inquiry">Facilitators</a>
         <a href="mailto:info_BAM@pm.me?subject=Partner%20Inquiry">Partners</a>
       </div>
 
       <div class="footer-col">
-        <h5>Legal & Ethics</h5>
-        <a href="/ethics.html">Ethics Charter</a>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Use</a>
+        <h5>Legal &amp; Ethics</h5>
+        <a href="ethics.html">Ethics Charter</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="footer-legal-links">
-        <a href="/ethics.html">Ethics Charter</a>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Use</a>
+        <a href="ethics.html">Ethics Charter</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
         <a href="mailto:info_BAM@pm.me">info_BAM@pm.me</a>
       </div>
       <div class="footer-disclaimer">
