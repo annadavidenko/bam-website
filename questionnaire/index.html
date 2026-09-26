@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoPet Suitability Questionnaire | Biophilic Anchor Method</title>
+  <meta name="description" content="Find your match. A 3-minute questionnaire to discover your ideal BAM ecosystem.">
+  <meta name="theme-color" content="#0a0d12">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <style>
+    :root{--bg-dark:#0a0d12;--bg-panel:#131a24;--text-main:#f3f4f6;--text-body:#d4d7dc;--text-muted:#9ca3af;--text-dim:#6b7280;--accent-bio:#10b981;--accent-bio-glow:rgba(16,185,129,.4);--accent-tech:#3b82f6;--accent-tech-glow:rgba(59,130,246,.4);--accent-clay:#c8765a;--border-color:#1c2530;--border-bright:#374151;}
+    *{margin:0;padding:0;box-sizing:border-box;} html{scroll-behavior:smooth;}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background-color:var(--bg-dark);color:var(--text-main);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 50% 0%,rgba(16,185,129,.08),transparent 55%),radial-gradient(circle at 85% 85%,rgba(59,130,246,.05),transparent 50%);pointer-events:none;z-index:0;}
+    .container{max-width:900px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:1.75rem 0 1.5rem;border-bottom:1px solid var(--border-color);margin-bottom:4rem;}
+    .logo{display:flex;align-items:center;gap:.85rem;font-weight:800;letter-spacing:.03em;font-size:.95rem;text-decoration:none;color:var(--text-main);}
+    .logo-img{width:44px;height:44px;object-fit:contain;display:block;flex-shrink:0;filter:drop-shadow(0 0 12px rgba(16,185,129,.35));}
+    .logo-text{display:flex;align-items:baseline;gap:.15rem;} .logo-text .sep{color:var(--text-dim);font-weight:400;margin:0 .1rem;}
+    .nav-links{display:flex;gap:1.75rem;font-size:.85rem;} .nav-links a{color:var(--text-muted);text-decoration:none;transition:color .2s;font-weight:500;} .nav-links a:hover{color:var(--accent-bio);}
+    .nav-cta{padding:.5rem 1rem;border:1px solid var(--border-bright);border-radius:8px;color:var(--text-main)!important;font-weight:600!important;} .nav-cta:hover{border-color:var(--accent-bio);color:var(--accent-bio)!important;}
+    .page-header{padding-bottom:3rem;position:relative;} .back-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--text-muted);text-decoration:none;font-size:.82rem;font-weight:600;margin-bottom:2rem;transition:color .2s;} .back-link:hover{color:var(--accent-bio);} .back-link svg{width:14px;height:14px;}
+    .page-label{font-size:.72rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent-clay);margin-bottom:1rem;font-weight:700;display:flex;align-items:center;gap:.75rem;} .page-label::before{content:'';width:24px;height:1px;background:var(--accent-clay);}
+    h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;line-height:1.08;letter-spacing:-.035em;margin-bottom:1.5rem;}
+    .page-lead{font-size:1.1rem;color:var(--text-body);max-width:720px;margin-bottom:2rem;line-height:1.7;}
+    
+    /* Form Styles */
+    .quiz-container{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:3rem;margin-bottom:4rem;backdrop-filter:blur(12px);}
+    .question-block{margin-bottom:3rem; border-bottom:1px solid var(--border-color); padding-bottom:2rem;}
+    .question-block:last-of-type{border-bottom:none;}
+    .question-title{font-size:1.2rem;font-weight:700;margin-bottom:1.5rem;color:var(--text-main);}
+    .question-sub{font-size:.85rem;color:var(--text-dim);margin-bottom:1.5rem;display:block;}
+    .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .option-label{display:flex;align-items:center;gap:1rem;padding:1.25rem;background:rgba(255,255,255,.03);border:1px solid var(--border-bright);border-radius:12px;cursor:pointer;transition:all .2s ease;}
+    .option-label:hover{background:rgba(16,185,129,.06);border-color:var(--accent-bio);}
+    .option-label input[type="radio"]{appearance:none;width:20px;height:20px;border:2px solid var(--border-bright);border-radius:50%;outline:none;transition:all .2s;}
+    .option-label input[type="radio"]:checked{border-color:var(--accent-bio);background:var(--accent-bio);box-shadow:inset 0 0 0 4px var(--bg-panel);}
+    .option-label.selected{border-color:var(--accent-bio);background:rgba(16,185,129,.08);}
+    .option-text{font-size:.95rem;color:var(--text-body);}
+    .option-text strong{color:var(--text-main);}
+    
+    .btn-submit{width:100%;padding:1.25rem;font-size:1.1rem;font-weight:700;background:linear-gradient(135deg,var(--accent-tech),var(--accent-bio));color:#fff;border:none;border-radius:12px;cursor:pointer;transition:transform .2s, box-shadow .2s;}
+    .btn-submit:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px var(--accent-bio-glow);}
+    
+    /* Result Styles */
+    #result{display:none;margin-top:3rem;padding:3rem;background:linear-gradient(135deg,rgba(16,185,129,.1) 0%,rgba(59,130,246,.1) 100%);border:2px solid var(--accent-bio);border-radius:16px;text-align:center;animation:fadeIn .5s ease;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    #result h2{font-size:2rem;margin-bottom:1rem;color:var(--text-main);}
+    #result .result-type{font-size:1.5rem;font-weight:800;color:var(--accent-bio);margin-bottom:1rem;letter-spacing:1px;}
+    #result p{font-size:1.05rem;color:var(--text-body);max-width:600px;margin:0 auto 2rem;line-height:1.7;}
+    .result-icon{font-size:4rem;margin-bottom:1rem;}
+    
+    footer{background:var(--bg-panel);padding:3.5rem 0 2.25rem;border-top:1px solid var(--border-color);position:relative;z-index:1;margin-top:4rem;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem;} .footer-brand p{color:var(--text-body);font-size:.82rem;margin-top:1rem;max-width:320px;line-height:1.6;}
+    .footer-col h5{font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);margin-bottom:.9rem;font-weight:700;} .footer-col a{display:block;color:var(--text-muted);text-decoration:none;font-size:.82rem;margin-bottom:.55rem;transition:color .2s;} .footer-col a:hover{color:var(--accent-bio);}
+    .footer-bottom{padding-top:1.75rem;border-top:1px solid var(--border-color);display:flex;flex-direction:column;gap:.9rem;} .footer-legal-links{display:flex;flex-wrap:wrap;gap:1.5rem;font-size:.75rem;} .footer-legal-links a{color:var(--text-dim);text-decoration:none;transition:color .2s;} .footer-legal-links a:hover{color:var(--accent-bio);}
+    .footer-disclaimer{font-size:.7rem;color:var(--text-dim);line-height:1.6;max-width:900px;padding:.9rem 1.15rem;background:rgba(255,255,255,.02);border-left:2px solid var(--border-bright);border-radius:0 6px 6px 0;}
+    .footer-copyright{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;color:var(--text-dim);font-size:.72rem;padding-top:.4rem;}
+    
+    @media(max-width:900px){ .nav-links{display:none;} .footer-grid{grid-template-columns:1fr;gap:1.75rem;} .options-grid{grid-template-columns:1fr;} .quiz-container{padding:1.5rem;} }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="nav">
+    <a href="../" class="logo">
+      <img src="../2bam.png" alt="BAM Logo" class="logo-img">
+      <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
+    </a>
+    <div class="nav-links">
+      <a href="../investors/">Investors</a>
+      <a href="../clinical/">Clinicians</a>
+      <a href="../facilitators/">Facilitators</a>
+      <a href="../partners/">Partners</a>
+      <a href="../" class="nav-cta">← Back to Home</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <a href="../" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+    <div class="page-label">Interactive Prototype</div>
+    <h1>EcoPet Suitability Questionnaire</h1>
+    <p class="page-lead">
+      This is a working prototype of our matching engine. Answer four simple questions to discover which BAM ecosystem aligns with your sensory baseline. 
+      <br><br>
+      <strong style="color:var(--accent-clay);font-size:.9rem;">Note: This is a demonstration prototype. The clinical version is currently in lab trials.</strong>
+    </p>
+  </header>
+
+  <div class="quiz-container">
+    <form id="quizForm">
+      <!-- Question 1 -->
+      <div class="question-block">
+        <div class="question-title">1. What draws you in the most?</div>
+        <span class="question-sub">Your primary sensory preference.</span>
+        <div class="options-grid">
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q1" value="visual" required>
+            <div class="option-text"><strong>Visual Movement</strong><br>Watching things shift and flow.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q1" value="tactile">
+            <div class="option-text"><strong>Tactile Touch</strong><br>The weight of stone, texture of leaves.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q1" value="plant">
+            <div class="option-text"><strong>Plant Care</strong><br>Misting, pruning, watching it grow.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q1" value="reptile">
+            <div class="option-text"><strong>Slow Observation</strong><br>Quietly watching a creature exist.</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-block">
+        <div class="question-title">2. How much maintenance do you want?</div>
+        <span class="question-sub">Be honest about your daily routine.</span>
+        <div class="options-grid">
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q2" value="minimal" required>
+            <div class="option-text"><strong>Minimal</strong><br>I want to look, not touch. Once a week is fine.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q2" value="weekly">
+            <div class="option-text"><strong>Weekly</strong><br>A small ritual a few times a week.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q2" value="daily">
+            <div class="option-text"><strong>Daily</strong><br>I want something that needs me every day.</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-block">
+        <div class="question-title">3. Where will it live?</div>
+        <span class="question-sub">The space you have available.</span>
+        <div class="options-grid">
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q3" value="desk" required>
+            <div class="option-text"><strong>On my desk</strong><br>Small footprint, close to me.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q3" value="table">
+            <div class="option-text"><strong>On a table or shelf</strong><br>A focal point in the room.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q3" value="floor">
+            <div class="option-text"><strong>On the floor</strong><br>I have space for something larger.</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-block">
+        <div class="question-title">4. What is your main goal?</div>
+        <span class="question-sub">What are you trying to achieve?</span>
+        <div class="options-grid">
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q4" value="wind" required>
+            <div class="option-text"><strong>Winding Down</strong><br>Ending the day with calm.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q4" value="focus">
+            <div class="option-text"><strong>Focus & Grounding</strong><br>Starting the day centered.</div>
+          </label>
+          <label class="option-label" onclick="selectOption(this)">
+            <input type="radio" name="q4" value="purpose">
+            <div class="option-text"><strong>Purpose & Care</strong><br>Having something that needs me.</div>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Calculate My Match →</button>
+    </form>
+
+    <!-- Result Div -->
+    <div id="result">
+      <div class="result-icon">◈</div>
+      <h2>Your Match:</h2>
+      <div class="result-type" id="resultType"></div>
+      <p id="resultText"></p>
+      <a href="mailto:info_BAM@pm.me?subject=Questionnaire%20Result%20-%20Follow%20Up" class="btn btn-primary">Join the Waitlist →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../" class="logo">
+          <img src="../2bam.png" alt="BAM Logo" class="logo-img">
+          <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
+        </a>
+        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Audiences</h5>
+        <a href="../investors/">Investors</a>
+        <a href="../clinical/">Clinicians</a>
+        <a href="../facilitators/">Facilitators</a>
+        <a href="../partners/">Partners</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal &amp; Ethics</h5>
+        <a href="../ethics/index.html">Ethics Charter</a>
+        <a href="../privacy/index.html">Privacy Policy</a>
+        <a href="../terms/index.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal-links">
+        <a href="../ethics/index.html">Ethics Charter</a>
+        <a href="../privacy/index.html">Privacy Policy</a>
+        <a href="../terms/index.html">Terms of Use</a>
+        <a href="mailto:info_BAM@pm.me">info_BAM@pm.me</a>
+      </div>
+      <div class="footer-disclaimer">
+        <strong style="color: var(--text-muted);">Wellness Disclaimer:</strong> BAM is a peer-supported wellness practice. We are not a licensed medical, psychological, or veterinary provider. Nothing on this site constitutes medical advice. Animals carry naturally occurring bacteria — always follow the hygiene protocol. Please speak with a qualified professional for any health concern.
+      </div>
+      <div class="footer-copyright">
+        <div>© 2026 Karma Strategic Intelligence Inc. · Federal Corp #1001472307</div>
+        <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Add visual selection state
+  function selectOption(label) {
+    const name = label.querySelector('input').name;
+    document.querySelectorAll(`input[name="${name}"]`).forEach(input => {
+      input.closest('.option-label').classList.remove('selected');
+    });
+    label.classList.add('selected');
+  }
+
+  // Handle Form Submission
+  document.getElementById('quizForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const q1 = document.querySelector('input[name="q1"]:checked').value;
+    const q2 = document.querySelector('input[name="q2"]:checked').value;
+    const q3 = document.querySelector('input[name="q3"]:checked').value;
+    const q4 = document.querySelector('input[name="q4"]:checked').value;
+
+    let type = "";
+    let text = "";
+
+    // Simple Logic Engine
+    if (q1 === 'tactile' || q2 === 'minimal') {
+      type = "The Desk Stone";
+      text = "You need low maintenance and high tactile reward. A hand-polished limestone anchor stone on your desk will ground you without requiring any care. It is always there. Always cool. Always quiet.";
+    } else if (q1 === 'plant' || q2 === 'weekly') {
+      type = "The Moss Jar";
+      text = "You want a living system to tend, but not a daily obligation. A sealed moss jar with springtails provides visual movement and a gentle weekly misting ritual. It asks for little and gives back a whole world.";
+    } else if (q1 === 'reptile' || q3 === 'floor' || q4 === 'purpose') {
+      type = "The Bioactive Terrarium";
+      text = "You want a deep connection with a living creature. A bioactive terrarium with a peaceful reptile (like a corn snake) engages your senses of sight, touch, and care. This is a daily practice of quiet observation.";
+    } else if (q1 === 'visual' && q3 === 'table') {
+      type = "The Water Garden";
+      text = "You are drawn to flow and reflection. A nano aquarium with live plants creates a hypnotic visual anchor. The sound of water and the movement of fish will regulate your nervous system within minutes of watching.";
+    } else {
+      type = "The Desktop Sanctuary";
+      text = "You need a flexible, balanced entry point. The Desktop Sanctuary kit combines a small jar, a stone, and a simple plant. It adapts to your space and your schedule, growing with you as you build your practice.";
+    }
+
+    // Display Result
+    document.getElementById('resultType').innerText = type;
+    document.getElementById('resultText').innerText = text;
+    
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    
+    // Smooth scroll to result
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+</body>
+</html>
