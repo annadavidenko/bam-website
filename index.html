@@ -7,7 +7,7 @@
   <meta name="description" content="Personâ-tailored micro-life inside a bioactive ecosystem that engages up to 14 of your 23 human senses. Nervous system regulation, engineered through living systems.">
   <meta name="theme-color" content="#0a0d12">
   <meta property="og:title" content="BAM | Nervous System Regulation Through Living Systems">
-  <meta property="og:description" content="Personâ-tailored ecosystems that engage 14 of your 23 human senses. Any age. Any stage. Real change.">
+  <meta property="og:description" content="Personâ-tailored ecosystems. Any age. Any stage. Real change.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/2bam.png">
 
@@ -18,87 +18,173 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <style>
-    :root{--bg-dark:#0a0d12;--bg-panel:#131a24;--text-main:#f3f4f6;--text-muted:#9ca3af;--text-dim:#6b7280;--accent-bio:#10b981;--accent-bio-glow:rgba(16,185,129,.4);--accent-tech:#3b82f6;--accent-tech-glow:rgba(59,130,246,.4);--accent-gold:#f59e0b;--border-color:#1c2530;--border-bright:#374151;}
+    /* ============================================
+       REFINED PALETTE — added warm anchors
+       ============================================ */
+    :root{
+      /* Dark backgrounds */
+      --bg-dark:#0a0d12;
+      --bg-panel:#131a24;
+      --bg-warm:#1a1512;
+
+      /* Text hierarchy */
+      --text-main:#f3f4f6;
+      --text-body:#d4d7dc;
+      --text-muted:#9ca3af;
+      --text-dim:#6b7280;
+      --text-warm:#e8e4d9;
+
+      /* Accents */
+      --accent-bio:#10b981;
+      --accent-bio-glow:rgba(16,185,129,.4);
+      --accent-tech:#3b82f6;
+      --accent-tech-glow:rgba(59,130,246,.4);
+      --accent-clay:#c8765a;
+      --accent-clay-glow:rgba(200,118,90,.35);
+      --accent-sand:#d4a574;
+
+      /* Borders */
+      --border-color:#1c2530;
+      --border-bright:#374151;
+    }
+
     *{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;}
-    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background-color:var(--bg-dark);color:var(--text-main);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;}
-    body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 50% 0%,rgba(16,185,129,.10),transparent 55%),radial-gradient(circle at 85% 85%,rgba(59,130,246,.07),transparent 50%);pointer-events:none;z-index:0;}
-    body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.014) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;mask-image:radial-gradient(ellipse at center,black 40%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse at center,black 40%,transparent 80%);}
+
+    body{
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      background-color:var(--bg-dark);
+      color:var(--text-main);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      position:relative;
+    }
+
+    body::before{
+      content:'';position:fixed;inset:0;
+      background:radial-gradient(circle at 50% 0%,rgba(16,185,129,.10),transparent 55%),
+                 radial-gradient(circle at 85% 85%,rgba(59,130,246,.07),transparent 50%);
+      pointer-events:none;z-index:0;
+    }
+    body::after{
+      content:'';position:fixed;inset:0;
+      background-image:linear-gradient(rgba(255,255,255,.014) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px);
+      background-size:60px 60px;
+      pointer-events:none;z-index:0;
+      mask-image:radial-gradient(ellipse at center,black 40%,transparent 80%);
+      -webkit-mask-image:radial-gradient(ellipse at center,black 40%,transparent 80%);
+    }
+
     .container{max-width:1240px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
+
+    /* ============================================
+       NAV — compact, 5 anchors + CTA
+       ============================================ */
     .nav{display:flex;justify-content:space-between;align-items:center;padding:1.75rem 0 1.5rem;border-bottom:1px solid var(--border-color);margin-bottom:4rem;}
     .logo{display:flex;align-items:center;gap:.85rem;font-weight:800;letter-spacing:.03em;font-size:.95rem;text-decoration:none;color:var(--text-main);}
-    .logo-img{width:44px;height:44px;object-fit:contain;display:block;flex-shrink:0;filter:drop-shadow(0 0 12px rgba(16,185,129,.35)) drop-shadow(0 0 4px rgba(59,130,246,.25));transition:filter .3s ease,transform .3s ease;}
+    .logo-img{width:44px;height:44px;object-fit:contain;display:block;flex-shrink:0;
+      filter:drop-shadow(0 0 12px rgba(16,185,129,.35)) drop-shadow(0 0 4px rgba(59,130,246,.25));
+      transition:filter .3s ease,transform .3s ease;}
     .logo:hover .logo-img{filter:drop-shadow(0 0 18px rgba(16,185,129,.55)) drop-shadow(0 0 8px rgba(59,130,246,.4));transform:scale(1.04);}
     .logo-text{display:flex;align-items:baseline;gap:.15rem;}
     .logo-text .sep{color:var(--text-dim);font-weight:400;margin:0 .1rem;}
-    .nav-links{display:flex;gap:1.4rem;font-size:.85rem;}
+    .nav-links{display:flex;gap:1.75rem;font-size:.85rem;}
     .nav-links a{color:var(--text-muted);text-decoration:none;transition:color .2s;font-weight:500;}
     .nav-links a:hover{color:var(--accent-bio);}
-    .nav-cta{padding:.45rem .9rem;border:1px solid var(--border-bright);border-radius:8px;color:var(--text-main)!important;font-weight:600!important;}
-    .nav-cta:hover{border-color:var(--accent-bio);color:var(--accent-bio)!important;}
+    .nav-cta{padding:.5rem 1rem;border:1px solid var(--accent-bio);border-radius:8px;color:var(--accent-bio)!important;font-weight:600!important;background:rgba(16,185,129,.06);}
+    .nav-cta:hover{background:rgba(16,185,129,.12);}
 
+    /* ============================================
+       HERO
+       ============================================ */
     header{padding-bottom:5rem;position:relative;}
     .hero-visual{position:absolute;top:0;right:-10%;width:55%;height:100%;pointer-events:none;z-index:0;opacity:.35;
       background:radial-gradient(circle at 70% 40%,rgba(16,185,129,.35),transparent 45%),
-                radial-gradient(circle at 30% 70%,rgba(59,130,246,.25),transparent 50%);
+                 radial-gradient(circle at 30% 70%,rgba(59,130,246,.25),transparent 50%);
       filter:blur(40px);animation:aurora 12s ease-in-out infinite alternate;}
     @keyframes aurora{0%{transform:translate(0,0) scale(1);}100%{transform:translate(-30px,20px) scale(1.15);}}
     header > * {position:relative;z-index:1;}
+
     .status-badge{display:inline-block;background:rgba(16,185,129,.10);color:var(--accent-bio);padding:.4rem 1rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.75rem;border:1px solid rgba(16,185,129,.28);backdrop-filter:blur(8px);}
     .status-badge::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent-bio);margin-right:.5rem;box-shadow:0 0 8px var(--accent-bio);animation:pulse 2s ease-in-out infinite;vertical-align:middle;}
     @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+
     h1{font-size:clamp(2.4rem,6vw,4.25rem);font-weight:800;line-height:1.08;letter-spacing:-.035em;margin-bottom:2rem;max-width:900px;}
     h1 span.gradient{background:linear-gradient(135deg,var(--accent-tech) 0%,var(--accent-bio) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-    .hero-lead{font-size:1.2rem;color:var(--text-muted);max-width:820px;margin-bottom:1.25rem;line-height:1.7;}
+
+    .hero-lead{font-size:1.2rem;color:var(--text-body);max-width:820px;margin-bottom:1.25rem;line-height:1.7;}
     .hero-lead strong.accent{color:var(--accent-bio);font-weight:700;}
-    .hero-outcome{font-size:1.5rem;font-weight:700;color:var(--text-main);max-width:820px;margin-top:2rem;letter-spacing:-.01em;background:linear-gradient(135deg,#ffffff 0%,var(--accent-bio) 120%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .hero-lead strong.clay{color:var(--accent-clay);font-weight:700;}
+
+    .hero-outcome{font-size:1.5rem;font-weight:700;color:var(--text-main);max-width:820px;margin-top:2rem;letter-spacing:-.01em;
+      background:linear-gradient(135deg,#ffffff 0%,var(--accent-bio) 120%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
     .metrics-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--border-color);}
     .metric{display:flex;flex-direction:column;gap:.35rem;}
-    .metric-value{font-size:2rem;font-weight:800;letter-spacing:-.02em;background:linear-gradient(135deg,#fff 0%,var(--text-muted) 120%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;}
+    .metric-value{font-size:2rem;font-weight:800;letter-spacing:-.02em;
+      background:linear-gradient(135deg,#fff 0%,var(--text-muted) 120%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;}
     .metric-label{font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-dim);font-weight:600;}
 
+    /* ============================================
+       SECTIONS
+       ============================================ */
     section{padding:6rem 0;border-bottom:1px solid var(--border-color);position:relative;}
     .section-header{font-size:.72rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent-tech);margin-bottom:1rem;font-weight:700;display:flex;align-items:center;gap:.75rem;}
     .section-header::before{content:'';width:24px;height:1px;background:var(--accent-tech);}
+    .section-header.clay{color:var(--accent-clay);}
+    .section-header.clay::before{background:var(--accent-clay);}
+
     h2{font-size:clamp(1.75rem,3.5vw,2.5rem);margin-bottom:1.5rem;font-weight:700;letter-spacing:-.02em;line-height:1.2;}
     h3{font-size:1.25rem;font-weight:700;letter-spacing:-.01em;}
-    .section-lead{color:var(--text-muted);max-width:780px;font-size:1.05rem;margin-bottom:3rem;line-height:1.7;}
+    .section-lead{color:var(--text-body);max-width:780px;font-size:1.05rem;margin-bottom:3rem;line-height:1.7;}
 
+    /* ============================================
+       GRIDS & CARDS
+       ============================================ */
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
     .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
 
     .card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:14px;padding:2rem;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;position:relative;overflow:hidden;backdrop-filter:blur(12px);}
-    .card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,.3),transparent);opacity:0;transition:opacity .3s;}
     .card:hover{transform:translateY(-4px);border-color:var(--border-bright);box-shadow:0 20px 40px -20px rgba(59,130,246,.3);}
-    .card:hover::before{opacity:1;}
     .card.bio:hover{border-color:rgba(16,185,129,.4);box-shadow:0 20px 40px -20px var(--accent-bio-glow);}
-    .card p{color:var(--text-muted);font-size:.95rem;margin-top:.75rem;}
+    .card p{color:var(--text-body);font-size:.95rem;margin-top:.75rem;}
     .card-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1.25rem;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);color:var(--accent-tech);}
     .card.bio .card-icon{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.2);color:var(--accent-bio);}
-    .card-icon svg{width:26px;height:26px;display:block;}
 
-    .icon-tile{width:100%;aspect-ratio:16/10;border-radius:10px;margin-bottom:1.25rem;background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(59,130,246,.12));border:1px solid var(--border-color);display:flex;align-items:center;justify-content:center;color:var(--accent-bio);position:relative;overflow:hidden;}
-    .icon-tile::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(16,185,129,.15),transparent 70%);}
-    .icon-tile svg{width:64px;height:64px;position:relative;z-index:1;}
-
-    .highlight-box{background:rgba(59,130,246,.05);border-left:3px solid var(--accent-tech);padding:1rem 1.25rem;font-size:.88rem;color:#d1d5db;margin-top:1.25rem;border-radius:0 8px 8px 0;line-height:1.6;}
+    .highlight-box{background:rgba(59,130,246,.05);border-left:3px solid var(--accent-tech);padding:1rem 1.25rem;font-size:.88rem;color:var(--text-body);margin-top:1.25rem;border-radius:0 8px 8px 0;line-height:1.6;}
     .highlight-box.bio{background:rgba(16,185,129,.05);border-left-color:var(--accent-bio);}
     .highlight-box strong{color:var(--text-main);font-weight:600;}
 
+    /* ============================================
+       CALLOUTS
+       ============================================ */
     .plain-callout{background:linear-gradient(135deg,rgba(16,185,129,.06) 0%,rgba(59,130,246,.06) 100%);border:1px solid rgba(16,185,129,.25);border-radius:14px;padding:1.75rem 2rem;margin-top:2rem;}
     .plain-callout h4{font-size:.95rem;font-weight:700;color:var(--accent-bio);margin-bottom:.75rem;letter-spacing:.5px;}
-    .plain-callout p{color:var(--text-muted);font-size:.92rem;line-height:1.7;margin:0 0 .75rem 0;}
-    .plain-callout p:last-child{margin-bottom:0;}
+    .plain-callout p{color:var(--text-body);font-size:.92rem;line-height:1.7;margin:0;}
+    .plain-callout p + p{margin-top:.9rem;}
+    .plain-callout p em{color:var(--text-warm);font-style:italic;}
     .plain-callout p strong{color:var(--text-main);font-weight:600;}
-    .plain-callout p em{color:var(--text-main);font-style:italic;}
+    .plain-callout.clay{background:linear-gradient(135deg,rgba(200,118,90,.06) 0%,rgba(212,165,116,.06) 100%);border-color:rgba(200,118,90,.3);}
+    .plain-callout.clay h4{color:var(--accent-clay);}
 
-    .senses-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.5rem;margin-top:1rem;font-size:.88rem;color:var(--text-muted);}
+    /* ============================================
+       SENSES GRID
+       ============================================ */
+    .senses-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.5rem;margin-top:1rem;font-size:.88rem;color:var(--text-body);}
     .senses-grid .sense{display:flex;gap:.75rem;align-items:baseline;}
     .senses-grid .sense strong{color:var(--accent-bio);font-weight:700;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;min-width:130px;flex-shrink:0;}
     .senses-grid .sense.group-header{grid-column:1 / -1;margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.06);}
     .senses-grid .sense.group-header:first-child{margin-top:0;padding-top:0;border-top:none;}
     .senses-grid .sense.group-header strong{color:var(--accent-tech);font-size:.72rem;letter-spacing:1.8px;min-width:0;}
+    .senses-footnote{margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.06);font-size:.78rem;color:var(--text-dim);font-style:italic;line-height:1.55;}
 
+    /* ============================================
+       PILLARS
+       ============================================ */
     .pillars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem;}
     .pillar-card{background:linear-gradient(180deg,rgba(28,37,48,.7) 0%,rgba(19,26,36,.7) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2.25rem 2rem;transition:transform .3s,border-color .3s,box-shadow .3s;}
     .pillar-card:hover{transform:translateY(-4px);border-color:rgba(16,185,129,.4);box-shadow:0 20px 40px -20px var(--accent-bio-glow);}
@@ -106,62 +192,83 @@
     .pillar-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);color:var(--accent-bio);}
     .pillar-icon svg{width:28px;height:28px;display:block;}
     .pillar-card h3{font-size:1.4rem;margin-bottom:.5rem;}
-    .pillar-card p{color:var(--text-muted);font-size:.95rem;line-height:1.65;margin-top:.75rem;}
+    .pillar-card p{color:var(--text-body);font-size:.95rem;line-height:1.65;margin-top:.75rem;}
     .pillar-time{display:inline-block;margin-top:1.25rem;font-size:.78rem;font-weight:700;letter-spacing:1px;color:var(--accent-bio);background:rgba(16,185,129,.08);padding:.35rem .85rem;border-radius:999px;border:1px solid rgba(16,185,129,.2);}
 
+    /* ============================================
+       PERSONA / COMPOSITE PROFILES — clay accent
+       ============================================ */
     .persona-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem;}
     .persona-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2.25rem;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;backdrop-filter:blur(12px);}
-    .persona-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-tech),var(--accent-bio));}
-    .persona-card:hover{transform:translateY(-6px);border-color:rgba(16,185,129,.4);box-shadow:0 24px 48px -20px var(--accent-bio-glow);}
-    .persona-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(16,185,129,.14),rgba(59,130,246,.14));border:1px solid rgba(16,185,129,.28);color:var(--accent-bio);margin-bottom:1.25rem;transition:transform .3s,border-color .3s,box-shadow .3s,color .3s;}
+    .persona-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-clay),var(--accent-sand));}
+    .persona-card:hover{transform:translateY(-6px);border-color:rgba(200,118,90,.5);box-shadow:0 24px 48px -20px var(--accent-clay-glow);}
+    .persona-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(200,118,90,.14),rgba(212,165,116,.14));border:1px solid rgba(200,118,90,.3);color:var(--accent-clay);margin-bottom:1.25rem;transition:transform .3s,border-color .3s,box-shadow .3s,color .3s;}
     .persona-icon svg{width:30px;height:30px;display:block;}
-    .persona-card:hover .persona-icon{transform:scale(1.06);border-color:rgba(16,185,129,.55);box-shadow:0 10px 28px -12px var(--accent-bio-glow);color:var(--accent-bio);}
-    .persona-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;background:rgba(59,130,246,.1);color:#93c5fd;border:1px solid rgba(59,130,246,.25);margin-bottom:1.25rem;}
+    .persona-card:hover .persona-icon{transform:scale(1.06);border-color:rgba(200,118,90,.6);box-shadow:0 10px 28px -12px var(--accent-clay-glow);color:var(--accent-clay);}
+    .persona-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;background:rgba(200,118,90,.1);color:var(--accent-clay);border:1px solid rgba(200,118,90,.28);margin-bottom:1.25rem;}
     .persona-card h3{font-size:1.35rem;margin-bottom:.35rem;color:var(--text-main);}
     .persona-life{color:var(--text-dim);font-size:.85rem;margin-bottom:1.5rem;font-style:italic;}
     .persona-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);margin:1.25rem 0;}
     .persona-section-label{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:.5rem;}
-    .persona-text{color:var(--text-muted);font-size:.92rem;line-height:1.7;margin-bottom:1.25rem;}
-    .persona-text.after{color:#d1d5db;}
-    .persona-text strong{color:var(--accent-bio);font-weight:600;}
+    .persona-text{color:var(--text-body);font-size:.92rem;line-height:1.7;margin-bottom:1.25rem;}
+    .persona-text.after{color:var(--text-warm);}
+    .persona-text strong{color:var(--accent-clay);font-weight:600;}
 
-    .venn-wrap{display:flex;justify-content:center;align-items:center;padding:2rem 0;}
-    .venn-svg{max-width:520px;width:100%;height:auto;}
+    /* ============================================
+       QUESTIONNAIRE WAITLIST BANNER
+       ============================================ */
+    .quiz-banner{background:linear-gradient(135deg,rgba(16,185,129,.14) 0%,rgba(59,130,246,.14) 100%);border:2px solid rgba(16,185,129,.4);border-radius:20px;padding:3.5rem 3rem;text-align:center;position:relative;overflow:hidden;}
+    .quiz-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+      background:radial-gradient(circle at 30% 30%,rgba(16,185,129,.2),transparent 40%),
+                 radial-gradient(circle at 70% 70%,rgba(59,130,246,.15),transparent 40%);
+      animation:quizAurora 15s ease-in-out infinite alternate;pointer-events:none;}
+    @keyframes quizAurora{0%{transform:rotate(0deg);}100%{transform:rotate(15deg);}}
+    .quiz-status{position:relative;display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.12);color:#f59e0b;padding:.5rem 1.1rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;border:1px solid rgba(245,158,11,.35);backdrop-filter:blur(8px);}
+    .quiz-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#f59e0b;box-shadow:0 0 8px #f59e0b;animation:pulse 2s ease-in-out infinite;}
+    .quiz-banner h2{position:relative;font-size:clamp(2rem,4vw,2.75rem);margin-bottom:1rem;}
+    .quiz-banner p{position:relative;color:var(--text-warm);max-width:680px;margin:0 auto 2.5rem;font-size:1.1rem;line-height:1.7;}
+    .quiz-cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
+    .quiz-banner .btn{position:relative;font-size:1rem;padding:1.1rem 2.25rem;}
+    .quiz-launch{position:relative;margin-top:1.5rem;font-size:.8rem;color:#94A3B8;letter-spacing:.02em;font-weight:500;}
+    .quiz-launch strong{color:var(--accent-bio);font-weight:700;}
 
-    .comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;}
-    .comp-col{background:rgba(19,26,36,.6);padding:2.25rem;border-radius:14px;border:1px solid var(--border-color);backdrop-filter:blur(12px);}
-    .comp-col.new{border-color:rgba(16,185,129,.3);background:linear-gradient(180deg,rgba(16,185,129,.04) 0%,rgba(19,26,36,.6) 100%);box-shadow:0 0 60px -30px var(--accent-bio-glow);}
-    .comp-col h3{text-transform:uppercase;letter-spacing:1.5px;margin-bottom:2rem;font-size:.85rem;font-weight:700;}
-    .comp-item{margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border-color);}
-    .comp-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-    .comp-item h4{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);margin-bottom:.5rem;font-weight:700;}
-    .comp-item p{font-size:.95rem;color:var(--text-muted);line-height:1.6;}
-    .comp-col.new .comp-item p{color:#d1d5db;}
+    /* ============================================
+       PORTALS — hub cards for four audiences
+       ============================================ */
+    .portal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:2rem;}
+    .portal-card{display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(28,37,48,.7) 0%,rgba(19,26,36,.7) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2rem;text-decoration:none;color:var(--text-main);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;position:relative;overflow:hidden;}
+    .portal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent-tech),var(--accent-bio));opacity:.5;transition:opacity .3s;}
+    .portal-card:hover{transform:translateY(-4px);border-color:var(--accent-bio);box-shadow:0 20px 40px -20px var(--accent-bio-glow);}
+    .portal-card:hover::before{opacity:1;}
+    .portal-card.clay::before{background:linear-gradient(90deg,var(--accent-clay),var(--accent-sand));}
+    .portal-card.clay:hover{border-color:var(--accent-clay);box-shadow:0 20px 40px -20px var(--accent-clay-glow);}
+    .portal-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.22);color:var(--accent-bio);margin-bottom:1.25rem;}
+    .portal-card.clay .portal-icon{background:rgba(200,118,90,.1);border-color:rgba(200,118,90,.25);color:var(--accent-clay);}
+    .portal-icon svg{width:26px;height:26px;display:block;}
+    .portal-card h3{font-size:1.15rem;margin-bottom:.5rem;}
+    .portal-card p{color:var(--text-body);font-size:.9rem;line-height:1.6;flex-grow:1;margin-bottom:1.25rem;}
+    .portal-cta{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:700;letter-spacing:.03em;color:var(--accent-bio);transition:gap .2s ease;}
+    .portal-card.clay .portal-cta{color:var(--accent-clay);}
+    .portal-card:hover .portal-cta{gap:.65rem;}
 
-    .traction-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;}
-    .traction-item{background:var(--bg-panel);border:1px solid var(--border-color);border-radius:12px;padding:1.75rem;position:relative;}
-    .traction-item .tag{position:absolute;top:1rem;right:1rem;font-size:.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.25rem .6rem;border-radius:999px;background:rgba(16,185,129,.1);color:var(--accent-bio);border:1px solid rgba(16,185,129,.2);}
-    .traction-item .tag.amber{background:rgba(245,158,11,.1);color:var(--accent-gold);border-color:rgba(245,158,11,.2);}
-    .traction-item h4{font-size:.95rem;font-weight:700;margin-bottom:.5rem;color:var(--text-main);padding-right:5rem;}
-    .traction-item p{font-size:.85rem;color:var(--text-muted);line-height:1.55;}
-
-    .founder-card{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start;padding:3rem;background:linear-gradient(135deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-color);border-radius:16px;backdrop-filter:blur(12px);}
+    /* ============================================
+       FOUNDER
+       ============================================ */
+    .founder-card{display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:start;padding:3rem;background:linear-gradient(135deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-color);border-radius:16px;backdrop-filter:blur(12px);}
     .founder-avatar{width:100%;aspect-ratio:1;border-radius:14px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--accent-tech),var(--accent-bio));display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px -20px var(--accent-tech-glow);}
     .founder-avatar img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.98) contrast(1.03) brightness(.98);position:relative;z-index:1;}
     .founder-avatar::before{content:'AD';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.5rem;font-weight:900;color:#fff;letter-spacing:-.05em;z-index:0;}
     .founder-avatar::after{content:'';position:absolute;inset:0;border-radius:14px;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 0 40px rgba(0,0,0,.3);pointer-events:none;z-index:2;}
     .founder-info h3{font-size:1.5rem;margin-bottom:.35rem;}
     .founder-role{color:var(--accent-bio);font-size:.8rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;}
-    .founder-bio{color:var(--text-muted);font-size:.95rem;line-height:1.7;margin-bottom:1.25rem;}
+    .founder-bio{color:var(--text-body);font-size:.95rem;line-height:1.7;margin-bottom:1.25rem;}
     .founder-bio strong{color:var(--text-main);font-weight:600;}
-    .founder-list{list-style:none;padding:0;margin:1.25rem 0;}
-    .founder-list li{padding:.85rem 0 .85rem 1.5rem;border-bottom:1px solid var(--border-color);color:var(--text-muted);font-size:.95rem;line-height:1.65;position:relative;}
-    .founder-list li:last-child{border-bottom:none;}
-    .founder-list li::before{content:'';position:absolute;left:0;top:1.25rem;width:6px;height:6px;border-radius:50%;background:var(--accent-bio);box-shadow:0 0 8px var(--accent-bio-glow);}
-    .founder-list li strong{color:var(--text-main);font-weight:700;display:block;margin-bottom:.15rem;font-size:.95rem;}
     .credential-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
     .credential{font-size:.72rem;padding:.4rem .8rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:6px;color:#bfdbfe;font-weight:500;}
 
+    /* ============================================
+       SOCIAL
+       ============================================ */
     .social-links{display:flex;gap:.75rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);flex-wrap:wrap;}
     .social-link{display:inline-flex;align-items:center;gap:.6rem;padding:.65rem 1rem;background:rgba(255,255,255,.03);border:1px solid var(--border-bright);border-radius:10px;color:var(--text-muted);text-decoration:none;font-size:.82rem;font-weight:600;transition:all .25s ease;}
     .social-link svg{width:18px;height:18px;flex-shrink:0;transition:transform .25s ease;}
@@ -179,33 +286,18 @@
     .social-icon.instagram:hover{border-color:#e1306c;background:rgba(225,48,108,.08);box-shadow:0 8px 20px -10px rgba(225,48,108,.5);}
     .social-icon.facebook:hover{border-color:#1877f2;background:rgba(24,119,242,.08);box-shadow:0 8px 20px -10px rgba(24,119,242,.6);}
 
-    .roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem;}
-    .phase{padding:1.75rem;background:var(--bg-panel);border:1px solid var(--border-color);border-radius:12px;position:relative;}
-    .phase.active{border-color:var(--accent-bio);background:linear-gradient(180deg,rgba(16,185,129,.06) 0%,var(--bg-panel) 100%);}
-    .phase-num{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-tech);margin-bottom:.75rem;}
-    .phase.active .phase-num{color:var(--accent-bio);}
-    .phase h4{font-size:1rem;font-weight:700;margin-bottom:.75rem;}
-    .phase p{font-size:.85rem;color:var(--text-muted);line-height:1.6;}
-
-    .quiz-banner{background:linear-gradient(135deg,rgba(16,185,129,.14) 0%,rgba(59,130,246,.14) 100%);border:2px solid rgba(16,185,129,.4);border-radius:20px;padding:3.5rem 3rem;text-align:center;position:relative;overflow:hidden;}
-    .quiz-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 30%,rgba(16,185,129,.2),transparent 40%),radial-gradient(circle at 70% 70%,rgba(59,130,246,.15),transparent 40%);animation:quizAurora 15s ease-in-out infinite alternate;pointer-events:none;}
-    @keyframes quizAurora{0%{transform:rotate(0deg);}100%{transform:rotate(15deg);}}
-    .quiz-status{position:relative;display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.12);color:var(--accent-gold);padding:.5rem 1.1rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;border:1px solid rgba(245,158,11,.35);backdrop-filter:blur(8px);}
-    .quiz-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent-gold);box-shadow:0 0 8px var(--accent-gold);animation:pulse 2s ease-in-out infinite;}
-    .quiz-banner h2{position:relative;font-size:clamp(2rem,4vw,2.75rem);margin-bottom:1rem;}
-    .quiz-banner p{position:relative;color:#d1d5db;max-width:680px;margin:0 auto 2.5rem;font-size:1.1rem;line-height:1.7;}
-    .quiz-cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
-    .quiz-banner .btn{position:relative;font-size:1rem;padding:1.1rem 2.25rem;}
-    .quiz-launch{position:relative;margin-top:1.5rem;font-size:.8rem;color:#94A3B8;letter-spacing:.02em;font-weight:500;}
-    .quiz-launch strong{color:var(--accent-bio);font-weight:700;}
-
+    /* ============================================
+       SUPPORT
+       ============================================ */
     .support-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2rem;}
     .support-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:14px;padding:2rem;position:relative;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;backdrop-filter:blur(12px);overflow:hidden;}
     .support-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent-tech),var(--accent-bio));opacity:.6;}
     .support-card:hover{transform:translateY(-4px);border-color:rgba(16,185,129,.4);box-shadow:0 20px 40px -20px var(--accent-bio-glow);}
-    .support-amount{font-size:2.5rem;font-weight:800;letter-spacing:-.03em;background:linear-gradient(135deg,#fff 0%,var(--accent-bio) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.75rem;}
+    .support-amount{font-size:2.5rem;font-weight:800;letter-spacing:-.03em;
+      background:linear-gradient(135deg,#fff 0%,var(--accent-bio) 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.75rem;}
     .support-title{font-size:1rem;font-weight:700;color:var(--text-main);margin-bottom:.6rem;}
-    .support-card p{color:var(--text-muted);font-size:.88rem;line-height:1.65;margin:0;}
+    .support-card p{color:var(--text-body);font-size:.88rem;line-height:1.65;margin:0;}
     .support-cta{text-align:center;padding:24px 16px;background:linear-gradient(135deg,rgba(16,185,129,.10) 0%,rgba(59,130,246,.10) 100%);border:1px solid rgba(16,185,129,.35);border-radius:16px;position:relative;overflow:hidden;}
     .support-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(16,185,129,.15),transparent 60%);pointer-events:none;}
     .support-cta-label{position:relative;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-bio);margin-bottom:1.25rem;opacity:.9;}
@@ -219,79 +311,36 @@
     .btn-donate:hover .arrow{transform:translateX(4px);}
     @keyframes supportPulse{0%,100%{box-shadow:0 4px 24px rgba(45,212,191,.3);}50%{box-shadow:0 4px 32px rgba(45,212,191,.55);}}
     .support-note{position:relative;margin-top:1.5rem;font-size:13px;line-height:1.65;color:#94A3B8;max-width:580px;margin-left:auto;margin-right:auto;font-weight:400;}
-    .support-note a{color:var(--accent-bio);text-decoration:none;font-weight:600;}
-    .support-note a:hover{text-decoration:underline;}
 
-    .chart-wrap{background:linear-gradient(180deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-color);border-radius:14px;padding:2.5rem 2rem 1.5rem;margin-top:2rem;}
-    .chart-title{font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:2rem;text-align:center;}
-    .chart-bars{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;height:260px;padding:0 1rem;border-bottom:1px solid var(--border-color);position:relative;}
-    .chart-bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;position:relative;}
-    .chart-bar-fill{width:100%;max-width:70px;background:linear-gradient(180deg,var(--accent-bio) 0%,rgba(16,185,129,.5) 100%);border-radius:8px 8px 0 0;transition:transform .3s;box-shadow:0 -10px 30px -10px var(--accent-bio-glow);}
-    .chart-bar:hover .chart-bar-fill{transform:scaleY(1.03);}
-    .chart-bar-value{position:absolute;top:-28px;left:50%;transform:translateX(-50%);font-size:.75rem;font-weight:700;color:var(--accent-bio);white-space:nowrap;}
-    .chart-labels{display:flex;justify-content:space-between;gap:1.5rem;padding:.85rem 1rem 0;}
-    .chart-label{flex:1;text-align:center;font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim);}
-
-    .partner-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;}
-    .partner-card{background:linear-gradient(180deg,rgba(28,37,48,.7) 0%,rgba(19,26,36,.7) 100%);border:1px solid var(--border-color);border-radius:14px;padding:2rem;transition:transform .3s,border-color .3s,box-shadow .3s;display:flex;flex-direction:column;}
-    .partner-card:hover{transform:translateY(-4px);border-color:var(--border-bright);box-shadow:0 20px 40px -20px rgba(59,130,246,.3);}
-    .partner-card h3{font-size:1.1rem;margin-bottom:.75rem;}
-    .partner-card p{color:var(--text-muted);font-size:.9rem;line-height:1.65;margin-bottom:1.5rem;flex-grow:1;}
-    .partner-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.3rem .7rem;border-radius:999px;background:rgba(59,130,246,.1);color:#93c5fd;border:1px solid rgba(59,130,246,.2);margin-bottom:1rem;align-self:flex-start;}
-    .partner-tag.bio{background:rgba(16,185,129,.1);color:var(--accent-bio);border-color:rgba(16,185,129,.2);}
-    .partner-tag.gold{background:rgba(245,158,11,.1);color:var(--accent-gold);border-color:rgba(245,158,11,.2);}
-    .partner-download{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:var(--text-main);text-decoration:none;padding:.65rem 1rem;border:1px solid var(--border-bright);border-radius:8px;transition:all .2s;background:rgba(255,255,255,.02);align-self:flex-start;}
-    .partner-download:hover{border-color:var(--accent-bio);color:var(--accent-bio);background:rgba(16,185,129,.05);}
-
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
-    .contact-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2.5rem;backdrop-filter:blur(12px);}
-    .contact-card h3{font-size:1.15rem;margin-bottom:1.25rem;color:var(--text-main);}
-    .contact-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border-color);}
-    .contact-item:last-child{border-bottom:none;}
-    .contact-item .label{font-size:.7rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-dim);min-width:100px;flex-shrink:0;padding-top:.15rem;}
-    .contact-item .value{font-size:.92rem;color:var(--text-main);word-break:break-word;}
-    .contact-item .value a{color:var(--accent-bio);text-decoration:none;}
-    .contact-item .value a:hover{text-decoration:underline;}
-    .contact-note{margin-top:1.5rem;padding:1rem 1.25rem;background:rgba(16,185,129,.05);border-left:3px solid var(--accent-bio);border-radius:0 8px 8px 0;font-size:.85rem;color:var(--text-muted);line-height:1.6;}
-
-    .ask-card{background:linear-gradient(135deg,rgba(59,130,246,.08) 0%,rgba(16,185,129,.08) 100%);border:1px solid rgba(59,130,246,.3);border-radius:16px;padding:3rem;text-align:center;position:relative;overflow:hidden;}
-    .ask-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(59,130,246,.15),transparent 60%);pointer-events:none;}
-    .ask-card h2{position:relative;margin-bottom:1rem;}
-    .ask-card p{color:var(--text-muted);max-width:640px;margin:0 auto 2rem;position:relative;font-size:1.05rem;}
-    .cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
+    /* ============================================
+       BUTTONS
+       ============================================ */
     .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.75rem;border-radius:10px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s ease;border:1px solid transparent;cursor:pointer;}
     .btn-primary{background:linear-gradient(135deg,var(--accent-tech),var(--accent-bio));color:#fff;box-shadow:0 10px 30px -10px var(--accent-tech-glow);}
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 15px 40px -10px var(--accent-tech-glow);}
     .btn-ghost{background:rgba(255,255,255,.03);color:var(--text-main);border-color:var(--border-bright);}
     .btn-ghost:hover{background:rgba(255,255,255,.06);border-color:var(--text-muted);}
-    .ask-details{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border-color);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;text-align:left;position:relative;}
-    .ask-detail-label{font-size:.68rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-dim);font-weight:600;}
-    .ask-detail-value{font-weight:700;margin-top:.35rem;font-size:.95rem;}
-    .ask-detail-sub{font-size:.78rem;color:var(--text-dim);margin-top:.15rem;}
 
-    .investor-panel{background:linear-gradient(135deg,rgba(19,26,36,.9) 0%,rgba(10,13,18,.9) 100%);border:1px solid var(--border-bright);border-radius:16px;padding:3rem;position:relative;overflow:hidden;}
-    .investor-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent-tech),var(--accent-bio));}
-    .investor-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:start;margin-top:2rem;}
-    .investor-summary h3{font-size:1.35rem;margin-bottom:1rem;color:var(--text-main);}
-    .investor-summary p{color:var(--text-muted);font-size:.95rem;line-height:1.75;margin-bottom:1rem;}
-    .investor-facts{display:grid;gap:.75rem;margin-top:1.75rem;}
-    .investor-fact{display:flex;align-items:baseline;gap:1rem;padding:.85rem 1rem;background:rgba(255,255,255,.02);border:1px solid var(--border-color);border-radius:10px;}
-    .investor-fact .label{font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-dim);font-weight:600;min-width:130px;flex-shrink:0;}
-    .investor-fact .value{font-size:.92rem;color:var(--text-main);font-weight:600;}
-    .deck-download{background:linear-gradient(180deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-bright);border-radius:14px;padding:2.25rem;text-align:center;position:relative;}
-    .deck-download h4{font-size:1.15rem;margin-bottom:.75rem;color:var(--text-main);}
-    .deck-download p{color:var(--text-muted);font-size:.9rem;line-height:1.65;margin-bottom:1.75rem;}
-    .deck-download .btn-primary{width:100%;justify-content:center;}
-    .deck-note{margin-top:1.25rem;font-size:.75rem;color:var(--text-dim);line-height:1.55;}
+    /* ============================================
+       CONTACT (COMPACT)
+       ============================================ */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+    .contact-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2.25rem;backdrop-filter:blur(12px);}
+    .contact-card h3{font-size:1.05rem;margin-bottom:1.25rem;color:var(--text-main);}
+    .contact-item{display:flex;align-items:flex-start;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--border-color);}
+    .contact-item:last-child{border-bottom:none;}
+    .contact-item .label{font-size:.7rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-dim);min-width:100px;flex-shrink:0;padding-top:.15rem;}
+    .contact-item .value{font-size:.92rem;color:var(--text-body);word-break:break-word;}
+    .contact-item .value a{color:var(--accent-bio);text-decoration:none;}
+    .contact-item .value a:hover{text-decoration:underline;}
+    .contact-note{margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(16,185,129,.05);border-left:3px solid var(--accent-bio);border-radius:0 8px 8px 0;font-size:.85rem;color:var(--text-body);line-height:1.6;}
 
-    .faq-item{border-bottom:1px solid var(--border-color);padding:1.5rem 0;}
-    .faq-item:last-child{border-bottom:none;}
-    .faq-item h4{font-size:1rem;font-weight:700;margin-bottom:.6rem;color:var(--text-main);}
-    .faq-item p{font-size:.9rem;color:var(--text-muted);line-height:1.65;}
-
+    /* ============================================
+       FOOTER
+       ============================================ */
     footer{background:var(--bg-panel);padding:4rem 0 2.5rem;border-top:1px solid var(--border-color);position:relative;z-index:1;}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem;}
-    .footer-brand p{color:var(--text-muted);font-size:.85rem;margin-top:1rem;max-width:320px;line-height:1.6;}
+    .footer-brand p{color:var(--text-body);font-size:.85rem;margin-top:1rem;max-width:320px;line-height:1.6;}
     .footer-col h5{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);margin-bottom:1rem;font-weight:700;}
     .footer-col a{display:block;color:var(--text-muted);text-decoration:none;font-size:.85rem;margin-bottom:.6rem;transition:color .2s;}
     .footer-col a:hover{color:var(--accent-bio);}
@@ -302,24 +351,23 @@
     .footer-disclaimer{font-size:.72rem;color:var(--text-dim);line-height:1.6;max-width:900px;padding:1rem 1.25rem;background:rgba(255,255,255,.02);border-left:2px solid var(--border-bright);border-radius:0 6px 6px 0;}
     .footer-copyright{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;color:var(--text-dim);font-size:.75rem;padding-top:.5rem;}
 
+    /* ============================================
+       ANIMATIONS
+       ============================================ */
     .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
     .fade-up.visible{opacity:1;transform:translateY(0);}
 
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
     @media(max-width:1000px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
     @media(max-width:900px){
-      .grid-2,.comparison-grid,.founder-card,.investor-grid,.contact-grid{grid-template-columns:1fr;}
+      .grid-2,.founder-card,.contact-grid{grid-template-columns:1fr;}
       .nav-links{display:none;}
       .founder-avatar{max-width:220px;}
       section{padding:4rem 0;}
-      .ask-card{padding:2rem 1.5rem;}
-      .investor-panel{padding:2rem 1.5rem;}
-      .investor-fact{flex-direction:column;gap:.35rem;}
-      .investor-fact .label{min-width:0;}
       .senses-grid{grid-template-columns:1fr;}
       .quiz-banner{padding:2.5rem 1.5rem;}
-      .chart-bars{height:200px;gap:.75rem;}
-      .chart-bar-fill{max-width:44px;}
-      .chart-bar-value{font-size:.65rem;}
     }
     @media(max-width:640px){
       .container{padding:0 1.25rem;}
@@ -352,7 +400,6 @@
       .quiz-status{font-size:.6rem;padding:.4rem .9rem;}
       .quiz-cta-row{flex-direction:column;align-items:stretch;}
       .quiz-cta-row .btn{width:100%;justify-content:center;}
-      .icon-tile svg{width:48px;height:48px;}
       .btn-donate{padding:14px 28px;font-size:16px;width:100%;max-width:320px;justify-content:center;}
       .support-cta{padding:24px 14px;}
       .support-cta-label{font-size:.65rem;margin-bottom:1rem;}
@@ -364,23 +411,23 @@
 
 <div class="container">
 
+  <!-- NAV -->
   <nav class="nav">
     <a href="#" class="logo">
       <img src="2bam.png" alt="BAM Logo" class="logo-img">
       <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
     </a>
     <div class="nav-links">
-      <a href="#how">How It Works</a>
-      <a href="#who">Who It's For</a>
-      <a href="#quiz">Questionnaire</a>
-      <a href="#market">Market</a>
-      <a href="#model">Model</a>
-      <a href="#investors">Investors</a>
-      <a href="#support">Support</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#how">Method</a>
+      <a href="#profiles">Profiles</a>
+      <a href="#questionnaire">Questionnaire</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
+      <a href="#questionnaire" class="nav-cta">Join Waitlist</a>
     </div>
   </nav>
 
+  <!-- HERO -->
   <header>
     <div class="hero-visual" aria-hidden="true"></div>
     <div class="status-badge">Launch Mode · HELIX Cohort 2026</div>
@@ -389,7 +436,7 @@
       <span class="gradient">engineered through living systems.</span>
     </h1>
     <p class="hero-lead">
-      <strong class="accent">Personâ-tailored</strong> micro-life — plants, polished minerals, peaceful reptiles — inside a bioactive ecosystem that engages up to <strong class="accent">14 of your 23 human senses</strong>.
+      <strong class="clay">Personâ-tailored</strong> micro-life — plants, polished minerals, peaceful reptiles — inside a bioactive ecosystem.
     </p>
     <p class="hero-outcome">Any age. Any stage. Real change.</p>
 
@@ -413,20 +460,22 @@
     </div>
   </header>
 
+  <!-- CORE IDEA -->
   <section id="thesis" class="fade-up">
     <div class="section-header">The Core Idea</div>
     <div class="grid-2">
       <div>
         <h2>Wellness therapies have a delivery issue. BAM solves it with hardware.</h2>
-        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.75;">
+        <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.75;">
           The $6.8 trillion wellness space is built on apps, journals, and willpower. It asks people to <em>think</em> their way toward feeling better. That approach doesn't reach everyone.
         </p>
-        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; margin-top: 1rem;">
+        <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.75; margin-top: 1rem;">
           BAM takes a different path. We build <strong style="color: var(--text-main);">physical, living environments</strong> that settle the nervous system through the senses — without needing willpower or motivation. You don't have to try to feel better. The space does the work.
         </p>
         <div class="plain-callout">
           <h4>IN PLAIN WORDS</h4>
           <p>You sit near a small living system. You watch it, care for it, touch a smooth stone. Your body settles. This is the whole method. No complicated therapy. No prescriptions. Just a simple daily practice that anyone can learn.</p>
+          <p><em>The accent on Personâ is not a typo. It is a pause — the same pause the method creates. We spell it that way on purpose.</em></p>
         </div>
       </div>
       <div class="card bio" style="padding: 2rem;">
@@ -440,6 +489,7 @@
     </div>
   </section>
 
+  <!-- HOW IT WORKS -->
   <section id="how" class="fade-up">
     <div class="section-header">How It Works</div>
     <h2>Three pillars. Starts at one minute a day.</h2>
@@ -505,30 +555,16 @@
         <div class="sense"><strong>Spatial Awareness</strong><span>Feeling exactly where you are in the room</span></div>
       </div>
 
-      <p style="margin-top: 1.25rem; margin-bottom: 0;">Every BAM ecosystem is matched to engage the senses you need most — yours, specifically.</p>
-    </div>
-
-    <div class="plain-callout" style="margin-top: 1rem;">
-      <h4>WHY IT WORKS</h4>
-      <p>The brain has two reward systems. One spikes and crashes — that's the loop we're all trying to leave behind. The other plateaus and holds — that's serotonin. BAM is designed to build the second. Small daily tending becomes a keystone habit that ripples into everything else. Over weeks, the nervous system learns a new baseline: low, steady, and self-sustaining.</p>
-    </div>
-
-    <div class="plain-callout" style="margin-top: 1rem;">
-      <h4>MATCHED TO YOU</h4>
-      <p>Every system is matched to you — your space, your capacity, your nervous system — before installation. That's how the same method works for a 6-year-old with a moss jar, a CEO with a stone on his desk, and a recovery participant with a sealed bioactive habitat. The method stays the same. The system is matched to you.</p>
-    </div>
-
-    <div class="plain-callout" style="margin-top: 1rem;">
-      <h4>NO PRESSURE. EVER.</h4>
-      <p>No timer. No rush. No ceiling. Start where you are. The practice grows at the pace your nervous system can hold. That's not a marketing promise — it's how the method is designed.</p>
+      <p class="senses-footnote">Human sense count varies between 22 and 33 depending on methodology. We use the conservative figure — 23 — and engage 14 of them in a single session.</p>
     </div>
   </section>
 
-  <section id="people" class="fade-up">
-    <div class="section-header">Real People. Real Systems.</div>
+  <!-- COMPOSITE PROFILES -->
+  <section id="profiles" class="fade-up">
+    <div class="section-header clay">Composite Profiles</div>
     <h2>Three lives. Three systems. One method.</h2>
     <p class="section-lead">
-      The method stays the same — the ecosystem is matched to the person.
+      The method stays the same — the ecosystem is matched to the person. These are composite profiles drawn from research and lived experience. Real case studies will replace them as pilots complete.
     </p>
 
     <div class="persona-grid">
@@ -575,7 +611,7 @@
       </div>
     </div>
 
-    <div class="plain-callout" style="margin-top: 3rem;">
+    <div class="plain-callout clay" style="margin-top: 3rem;">
       <h4>THE METHOD FOLLOWS YOU OUT</h4>
       <p><strong style="color: var(--text-main);">Maya's jar taught her to notice moss.</strong> On the walk to school, she now catches herself slowing down. The moss on the wall looks like her jar. The quiet is the same. <em>She thinks: the world is not just something to walk through. It is something to look at.</em></p>
       <p><strong style="color: var(--text-main);">Daniel's terrarium taught him to pause at water.</strong> After rain, he stops at a puddle on the sidewalk. Not because he has to. Because the pause feels good. <em>He thinks: I am not rushing anymore. I am here.</em></p>
@@ -584,124 +620,9 @@
     </div>
   </section>
 
-  <section id="method" class="fade-up">
-    <div class="section-header">How We're Different</div>
-    <h2>The BAM Way</h2>
-    <p class="section-lead">
-      We don't compete in the existing wellness space. We change the rules — from thinking to doing, from passive to active, from one-time sale to long-term relationship.
-    </p>
-
-    <div class="comparison-grid">
-      <div class="comp-col">
-        <h3 style="color: #ef4444;">The Old Way</h3>
-        <div class="comp-item"><h4>How It Works</h4><p>Uses talking, thinking, and willpower to try to feel better.</p></div>
-        <div class="comp-item"><h4>The Tools</h4><p>Apps, journals, books, and cold clinical rooms.</p></div>
-        <div class="comp-item"><h4>What It Asks</h4><p>Strong motivation, time, and a quiet place to "do therapy."</p></div>
-        <div class="comp-item"><h4>Business Model</h4><p>One-time sales. Compete on price. No ongoing relationship.</p></div>
-      </div>
-
-      <div class="comp-col new">
-        <h3 style="color: var(--accent-bio);">The BAM Way</h3>
-        <div class="comp-item"><h4>How It Works</h4><p>Uses touch, smell, sight, and sound to settle the body directly. No thinking required.</p></div>
-        <div class="comp-item"><h4>The Tools</h4><p>Living systems the user builds and cares for — a small world they own.</p></div>
-        <div class="comp-item"><h4>What It Asks</h4><p>Starts at one minute a day. Works anywhere. Even a small stone in your pocket can anchor you.</p></div>
-        <div class="comp-item"><h4>Business Model</h4><p>Long-term relationship. Subscriptions, training, and licensing. We win on method, not price.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="fade-up">
-    <div class="section-header">Where This Grows</div>
-    <h2>The Long-Term Vision</h2>
-    <p class="section-lead">
-      Because BAM uses physical hardware, it grows directly into furniture, architecture, and enterprise infrastructure. We turn ordinary rooms into active nervous-system regulators.
-    </p>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-icon">◢</div>
-        <h3>1. Enterprise Bio-Architecture</h3>
-        <p>Built directly into commercial buildings and corporate headquarters to create <strong style="color: var(--text-main);">Zero-Entropy Spaces</strong>.</p>
-        <div class="highlight-box">
-          <strong>How it works:</strong> Instead of a plant in the lobby, we install large self-sustaining aquatic systems using enterprise-grade filtration — built into the walls and HVAC systems of corporate offices to settle everyone who walks in.
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">◈</div>
-        <h3>2. Tactical Ergonomics & Clinical</h3>
-        <p>Combining risk reduction with nervous-system regulation for high-stress workers — intelligence analysts, traders, 911 dispatchers, and surgical teams.</p>
-        <div class="highlight-box">
-          <strong>How it works:</strong> Desks with small built-in ecosystems and heavy tactile stone anchors. Passive regulation without breaking focus.
-        </div>
-      </div>
-
-      <div class="card bio">
-        <div class="card-icon">◇</div>
-        <h3>3. Advanced Bio-Genetics</h3>
-        <p>A high-end breeding and design arm for the luxury market — high-ticket <strong style="color: var(--text-main);">living art</strong>.</p>
-        <div class="highlight-box bio">
-          <strong>How it works:</strong> Special genetics for rare, visually striking species, paired with automated filtration for luxury suites, boutique hotels, and private homes.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="who" class="fade-up">
-    <div class="section-header">Who It's For</div>
-    <h2>Three Primary Markets. One Method.</h2>
-    <p class="section-lead">
-      BAM serves three distinct customer profiles. Each gets the same core method — matched to their environment, capacity, and nervous system.
-    </p>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="icon-tile">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="10" y="20" width="44" height="30" rx="3"/>
-            <path d="M10 32h44"/>
-            <path d="M22 12h20v8H22z"/>
-            <circle cx="48" cy="40" r="3" fill="currentColor" stroke="none"/>
-          </svg>
-        </div>
-        <h3>Corporate &amp; Executive</h3>
-        <p><strong style="color: var(--text-main);">Passive, turn-key bioactive systems for chronic digital burnout.</strong></p>
-        <p>Installed in executive suites, break rooms, and reception areas. Zero daily maintenance required from the client. High visual impact. Silent. Self-sustaining.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon-tile">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="32" cy="24" r="12"/>
-            <path d="M14 54c4-8 10-12 18-12s14 4 18 12"/>
-            <circle cx="32" cy="24" r="4" fill="currentColor" stroke="none"/>
-          </svg>
-        </div>
-        <h3>Neurodivergent Autonomy</h3>
-        <p><strong style="color: var(--text-main);">Tactical, low-stimulus tactile anchors for sensory overload.</strong></p>
-        <p>Engineered to engage without overwhelming. No noise. No bright lights. No social demand. Just a smooth stone, a sealed jar, or a weighted mineral in the palm — always available.</p>
-      </div>
-
-      <div class="card bio">
-        <div class="icon-tile">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M32 10v6"/>
-            <path d="M20 18h24v36H20z"/>
-            <path d="M26 30h12"/>
-            <path d="M26 38h12"/>
-            <path d="M26 46h8"/>
-          </svg>
-        </div>
-        <h3>Assisted Living Enrichment</h3>
-        <p><strong style="color: var(--text-main);">Zero-maintenance lithariums and closed-loop ecosystems for cognitive engagement.</strong></p>
-        <p>Designed for retirement communities, memory care, and hospice settings. Safe. Dignified. Endlessly calming. Staff-assisted for residents who need support but want to participate.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="quiz" class="fade-up">
+  <!-- QUESTIONNAIRE WAITLIST — PRIMARY CTA -->
+  <section id="questionnaire" class="fade-up">
     <div class="quiz-banner">
-
       <div class="quiz-status">Coming Soon · In Lab Trials</div>
 
       <h2>We're Building Something Quietly.</h2>
@@ -722,251 +643,57 @@
       <p class="quiz-launch">
         Expected launch: <strong>Month 6 · 2026</strong> · Waitlist priority given to Anchor Club members and early supporters
       </p>
-
     </div>
   </section>
 
-  <section class="fade-up">
-    <div class="section-header">Roadmap</div>
-    <h2>18-Month Plan</h2>
+  <!-- PORTALS — route to subpages -->
+  <section id="portals" class="fade-up">
+    <div class="section-header">Choose Your Path</div>
+    <h2>Where Would You Like to Go?</h2>
     <p class="section-lead">
-      Bootstrapped through pre-sold expo tables and paid services. Break-even is projected at Month 10. The charity arm is set up by Month 12.
+      BAM is being built for four distinct audiences. Each path has its own page, its own questions, and its own next step.
     </p>
 
-    <div class="roadmap">
-      <div class="phase active">
-        <div class="phase-num">Phase 0 · Month 0–3</div>
-        <h4>Foundation</h4>
-        <p>YouTube launch, Discord community, first 6 episodes, trademark filing, corporate structure set up.</p>
-      </div>
-      <div class="phase">
-        <div class="phase-num">Phase 1 · Month 4–9</div>
-        <h4>Growth</h4>
-        <p>Paid tier launch, first 10 breeder/store features, Anchor Stone product line, first grants submitted.</p>
-      </div>
-      <div class="phase">
-        <div class="phase-num">Phase 2 · Month 10–12</div>
-        <h4>Cash Engine</h4>
-        <p>Expo #1 hosted (net about $5,800), charity incorporated, first clinical pilot with a community partner.</p>
-      </div>
-      <div class="phase">
-        <div class="phase-num">Phase 3 · Month 13–18</div>
-        <h4>Scale</h4>
-        <p>Expo #2, Certified Facilitator program, white-label B2B licensing, 20+ episodes, $25K+ cumulative revenue.</p>
-      </div>
+    <div class="portal-grid">
+      <a href="mailto:info_BAM@pm.me?subject=Investor%20Inquiry" class="portal-card">
+        <div class="portal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 4 4 5-5"/></svg>
+        </div>
+        <h3>For Investors</h3>
+        <p>Full business plan, financial model, market analysis, and founder credentials.</p>
+        <span class="portal-cta">Request the deck →</span>
+      </a>
+
+      <a href="mailto:info_BAM@pm.me?subject=Clinical%20Inquiry" class="portal-card">
+        <div class="portal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><circle cx="12" cy="12" r="8"/></svg>
+        </div>
+        <h3>For Clinicians</h3>
+        <p>Therapists, rehabilitation centres, and clinical partners running a BAM pilot program.</p>
+        <span class="portal-cta">Book a pilot call →</span>
+      </a>
+
+      <a href="mailto:info_BAM@pm.me?subject=Facilitator%20Inquiry" class="portal-card clay">
+        <div class="portal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3>For Facilitators</h3>
+        <p>Certification, territory licensing, and the closed-loop supply chain.</p>
+        <span class="portal-cta">Apply to cohort →</span>
+      </a>
+
+      <a href="mailto:info_BAM@pm.me?subject=Partner%20Inquiry" class="portal-card clay">
+        <div class="portal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        </div>
+        <h3>For Partners</h3>
+        <p>Breeders, retailers, and venues. Contracts, applications, and hold-harmless documents.</p>
+        <span class="portal-cta">Download documents →</span>
+      </a>
     </div>
   </section>
 
-  <section id="market" class="fade-up">
-    <div class="section-header">Market Opportunity</div>
-    <h2>Three big markets. One product layer.</h2>
-    <p class="section-lead">
-      BAM sits at the meeting point of three large and growing markets. None of them have a structural, bio-architectural solution today.
-    </p>
-
-    <div class="venn-wrap">
-      <svg viewBox="0 0 520 380" class="venn-svg" role="img" aria-label="Venn diagram showing BAM at intersection of Wellness, Bio-Architecture, and Clinical Markets">
-        <defs>
-          <radialGradient id="vennBio" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(16,185,129,0.35)"/><stop offset="100%" stop-color="rgba(16,185,129,0.08)"/></radialGradient>
-          <radialGradient id="vennTech" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(59,130,246,0.35)"/><stop offset="100%" stop-color="rgba(59,130,246,0.08)"/></radialGradient>
-          <radialGradient id="vennGold" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(245,158,11,0.28)"/><stop offset="100%" stop-color="rgba(245,158,11,0.06)"/></radialGradient>
-        </defs>
-        <circle cx="200" cy="160" r="130" fill="url(#vennBio)" stroke="rgba(16,185,129,0.5)" stroke-width="1.5"/>
-        <circle cx="320" cy="160" r="130" fill="url(#vennTech)" stroke="rgba(59,130,246,0.5)" stroke-width="1.5"/>
-        <circle cx="260" cy="260" r="130" fill="url(#vennGold)" stroke="rgba(245,158,11,0.4)" stroke-width="1.5"/>
-        <text x="110" y="140" fill="#10b981" font-family="Inter,sans-serif" font-size="13" font-weight="700" letter-spacing="1">WELLNESS</text>
-        <text x="120" y="158" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10">$6.8T → $10T</text>
-        <text x="360" y="140" fill="#3b82f6" font-family="Inter,sans-serif" font-size="13" font-weight="700" letter-spacing="1">BIO-ARCH</text>
-        <text x="368" y="158" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10">$2B emerging</text>
-        <text x="220" y="340" fill="#f59e0b" font-family="Inter,sans-serif" font-size="13" font-weight="700" letter-spacing="1">CLINICAL</text>
-        <text x="218" y="358" fill="#9ca3af" font-family="Inter,sans-serif" font-size="10">$50B corporate</text>
-        <text x="260" y="200" fill="#f3f4f6" font-family="Inter,sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="2">BAM</text>
-      </svg>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="metric-value" style="font-size: 1.75rem;">$6.8T → $10T</div>
-        <div class="metric-label" style="margin-top: 0.5rem;">Global Wellness Market</div>
-        <p style="margin-top: 1rem;">Mental wellness, preventive health, and corporate wellness are the fastest-growing parts. Employers and consumers are looking for options that don't involve pills.</p>
-      </div>
-      <div class="card">
-        <div class="metric-value" style="font-size: 1.75rem;">$4.5B</div>
-        <div class="metric-label" style="margin-top: 0.5rem;">Canadian Pet Market</div>
-        <p style="margin-top: 1rem;">Slow-growth and price-competitive. We don't compete here — we use it as our supply chain. Our real market is wellness.</p>
-      </div>
-      <div class="card">
-        <div class="metric-value" style="font-size: 1.75rem;">$50B+</div>
-        <div class="metric-label" style="margin-top: 0.5rem;">Corporate Wellness Spend</div>
-        <p style="margin-top: 1rem;">Companies are actively looking for measurable, low-cost ways to reduce strain and turnover. BAM installs as a workspace asset.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="model" class="fade-up">
-    <div class="section-header">Business Model</div>
-    <h2>Six Core Engines. Zero Inventory Risk. High-Margin Recurring Revenue.</h2>
-    <p class="section-lead">
-      BAM is not a product company. It's a method company with a platform layer. Six revenue engines work together: media builds awareness, community builds recurring revenue, events provide large cash payments, products carry 80–97% margins, services add high-ticket engagements, and licensing compounds into annual recurring revenue.
-    </p>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-icon">▶</div>
-        <h3>Media Engine</h3>
-        <p>Calm, faceless documentary videos on YouTube. Builds trust, authority, and audience.</p>
-        <div class="highlight-box">
-          <strong>Revenue:</strong> Ads, affiliate, consignment<br>
-          <strong>Year 3:</strong> $11K+ per year
-        </div>
-      </div>
-      <div class="card bio">
-        <div class="card-icon">◉</div>
-        <h3>Community Engine</h3>
-        <p>Free and paid membership tiers on Discord and Circle. Weekly wins, accountability partners, live Q&As, and a blueprint library.</p>
-        <div class="highlight-box bio">
-          <strong>Revenue:</strong> $8–15 per month, per member<br>
-          <strong>Year 3:</strong> $24K+ per year
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-icon">◆</div>
-        <h3>Events Engine</h3>
-        <p>Vendor-funded Biophilic Expos at private venues. Pre-sold tables cover all upfront costs.</p>
-        <div class="highlight-box">
-          <strong>Revenue:</strong> Table fees + door tickets<br>
-          <strong>Per expo:</strong> about $5,850 net
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-icon">◈</div>
-        <h3>Products & Kits</h3>
-        <p>Anchor Stones, Desktop Sanctuary Jars, Marimo Kits, and Hardscape Bundles. Margins of 80–97%.</p>
-        <div class="highlight-box">
-          <strong>Revenue:</strong> Direct and wholesale<br>
-          <strong>Year 3:</strong> $10K+ per year
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-icon">◇</div>
-        <h3>Services & Courses</h3>
-        <p>Consultations, tank setups, setup reviews, breeder features, and certified facilitator training.</p>
-        <div class="highlight-box">
-          <strong>Revenue:</strong> $50–$1,200 per engagement<br>
-          <strong>Year 3:</strong> $41K+ per year
-        </div>
-      </div>
-      <div class="card bio">
-        <div class="card-icon">✦</div>
-        <h3>B2B Licensing</h3>
-        <p>White-label BAM curriculum for corporate wellness programs, recovery centres, and clinical partners.</p>
-        <div class="highlight-box bio">
-          <strong>Revenue:</strong> $5K–$25K per contract<br>
-          <strong>Year 3:</strong> $25K+ per year
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="traction" class="fade-up">
-    <div class="section-header">Current Status</div>
-    <h2>Where We Are Now</h2>
-    <p class="section-lead">
-      We're in launch mode. Here's the current status of each part of the business as we prepare for first installations and grant applications.
-    </p>
-
-    <div class="traction-grid">
-      <div class="traction-item">
-        <span class="tag">Active</span>
-        <h4>Pilot Testing & Clinical Distribution</h4>
-        <p>Working to bring the BAM method and intake questionnaire into academic wellness centres, recovery programs, and corporate load-reduction programs.</p>
-      </div>
-      <div class="traction-item">
-        <span class="tag amber">In Progress</span>
-        <h4>Investor & Grant Alignment</h4>
-        <p>Connecting our hybrid hardware/wellness model to regional early-stage funding and non-dilutive grants (Starter Company Plus, Ontario Trillium Foundation).</p>
-      </div>
-      <div class="traction-item">
-        <span class="tag">Active</span>
-        <h4>IP Protection & Scale</h4>
-        <p>Testing the commercial licensing model to confirm it can scale globally as a method, not just a local service. Trademarks filed for "Biophilic Anchor" and "BAM."</p>
-      </div>
-      <div class="traction-item">
-        <span class="tag amber">In Progress</span>
-        <h4>Three-Entity Structure</h4>
-        <p>Building the structure with three parts: KSI Inc. (for-profit), Biophilic Anchor Foundation (charity), and the BAM Certified Facilitators Co-op — to open doors for grants, donations, and licensing.</p>
-      </div>
-      <div class="traction-item">
-        <span class="tag">Ready</span>
-        <h4>Media Launch</h4>
-        <p>YouTube channel, trailer, and first 5 episodes are scripted and storyboarded. The calm, faceless documentary format is designed for long-term search traffic.</p>
-      </div>
-      <div class="traction-item">
-        <span class="tag">Ready</span>
-        <h4>Anchor Club Ready</h4>
-        <p>Discord server is built. Free and paid tiers are designed. Weekly win loop, accountability pairs, and blueprint library are ready for the first members.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="investors" class="fade-up">
-    <div class="section-header">For Investors</div>
-    <h2>Who We Are, In Numbers</h2>
-    <p class="section-lead">
-      BAM is a bootstrapped company. We don't need equity investment to launch. We're looking for non-dilutive grants, in-kind partnerships, and clinical pilot opportunities. Below is a plain-English summary for partners reviewing us.
-    </p>
-
-    <div class="investor-panel">
-      <div class="investor-grid">
-        <div class="investor-summary">
-          <h3>Summary for Review</h3>
-          <p>
-            BAM reaches operational break-even at Month 10 with <strong style="color: var(--text-main);">$0 upfront capital</strong>. Costs stay low because we use a zero-cost supply chain (local stone yards, foraged materials) and pre-sell expo tables to fund events upfront.
-          </p>
-          <p>
-            Year 3 projections show $71,000 in revenue and $56,000 in net profit — funding the charity arm's first clinical programs. The model is deliberately capital-efficient: media builds awareness, community builds recurring revenue, and expos provide the large cash injections that fund everything else.
-          </p>
-
-          <div class="investor-facts">
-            <div class="investor-fact"><span class="label">Legal Entity</span><span class="value">Karma Strategic Intelligence Inc. (Federal Corp #1001472307)</span></div>
-            <div class="investor-fact"><span class="label">Structure</span><span class="value">Hybrid: for-profit + charity (in progress) + facilitator co-op</span></div>
-            <div class="investor-fact"><span class="label">Break-Even</span><span class="value">Month 10</span></div>
-            <div class="investor-fact"><span class="label">Upfront Capital Needed</span><span class="value">$0 — funded by vendor deposits and paid services</span></div>
-            <div class="investor-fact"><span class="label">Year 3 Revenue</span><span class="value">~$71,000</span></div>
-            <div class="investor-fact"><span class="label">Year 3 Net Profit</span><span class="value">~$56,000</span></div>
-            <div class="investor-fact"><span class="label">Gross Margin</span><span class="value">80–97% on physical products</span></div>
-            <div class="investor-fact"><span class="label">Funding Sought</span><span class="value">Non-dilutive grants only</span></div>
-          </div>
-        </div>
-
-        <div class="deck-download">
-          <h4>Investor Deck</h4>
-          <p>Full business plan, financial model, and market analysis. Available on request for verified investors, grant officers, and clinical partners.</p>
-          <a href="mailto:info_BAM@pm.me?subject=Investor%20Deck%20Request" class="btn btn-primary">Request the Investor Deck →</a>
-          <p class="deck-note">We respond to all serious inquiries within 2 business days. Please include your name, organization, and purpose of review.</p>
-        </div>
-      </div>
-
-      <div class="chart-wrap" style="margin-top: 3rem;">
-        <div class="chart-title">Projected Revenue Growth · Year 1 – Year 5</div>
-        <div class="chart-bars">
-          <div class="chart-bar" style="height: 5%;"><span class="chart-bar-value">$3.2K</span><div class="chart-bar-fill" style="height: 100%;"></div></div>
-          <div class="chart-bar" style="height: 12%;"><span class="chart-bar-value">$41K</span><div class="chart-bar-fill" style="height: 100%;"></div></div>
-          <div class="chart-bar" style="height: 30%;"><span class="chart-bar-value">$98K</span><div class="chart-bar-fill" style="height: 100%;"></div></div>
-          <div class="chart-bar" style="height: 60%;"><span class="chart-bar-value">$200K</span><div class="chart-bar-fill" style="height: 100%;"></div></div>
-          <div class="chart-bar" style="height: 100%;"><span class="chart-bar-value">$328K</span><div class="chart-bar-fill" style="height: 100%;"></div></div>
-        </div>
-        <div class="chart-labels">
-          <div class="chart-label">Year 1</div>
-          <div class="chart-label">Year 2</div>
-          <div class="chart-label">Year 3</div>
-          <div class="chart-label">Year 4</div>
-          <div class="chart-label">Year 5</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- FOUNDER -->
   <section id="founder" class="fade-up">
     <div class="section-header">The Architect</div>
     <h2>Anna Davidenko</h2>
@@ -978,26 +705,11 @@
         <div class="founder-role">Honours BCIA · NLP Master Practitioner · Founder of Karma Strategic Intelligence</div>
 
         <p class="founder-bio">
-          BAM was built at the intersection of three disciplines.
+          Operating a system at the intersection of behavioral science and biophilic design, she brings grounded claims, clean language, and rigid operational discipline to the wellness industry.
         </p>
 
-        <ul class="founder-list">
-          <li>
-            <strong>Forensic intelligence.</strong>
-            Pattern recognition applied to human behaviour — seeing the hidden architecture inside complex systems.
-          </li>
-          <li>
-            <strong>Non-verbal behavioural mapping.</strong>
-            Reading what people cannot say. Understanding stress, shutdown, and safety before words arrive.
-          </li>
-          <li>
-            <strong>Spatial ecosystems.</strong>
-            Engineering environments that regulate the body — not through willpower, but through physical design.
-          </li>
-        </ul>
-
         <p class="founder-bio">
-          Operating a system at the intersection of behavioral science and biophilic design, she brings grounded claims, clean language, and rigid operational discipline to the wellness industry.
+          Her background bridges three disciplines: <strong>forensic intelligence</strong>, <strong>non-verbal behavioural mapping</strong>, and <strong>spatial ecosystem engineering</strong>. BAM was built at the intersection.
         </p>
 
         <div class="credential-list">
@@ -1006,7 +718,6 @@
           <span class="credential">Addictions &amp; Community Services Diploma</span>
           <span class="credential">Private Investigator Licence</span>
           <span class="credential">President's Honour List (4.0 GPA)</span>
-          <span class="credential">Founder, KSI Strategic Intelligence</span>
         </div>
 
         <div class="social-links">
@@ -1027,6 +738,7 @@
     </div>
   </section>
 
+  <!-- SUPPORT -->
   <section id="support" class="fade-up">
     <div class="section-header">Support the Mission</div>
     <h2>Every Dollar Builds Infrastructure</h2>
@@ -1048,118 +760,37 @@
       <div class="support-card">
         <div class="support-amount">$250</div>
         <div class="support-title">Sponsors a Desktop Sanctuary</div>
-        <p>A complete bioactive jar for a clinical pilot participant. Sealed moss ecosystem, springtails, Anchor Stone, and printed guide. Materials only — no overhead.</p>
+        <p>A complete bioactive jar for a clinical pilot participant. Sealed moss ecosystem, springtails, Anchor Stone, and printed guide.</p>
       </div>
     </div>
 
     <div class="support-cta">
       <div class="support-cta-label">Fuel the Mission</div>
-
-      <div class="support-cta-trust">
-        Every gift funds a real jar, a real stone, a real person.
-      </div>
+      <div class="support-cta-trust">Every gift funds a real jar, a real stone, a real person.</div>
 
       <a href="https://ko-fi.com/biophilic_anchor_method/goal?g=0"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-donate">
-
+         target="_blank" rel="noopener noreferrer" class="btn-donate">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 21s-7.5-4.35-9.75-9.75C.75 7.5 3 4.5 6.75 4.5c1.875 0 3.375 1.125 4.125 2.25L12 8.25l1.125-1.5c.75-1.125 2.25-2.25 4.125-2.25C21 4.5 23.25 7.5 21.75 11.25 19.5 16.65 12 21 12 21z"/>
         </svg>
-
         <span>Support the Mission on Ko-fi</span>
-
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 12h14"/>
-          <path d="M13 6l6 6-6 6"/>
+          <path d="M5 12h14"/><path d="M13 6l6 6-6 6"/>
         </svg>
-
       </a>
 
       <p class="support-note">
-        Donations processed securely through Ko-fi. Every gift goes to the mission. Charitable tax receipts will be available once the Biophilic Anchor Foundation receives CRA charitable status.
+        Donations processed securely through Ko-fi. Charitable tax receipts will be available once the Biophilic Anchor Foundation receives CRA charitable status.
       </p>
     </div>
   </section>
 
-  <section id="partners" class="fade-up">
-    <div class="section-header">Partner Documents</div>
-    <h2>Contracts, Templates, and Downloads</h2>
-    <p class="section-lead">
-      BAM works with breeders, retailers, venues, and clinical partners. Below are the standard documents used across all engagements. Each is available for download ahead of any transaction or partnership discussion.
-    </p>
-
-    <div class="partner-grid">
-      <div class="partner-card"><span class="partner-tag bio">Breeders</span><h3>Live Animal Purchase & Bill of Sale</h3><p>Standard transaction contract for any live animal purchase, with 48-hour inspection window, 7-day congenital health warranty, and refund policy.</p><a href="/documents/bam-bill-of-sale.pdf" class="partner-download" download>Download PDF →</a></div>
-      <div class="partner-card"><span class="partner-tag bio">Breeders</span><h3>Breeding Loan & Co-Ownership</h3><p>Governs placing animals with another breeder. Covers clutch split, veterinary care responsibility, and return deadlines.</p><a href="/documents/bam-breeding-loan.pdf" class="partner-download" download>Download PDF →</a></div>
-      <div class="partner-card"><span class="partner-tag bio">Retailers</span><h3>Consignment Agreement</h3><p>For placing animals or products in a physical store. Sets minimum payout, commission split, care responsibility, and return timeframe.</p><a href="/documents/bam-consignment.pdf" class="partner-download" download>Download PDF →</a></div>
-      <div class="partner-card"><span class="partner-tag gold">Events</span><h3>Vendor Expo Application & Hold-Harmless</h3><p>Required for every vendor at a Biophilic Expo. Assumes full liability for animals, prohibits venomous and giant constrictor species.</p><a href="/documents/bam-vendor-application.pdf" class="partner-download" download>Download PDF →</a></div>
-      <div class="partner-card"><span class="partner-tag gold">Clients</span><h3>In-Home Setup Waiver</h3><p>For on-site tank setup services. Covers property damage, animal health after handover, and allergy disclosure.</p><a href="/documents/bam-setup-waiver.pdf" class="partner-download" download>Download PDF →</a></div>
-      <div class="partner-card"><span class="partner-tag gold">Clients</span><h3>Consultation Disclaimer</h3><p>Included with every paid consultation. States that BAM is not a veterinary or medical service and that guidance is not a substitute for professional care.</p><a href="/documents/bam-consultation-disclaimer.pdf" class="partner-download" download>Download PDF →</a></div>
-      <div class="partner-card"><span class="partner-tag">Investors</span><h3>Investor Deck</h3><p>Full business plan, financial model, market analysis, and founder credentials. Available on request for verified investors and grant officers.</p><a href="mailto:info_BAM@pm.me?subject=Investor%20Deck%20Request" class="partner-download">Request by Email →</a></div>
-      <div class="partner-card"><span class="partner-tag">Partners</span><h3>Clinical Pilot MOU</h3><p>Memorandum of Understanding template for community health organizations, recovery centres, and clinical partners running a BAM pilot program.</p><a href="mailto:info_BAM@pm.me?subject=Clinical%20Pilot%20MOU%20Request" class="partner-download">Request by Email →</a></div>
-    </div>
-
-    <div class="plain-callout" style="margin-top: 3rem;">
-      <h4>ABOUT THESE DOCUMENTS</h4>
-      <p>All contracts are templates and must be reviewed by a licensed lawyer before execution in any specific jurisdiction. BAM is a Canadian company. Contracts are governed by Ontario law unless otherwise stated. For U.S. or international partners, additional riders may apply.</p>
-    </div>
-  </section>
-
-  <section id="ask" class="fade-up">
-    <div class="section-header">What We Need</div>
-    <div class="ask-card">
-      <h2>We're looking for non-dilutive grants and strategic partners.</h2>
-      <p>BAM doesn't need equity investment. We're looking for non-dilutive grants, in-kind partnerships, and clinical pilot opportunities to speed up product development, first installations, and community launch.</p>
-
-      <div class="cta-row">
-        <a href="mailto:info_BAM@pm.me" class="btn btn-primary">Request the Full Business Plan →</a>
-        <a href="mailto:info_BAM@pm.me?subject=HELIX%20Intro%20Call" class="btn btn-ghost">Schedule a Conversation</a>
-      </div>
-
-      <div class="ask-details">
-        <div><div class="ask-detail-label">Target Grant</div><div class="ask-detail-value">Starter Company Plus</div><div class="ask-detail-sub">$5,000 · Apply Month 2</div></div>
-        <div><div class="ask-detail-label">Target Grant</div><div class="ask-detail-value">Ontario Trillium Foundation</div><div class="ask-detail-sub">$10K–$25K · Apply Year 2</div></div>
-        <div><div class="ask-detail-label">Partnership</div><div class="ask-detail-value">Clinical Pilot</div><div class="ask-detail-sub">CMHA Simcoe / Youth Haven</div></div>
-        <div><div class="ask-detail-label">Partnership</div><div class="ask-detail-value">Corporate Wellness</div><div class="ask-detail-sub">5 local businesses · $10K+ contract</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="fade-up">
-    <div class="section-header">Common Questions</div>
-    <h2>FAQ</h2>
-
-    <div style="max-width: 820px;">
-      <div class="faq-item">
-        <h4>What makes BAM hard to copy?</h4>
-        <p>Three things. First, our method and terminology are protected (trademarks pending). Second, our community — the Anchor Club — keeps members involved through accountability partners and streak tracking. Third, the founder's lived recovery experience and forensic intelligence background can't be copied. On top of that, we source materials at zero cost from local stone yards, so competitors can't match our pricing.</p>
-      </div>
-      <div class="faq-item">
-        <h4>How does BAM fit into the wellness space?</h4>
-        <p>We're a peer-supported wellness practice. Every video, product, and consultation includes clear guidance. We support nervous system regulation — we don't replace medical care. Every participant is screened carefully, and our Ethics Charter is public and enforced. This keeps our work responsible, transparent, and safe.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What are the numbers per product?</h4>
-        <p>Physical products carry 80–97% gross margins. Anchor Stones cost about $0.30 and sell for $12. Desktop Sanctuary Jars cost $6–8 and sell for $35–45. Consultations are $75 with almost no additional cost. Anchor Club is $8 per month with 90%+ margin. Each expo nets about $5,850 with no upfront capital.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Why a for-profit plus charity structure?</h4>
-        <p>Three reasons. First, it opens grants that a for-profit can't apply for. Second, it allows tax-deductible donations from donors, including gifts of appreciated securities with no capital gains tax. Third, it gives credibility with clinical partners. The for-profit arm pays salaries and scales commercially. The charity arm runs mission programs and receives non-dilutive funding.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What is the exit path?</h4>
-        <p>Three options. (1) Acquisition by a large wellness or pet company entering the bio-architecture space (PetSmart, Chewy, Mars Petcare). (2) Acquisition by a corporate wellness provider seeking physical hardware (LifeSpeak, CoreHealth). (3) Independent operation as a profitable, founder-owned business with a charity arm. We're building for option 3 — with options 1 and 2 as upside.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- CONTACT (COMPACT) -->
   <section id="contact" class="fade-up">
     <div class="section-header">Contact</div>
     <h2>Get in Touch</h2>
     <p class="section-lead">
-      For investor inquiries, clinical partnerships, breeder collaborations, or press requests — reach out directly. We respond to all serious messages within 2 business days.
+      We respond to all serious inquiries within 2 business days.
     </p>
 
     <div class="contact-grid">
@@ -1168,25 +799,26 @@
         <div class="contact-item"><span class="label">Email</span><span class="value"><a href="mailto:info_BAM@pm.me">info_BAM@pm.me</a></span></div>
         <div class="contact-item"><span class="label">Parent Co.</span><span class="value"><a href="https://www.ksi-intel.com/" target="_blank" rel="noopener noreferrer">Karma Strategic Intelligence Inc.</a></span></div>
         <div class="contact-item"><span class="label">Location</span><span class="value">Midhurst, Ontario, Canada</span></div>
-        <div class="contact-item"><span class="label">Service Area</span><span class="value">Simcoe County & Greater Toronto Area</span></div>
-        <div class="contact-note">For donor inquiries: please include "Donation" in the subject line. For investor deck requests: include your name, organization, and purpose of review.</div>
+        <div class="contact-item"><span class="label">Service Area</span><span class="value">Simcoe County &amp; Greater Toronto Area</span></div>
+        <div class="contact-note">For investor deck requests, include your name, organization, and purpose of review.</div>
       </div>
 
       <div class="contact-card">
         <h3>Follow the Work</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.7;">The best way to follow BAM is through our social channels. We post weekly on Instagram, share long-form updates on LinkedIn, and announce new programs on Facebook.</p>
-        <div class="social-links-compact" style="margin-top: 1rem;">
+        <p style="color: var(--text-body); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.7;">Weekly posts on Instagram. Long-form updates on LinkedIn. Program announcements on Facebook.</p>
+        <div class="social-links-compact">
           <a href="https://www.linkedin.com/in/anna-davidenko/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
           <a href="https://www.instagram.com/biophilic_anchor_method/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
           <a href="https://www.facebook.com/anna.davidenko.27135" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
         </div>
-        <div class="contact-note" style="margin-top: 2rem;">Prefer email? Send directly to <a href="mailto:info_BAM@pm.me" style="color: var(--accent-bio); text-decoration: none;">info_BAM@pm.me</a> with a subject line describing your inquiry.</div>
+        <div class="contact-note" style="margin-top: 1.75rem;">Prefer email? Send directly to <a href="mailto:info_BAM@pm.me" style="color: var(--accent-bio); text-decoration: none;">info_BAM@pm.me</a> with a subject line describing your inquiry.</div>
       </div>
     </div>
   </section>
 
 </div>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1195,7 +827,7 @@
           <img src="2bam.png" alt="BAM Logo" class="logo-img">
           <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
         </a>
-        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario. Serving Simcoe County and the Greater Toronto Area.</p>
+        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario.</p>
         <div class="social-links-compact">
           <a href="https://www.linkedin.com/in/anna-davidenko/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
           <a href="https://www.instagram.com/biophilic_anchor_method/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
@@ -1207,18 +839,16 @@
         <h5>Company</h5>
         <a href="#thesis">Core Idea</a>
         <a href="#how">How It Works</a>
-        <a href="#who">Who It's For</a>
-        <a href="#market">Market</a>
-        <a href="#model">Business Model</a>
+        <a href="#profiles">Composite Profiles</a>
+        <a href="#founder">Founder</a>
       </div>
 
       <div class="footer-col">
-        <h5>Engage</h5>
-        <a href="#investors">For Investors</a>
-        <a href="#support">Support the Mission</a>
-        <a href="#partners">Partner Documents</a>
-        <a href="#ask">What We Need</a>
-        <a href="#contact">Contact</a>
+        <h5>Audiences</h5>
+        <a href="mailto:info_BAM@pm.me?subject=Investor%20Inquiry">Investors</a>
+        <a href="mailto:info_BAM@pm.me?subject=Clinical%20Inquiry">Clinicians</a>
+        <a href="mailto:info_BAM@pm.me?subject=Facilitator%20Inquiry">Facilitators</a>
+        <a href="mailto:info_BAM@pm.me?subject=Partner%20Inquiry">Partners</a>
       </div>
 
       <div class="footer-col">
