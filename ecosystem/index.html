@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The BAM Ecosystem | Biophilic Anchor Method</title>
+  <meta name="description" content="The BAM Ecosystem. Three entities working together — for-profit, charity, and facilitator co-op.">
+  <meta name="theme-color" content="#0a0d12">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .entity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;}
+    .entity-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2rem;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;}
+    .entity-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-clay),var(--accent-sand));}
+    .entity-card:hover{transform:translateY(-4px);border-color:rgba(200,118,90,.5);box-shadow:0 24px 48px -20px var(--accent-clay-glow);}
+    .entity-card.bio::before{background:linear-gradient(90deg,var(--accent-bio),var(--accent-sand));}
+    .entity-card.bio:hover{border-color:rgba(16,185,129,.5);box-shadow:0 24px 48px -20px var(--accent-bio-glow);}
+    .entity-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;background:rgba(200,118,90,.1);color:var(--accent-clay);border:1px solid rgba(200,118,90,.28);margin-bottom:1.25rem;}
+    .entity-card.bio .entity-tag{background:rgba(16,185,129,.1);color:var(--accent-bio);border-color:rgba(16,185,129,.28);}
+    .entity-card h3{font-size:1.25rem;margin-bottom:.5rem;color:var(--text-main);}
+    .entity-card p{color:var(--text-body);font-size:.92rem;line-height:1.7;margin-bottom:1rem;}
+    .entity-card ul{color:var(--text-body);font-size:.88rem;line-height:1.8;padding-left:1.2rem;margin-bottom:1rem;}
+    .entity-role{font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:.75rem;}
+    .flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem;}
+    .flow-item{background:rgba(28,37,48,.5);border:1px solid var(--border-color);border-radius:12px;padding:1.5rem;border-left:3px solid var(--accent-clay);}
+    .flow-item h4{font-size:.95rem;font-weight:700;margin-bottom:.5rem;color:var(--text-main);}
+    .flow-item p{color:var(--text-body);font-size:.85rem;line-height:1.6;margin:0;}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="container">
+  <nav class="nav">
+    <a href="../" class="logo">
+      <img src="../2bam.png" alt="BAM Logo" class="logo-img">
+      <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
+    </a>
+    <div class="nav-links">
+      <a href="../investors/">Investors</a>
+      <a href="../clinical/">Clinicians</a>
+      <a href="../facilitators/">Facilitators</a>
+      <a href="../partners/">Partners</a>
+      <a href="../" class="nav-cta">← Back to Home</a>
+    </div>
+  </nav>
+
+  <header class="page-header" id="main-content">
+    <a href="../" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+    <div class="page-label">The BAM Ecosystem</div>
+    <h1>
+      Three entities.<br>
+      <span class="gradient">One mission.</span>
+    </h1>
+    <p class="page-lead">
+      BAM is not a single company. It is a circular ecosystem of three entities working together — a for-profit engine, a charity arm, and a facilitator co-op. Each feeds the others. None subsidizes another.
+    </p>
+  </header>
+
+  <section class="fade-up">
+    <div class="section-header clay">The Structure</div>
+    <h2>The three entities.</h2>
+    <p class="section-lead">
+      Each entity has its own legal structure, its own board, and its own mission. Together, they form a self-sustaining ecosystem where every dollar serves two purposes: revenue and impact.
+    </p>
+
+    <div class="entity-grid">
+      <div class="entity-card">
+        <span class="entity-tag">For-Profit</span>
+        <div class="entity-role">Karma Strategic Intelligence Inc.</div>
+        <h3>The Engine</h3>
+        <p>The for-profit arm handles all revenue-generating activity. It funds the ecosystem through paid services, products, and licensing.</p>
+        <ul>
+          <li>Media (YouTube, Instagram, LinkedIn)</li>
+          <li>Products (Anchor Stones, Moss Jars, Terrariums)</li>
+          <li>Services (consultations, in-home setups)</li>
+          <li>Expos (vendor-funded events)</li>
+          <li>B2B Licensing (white-label curriculum)</li>
+          <li>Certified Facilitator Program</li>
+        </ul>
+      </div>
+
+      <div class="entity-card bio">
+        <span class="entity-tag">Charity</span>
+        <div class="entity-role">Biophilic Anchor Foundation (in progress)</div>
+        <h3>The Mission</h3>
+        <p>The charity arm runs free programs for vulnerable populations. It is funded by grants, donations, and corporate gifts — never by the for-profit.</p>
+        <ul>
+          <li>Free ecosystems for recovery programs</li>
+          <li>Free Anchor Stones for clinical pilots</li>
+          <li>Free workshops for seniors and youth</li>
+          <li>Library lending program</li>
+          <li>Research and evaluation (GAD-7)</li>
+        </ul>
+      </div>
+
+      <div class="entity-card">
+        <span class="entity-tag">Co-op</span>
+        <div class="entity-role">BAM Certified Facilitators Co-op</div>
+        <h3>The Network</h3>
+        <p>The co-op is the distribution layer. Every certified facilitator is a licensed operator in their own territory, sharing marketing, insurance, and peer support.</p>
+        <ul>
+          <li>Territory licensing</li>
+          <li>Shared marketing assets</li>
+          <li>Group insurance rates</li>
+          <li>Peer support forum</li>
+          <li>Closed-loop supply chain</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-up">
+    <div class="section-header">How It Works</div>
+    <h2>The circular economy.</h2>
+    <p class="section-lead">
+      Every part of BAM feeds another part. The for-profit generates revenue. The revenue funds the charity and the co-op. The charity earns credibility and grants. The co-op delivers the method at scale.
+    </p>
+
+    <div class="flow-grid">
+      <div class="flow-item">
+        <h4>1. For-Profit Generates Revenue</h4>
+        <p>Products, services, expos, and licensing create cash flow. This is the engine.</p>
+      </div>
+      <div class="flow-item">
+        <h4>2. Revenue Funds the Mission</h4>
+        <p>A portion of for-profit revenue funds free programs. Grant funding accelerates the charity arm.</p>
+      </div>
+      <div class="flow-item">
+        <h4>3. Charity Earns Credibility</h4>
+        <p>Clinical pilots and free programs produce data, white papers, and trust with grant officers.</p>
+      </div>
+      <div class="flow-item">
+        <h4>4. Co-op Delivers at Scale</h4>
+        <p>Certified facilitators expand the method into new territories. They pay licensing back to the for-profit.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box bio" style="margin-top: 2rem;">
+      <strong>Why this matters:</strong> Most wellness companies are either for-profit or non-profit. BAM is both. This hybrid structure creates financial resilience, social impact, and scalability — without compromising either mission.
+    </div>
+  </section>
+
+  <section class="fade-up" style="border-bottom:none;">
+    <div class="cta-panel" style="background:linear-gradient(135deg,rgba(200,118,90,.08) 0%,rgba(16,185,129,.08) 100%);border:1px solid rgba(200,118,90,.3);border-radius:16px;padding:3rem;text-align:center;">
+      <h2 style="margin-bottom:1rem;">Want to Be Part of the Ecosystem?</h2>
+      <p style="color:var(--text-body);max-width:580px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.7;">
+        Whether you want to invest, partner, become a facilitator, or support the charity — there is a place for you.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="../investors/" class="btn btn-primary">For Investors →</a>
+        <a href="../facilitators/" class="btn btn-ghost">Become a Facilitator</a>
+        <a href="../impact/" class="btn btn-ghost">Support the Charity</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../" class="logo">
+          <img src="../2bam.png" alt="BAM Logo" class="logo-img">
+          <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
+        </a>
+        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="../about/">About BAM</a>
+        <a href="../ecosystem/">Ecosystem</a>
+        <a href="../products/">Products</a>
+        <a href="../faq/">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h5>Audiences</h5>
+        <a href="../investors/">Investors</a>
+        <a href="../clinical/">Clinicians</a>
+        <a href="../facilitators/">Facilitators</a>
+        <a href="../partners/">Partners</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal &amp; Ethics</h5>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal-links">
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
+        <a href="mailto:info@biophilic-anchor-method.com">info@biophilic-anchor-method.com</a>
+      </div>
+      <div class="footer-disclaimer">
+        <strong style="color: var(--text-muted);">Wellness Disclaimer:</strong> BAM is a peer-supported wellness practice. We are not a licensed medical, psychological, or veterinary provider. Nothing on this site constitutes medical advice.
+      </div>
+      <div class="footer-copyright">
+        <div>© 2026 Karma Strategic Intelligence Inc. · Federal Corp #1001472307</div>
+        <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,es,zh-CN,ar,hi,pt,ru,ja,ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
