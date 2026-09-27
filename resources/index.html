@@ -11,11 +11,22 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" href="../favicon.ico">
   <link rel="manifest" href="../site.webmanifest">
-
-  <!-- EXTERNAL STYLESHEET -->
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;}
+    .book-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:14px;padding:2rem;display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s;backdrop-filter:blur(12px);}
+    .book-card:hover{transform:translateY(-4px);border-color:var(--accent-clay);box-shadow:0 20px 40px -20px var(--accent-clay-glow);}
+    .book-cover{width:100%;height:180px;background:linear-gradient(135deg,rgba(16,185,129,.1),rgba(200,118,90,.1));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;color:var(--accent-clay);margin-bottom:1.5rem;border:1px solid rgba(200,118,90,.2);}
+    .book-title{font-size:1.15rem;font-weight:700;color:var(--text-main);margin-bottom:.35rem;}
+    .book-author{font-size:.85rem;color:var(--accent-clay);font-weight:600;margin-bottom:1rem;letter-spacing:.5px;}
+    .book-why{font-size:.92rem;color:var(--text-body);line-height:1.6;flex-grow:1;margin-bottom:1.5rem;}
+    .book-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:700;color:var(--accent-clay);text-decoration:none;transition:gap .2s;}
+    .book-link:hover{gap:.65rem;}
+  </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <div class="container">
   <nav class="nav">
     <a href="../" class="logo">
@@ -23,15 +34,18 @@
       <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
     </a>
     <div class="nav-links">
+      <a href="../#how">Method</a>
+      <a href="../about/">About</a>
+      <a href="../products/">Products</a>
+      <a href="../resources/">Resources</a>
       <a href="../investors/">Investors</a>
-      <a href="../clinical/">Clinicians</a>
-      <a href="../facilitators/">Facilitators</a>
-      <a href="../partners/">Partners</a>
-      <a href="../" class="nav-cta">← Back to Home</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../#contact">Contact</a>
+      <a href="../questionnaire/" class="nav-cta">Join Waitlist</a>
     </div>
   </nav>
 
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <a href="../" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
       Back to Home
@@ -43,56 +57,54 @@
     </p>
   </header>
 
-  <section>
+  <section class="fade-up">
     <div class="book-grid">
-      <!-- Book 1 -->
       <div class="book-card">
         <div class="book-cover">🌿</div>
         <div class="book-title">The Nature Fix</div>
         <div class="book-author">Florence Williams</div>
         <p class="book-why">Why nature makes us happier, healthier, and more creative. Williams travels the world to uncover the science behind nature's positive effects on the brain.</p>
-        <a href="https://www.amazon.ca/Nature-Fix-Happier-Healthier-Creative/dp/0393355575" target="_blank" class="book-link">View on Amazon →</a>
+        <a href="https://www.amazon.ca/Nature-Fix-Happier-Healthier-Creative/dp/0393355575" target="_blank" rel="noopener noreferrer" class="book-link">View on Amazon →</a>
       </div>
-      <!-- Book 2 -->
       <div class="book-card">
         <div class="book-cover">🐜</div>
         <div class="book-title">Biophilia</div>
         <div class="book-author">E.O. Wilson</div>
         <p class="book-why">The foundational theory that humans have an innate, genetically based tendency to connect with nature and other living systems.</p>
-        <a href="https://www.amazon.ca/Biophilia-Edward-O-Wilson/dp/0674074423" target="_blank" class="book-link">View on Amazon →</a>
+        <a href="https://www.amazon.ca/Biophilia-Edward-O-Wilson/dp/0674074423" target="_blank" rel="noopener noreferrer" class="book-link">View on Amazon →</a>
       </div>
-      <!-- Book 3 -->
       <div class="book-card">
         <div class="book-cover">🧠</div>
         <div class="book-title">The Body Keeps the Score</div>
         <div class="book-author">Bessel van der Kolk</div>
         <p class="book-why">Explains how trauma is stored in the body and why sensory, bottom-up approaches (like BAM) are essential for nervous system regulation.</p>
-        <a href="https://www.amazon.ca/Body-Keeps-Score-Healing-Trauma/dp/0143127748" target="_blank" class="book-link">View on Amazon →</a>
+        <a href="https://www.amazon.ca/Body-Keeps-Score-Healing-Trauma/dp/0143127748" target="_blank" rel="noopener noreferrer" class="book-link">View on Amazon →</a>
       </div>
-      <!-- Book 4 -->
       <div class="book-card">
         <div class="book-cover">🌳</div>
         <div class="book-title">Last Child in the Woods</div>
         <div class="book-author">Richard Louv</div>
         <p class="book-why">Introduces the concept of "nature-deficit disorder" and argues that direct exposure to nature is essential for healthy childhood development.</p>
-        <a href="https://www.amazon.ca/Last-Child-Woods-Children-Nature-Deficit/dp/156512605X" target="_blank" class="book-link">View on Amazon →</a>
+        <a href="https://www.amazon.ca/Last-Child-Woods-Children-Nature-Deficit/dp/156512605X" target="_blank" rel="noopener noreferrer" class="book-link">View on Amazon →</a>
       </div>
-      <!-- Book 5 -->
       <div class="book-card">
         <div class="book-cover">🌊</div>
         <div class="book-title">Blue Mind</div>
         <div class="book-author">Wallace J. Nichols</div>
         <p class="book-why">The surprising science that shows how being near, in, on, or under water can make you happier, healthier, and more connected.</p>
-        <a href="https://www.amazon.ca/Blue-Mind-Surprising-Science-Happier/dp/0316252083" target="_blank" class="book-link">View on Amazon →</a>
+        <a href="https://www.amazon.ca/Blue-Mind-Surprising-Science-Happier/dp/0316252083" target="_blank" rel="noopener noreferrer" class="book-link">View on Amazon →</a>
       </div>
-      <!-- Book 6 -->
       <div class="book-card">
         <div class="book-cover">🧘</div>
         <div class="book-title">The Experience of Nature</div>
-        <div class="book-author">Rachel & Stephen Kaplan</div>
+        <div class="book-author">Rachel &amp; Stephen Kaplan</div>
         <p class="book-why">The original research on Attention Restoration Theory (ART). Explains why natural environments restore our directed attention and reduce mental fatigue.</p>
-        <a href="https://www.amazon.ca/Experience-Nature-Psychological-Perspective/dp/0521341399" target="_blank" class="book-link">View on Amazon →</a>
+        <a href="https://www.amazon.ca/Experience-Nature-Psychological-Perspective/dp/0521341399" target="_blank" rel="noopener noreferrer" class="book-link">View on Amazon →</a>
       </div>
+    </div>
+
+    <div class="highlight-box bio" style="margin-top: 2rem;">
+      <strong>Affiliate Disclosure:</strong> BAM is a participant in the Amazon Services LLC Associates Program. As an Amazon Associate, we earn from qualifying purchases. This comes at no extra cost to you.
     </div>
   </section>
 </div>
@@ -107,6 +119,16 @@
         </a>
         <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario.</p>
       </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="../about/">About BAM</a>
+        <a href="../ecosystem/">Ecosystem</a>
+        <a href="../products/">Products</a>
+        <a href="../impact/">Charity &amp; Impact</a>
+        <a href="../faq/">FAQ</a>
+      </div>
+
       <div class="footer-col">
         <h5>Audiences</h5>
         <a href="../investors/">Investors</a>
@@ -114,23 +136,20 @@
         <a href="../facilitators/">Facilitators</a>
         <a href="../partners/">Partners</a>
       </div>
-      <div class="footer-col">
-        <h5>Resources</h5>
-        <a href="../resources/index.html">Reading List</a>
-        <a href="../about/index.html">About BAM</a>
-      </div>
+
       <div class="footer-col">
         <h5>Legal &amp; Ethics</h5>
-        <a href="../ethics/index.html">Ethics Charter</a>
-        <a href="../privacy/index.html">Privacy Policy</a>
-        <a href="../terms/index.html">Terms of Use</a>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
       </div>
     </div>
+
     <div class="footer-bottom">
       <div class="footer-legal-links">
-        <a href="../ethics/index.html">Ethics Charter</a>
-        <a href="../privacy/index.html">Privacy Policy</a>
-        <a href="../terms/index.html">Terms of Use</a>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
         <a href="mailto:info@biophilic-anchor-method.com">info@biophilic-anchor-method.com</a>
       </div>
       <div class="footer-disclaimer">
@@ -141,10 +160,22 @@
         <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
       </div>
     </div>
+
+    <div id="google_translate_element"></div>
   </div>
 </footer>
 
-<!-- EXTERNAL JAVASCRIPT -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,fr,es,zh-CN,ar,hi,pt,ru,ja,ko',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <script src="../script.js"></script>
 </body>
 </html>
