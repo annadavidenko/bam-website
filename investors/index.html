@@ -22,7 +22,6 @@
 
   <!-- PAGE-SPECIFIC STYLES -->
   <style>
-    /* INVESTOR SUMMARY PANEL */
     .summary-panel{background:linear-gradient(135deg,rgba(19,26,36,.95) 0%,rgba(10,13,18,.95) 100%);border:1px solid var(--border-bright);border-radius:16px;padding:2.5rem;position:relative;overflow:hidden;}
     .summary-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent-clay),var(--accent-bio));}
     .summary-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:start;}
@@ -32,22 +31,16 @@
     .summary-fact{display:flex;align-items:baseline;gap:1rem;padding:.8rem 1rem;background:rgba(255,255,255,.02);border:1px solid var(--border-color);border-radius:10px;}
     .summary-fact .label{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-dim);font-weight:600;min-width:140px;flex-shrink:0;}
     .summary-fact .value{font-size:.9rem;color:var(--text-main);font-weight:600;}
-
-    /* CTA CARD */
     .deck-card{background:linear-gradient(180deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-bright);border-radius:14px;padding:2rem;text-align:center;position:relative;}
     .deck-card h4{font-size:1.05rem;margin-bottom:.65rem;color:var(--text-main);}
     .deck-card p{color:var(--text-body);font-size:.88rem;line-height:1.65;margin-bottom:1.5rem;}
     .btn-block{width:100%;justify-content:center;}
-
-    /* BUSINESS MODEL GRID */
     .engine-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;}
     .engine-card{background:linear-gradient(180deg,rgba(28,37,48,.7) 0%,rgba(19,26,36,.7) 100%);border:1px solid var(--border-color);border-radius:12px;padding:1.5rem;position:relative;}
     .engine-card h4{font-size:.95rem;font-weight:700;margin-bottom:.5rem;color:var(--text-main);}
     .engine-card p{color:var(--text-body);font-size:.85rem;line-height:1.6;margin-bottom:.9rem;}
     .engine-revenue{font-size:.78rem;color:var(--text-muted);line-height:1.55;}
     .engine-revenue strong{color:var(--accent-bio);font-weight:700;}
-
-    /* CHART */
     .chart-wrap{background:linear-gradient(180deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-color);border-radius:14px;padding:2.5rem 2rem 1.5rem;margin-top:2rem;}
     .chart-title{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:2rem;text-align:center;}
     .chart-bars{display:flex;align-items:flex-end;justify-content:space-between;gap:1.25rem;height:240px;padding:0 1rem;border-bottom:1px solid var(--border-color);position:relative;}
@@ -57,8 +50,6 @@
     .chart-bar-value{position:absolute;top:-26px;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:700;color:var(--accent-clay);white-space:nowrap;}
     .chart-labels{display:flex;justify-content:space-between;gap:1.25rem;padding:.8rem 1rem 0;}
     .chart-label{flex:1;text-align:center;font-size:.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim);}
-
-    /* FINANCIAL TABLE */
     .fin-table{width:100%;border-collapse:separate;border-spacing:0;background:rgba(28,37,48,.5);border:1px solid var(--border-color);border-radius:12px;overflow:hidden;margin-top:1.5rem;font-size:.88rem;}
     .fin-table th,.fin-table td{padding:.85rem 1rem;text-align:right;border-bottom:1px solid var(--border-color);}
     .fin-table th:first-child,.fin-table td:first-child{text-align:left;}
@@ -66,8 +57,6 @@
     .fin-table tbody tr:last-child td{border-bottom:none;}
     .fin-table tbody td{color:var(--text-body);}
     .fin-table tbody tr.total-row td{background:rgba(16,185,129,.05);color:var(--text-main);font-weight:700;}
-
-    /* ROADMAP */
     .roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.5rem;}
     .phase{padding:1.5rem;background:rgba(28,37,48,.6);border:1px solid var(--border-color);border-radius:12px;position:relative;}
     .phase.active{border-color:var(--accent-bio);background:linear-gradient(180deg,rgba(16,185,129,.06) 0%,rgba(28,37,48,.6) 100%);}
@@ -75,26 +64,18 @@
     .phase.active .phase-num{color:var(--accent-bio);}
     .phase h4{font-size:.95rem;font-weight:700;margin-bottom:.65rem;}
     .phase p{font-size:.82rem;color:var(--text-body);line-height:1.55;}
-
-    /* TRACTION */
     .traction-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;}
     .traction-item{background:rgba(28,37,48,.5);border:1px solid var(--border-color);border-radius:12px;padding:1.5rem;position:relative;}
     .traction-item .tag{position:absolute;top:.85rem;right:.85rem;font-size:.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.22rem .55rem;border-radius:999px;background:rgba(16,185,129,.1);color:var(--accent-bio);border:1px solid rgba(16,185,129,.2);}
     .traction-item .tag.amber{background:rgba(245,158,11,.1);color:var(--accent-gold);border-color:rgba(245,158,11,.2);}
     .traction-item h4{font-size:.9rem;font-weight:700;margin-bottom:.45rem;color:var(--text-main);padding-right:4.5rem;}
     .traction-item p{font-size:.82rem;color:var(--text-body);line-height:1.55;}
-
-    /* FAQ */
     .faq-item{border-bottom:1px solid var(--border-color);padding:1.35rem 0;}
     .faq-item:last-child{border-bottom:none;}
     .faq-item h4{font-size:.95rem;font-weight:700;margin-bottom:.55rem;color:var(--text-main);}
     .faq-item p{font-size:.88rem;color:var(--text-body);line-height:1.65;}
-
-    /* VENN */
     .venn-wrap{display:flex;justify-content:center;align-items:center;padding:1.5rem 0;}
     .venn-svg{max-width:480px;width:100%;height:auto;}
-
-    /* FOUNDER */
     .founder-card{display:grid;grid-template-columns:220px 1fr;gap:2.5rem;align-items:start;padding:2.5rem;background:linear-gradient(135deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-color);border-radius:16px;backdrop-filter:blur(12px);}
     .founder-avatar{width:100%;aspect-ratio:1;border-radius:14px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--accent-clay),var(--accent-bio));display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px -20px var(--accent-clay-glow);}
     .founder-avatar img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.98) contrast(1.03) brightness(.98);position:relative;z-index:1;}
@@ -104,13 +85,10 @@
     .founder-role{color:var(--accent-clay);font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.25rem;}
     .founder-bio{color:var(--text-body);font-size:.92rem;line-height:1.7;margin-bottom:1rem;}
     .founder-bio strong{color:var(--text-main);font-weight:600;}
-
-    /* FINAL CTA PANEL */
     .cta-panel{background:linear-gradient(135deg,rgba(200,118,90,.08) 0%,rgba(16,185,129,.08) 100%);border:1px solid rgba(200,118,90,.3);border-radius:16px;padding:3rem;text-align:center;position:relative;overflow:hidden;}
     .cta-panel h2{margin-bottom:1rem;}
     .cta-panel p{color:var(--text-body);max-width:580px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.7;}
     .cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
-
     @media(max-width:900px){
       .summary-grid,.founder-card{grid-template-columns:1fr;}
       .founder-avatar{max-width:200px;}
@@ -127,6 +105,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <div class="container">
 
@@ -136,16 +115,18 @@
       <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
     </a>
     <div class="nav-links">
-      <a href="#summary">Summary</a>
-      <a href="#model">Model</a>
-      <a href="#financials">Financials</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#qa">Q&amp;A</a>
-      <a href="../" class="nav-cta">← Back to Home</a>
+      <a href="../#how">Method</a>
+      <a href="../about/">About</a>
+      <a href="../products/">Products</a>
+      <a href="../resources/">Resources</a>
+      <a href="../investors/">Investors</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../#contact">Contact</a>
+      <a href="../questionnaire/" class="nav-cta">Join Waitlist</a>
     </div>
   </nav>
 
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <a href="../" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
       Back to Home
@@ -444,7 +425,7 @@
 
     <div class="founder-card">
       <div class="founder-avatar"><img src="../annaD.jpg" alt="Anna Davidenko, Founder of BAM"></div>
-           <div class="founder-info">
+      <div class="founder-info">
         <h3>Founder &amp; Wellness Architect</h3>
         <div class="founder-role">Honours BCIA · NLP Master Practitioner · Founder of Karma Strategic Intelligence</div>
 
@@ -553,35 +534,35 @@
       </div>
 
       <div class="footer-col">
-        <h5>Investor</h5>
-        <a href="#summary">Summary</a>
-        <a href="#model">Business Model</a>
-        <a href="#financials">Financials</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#qa">Q&amp;A</a>
+        <h5>Company</h5>
+        <a href="../about/">About BAM</a>
+        <a href="../ecosystem/">Ecosystem</a>
+        <a href="../products/">Products</a>
+        <a href="../impact/">Charity &amp; Impact</a>
+        <a href="../faq/">FAQ</a>
       </div>
 
       <div class="footer-col">
-        <h5>Other Pages</h5>
-        <a href="../">Home</a>
-        <a href="../clinical/">For Clinicians</a>
-        <a href="../facilitators/">For Facilitators</a>
-        <a href="../partners/">For Partners</a>
+        <h5>Audiences</h5>
+        <a href="../investors/">Investors</a>
+        <a href="../clinical/">Clinicians</a>
+        <a href="../facilitators/">Facilitators</a>
+        <a href="../partners/">Partners</a>
       </div>
 
       <div class="footer-col">
         <h5>Legal &amp; Ethics</h5>
-        <a href="../ethics/index.html">Ethics Charter</a>
-        <a href="../privacy/index.html">Privacy Policy</a>
-        <a href="../terms/index.html">Terms of Use</a>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="footer-legal-links">
-        <a href="../ethics/index.html">Ethics Charter</a>
-        <a href="../privacy/index.html">Privacy Policy</a>
-        <a href="../terms/index.html">Terms of Use</a>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
         <a href="mailto:info@biophilic-anchor-method.com">info@biophilic-anchor-method.com</a>
       </div>
       <div class="footer-disclaimer">
@@ -592,8 +573,21 @@
         <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
       </div>
     </div>
+
+    <div id="google_translate_element"></div>
   </div>
 </footer>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,fr,es,zh-CN,ar,hi,pt,ru,ja,ko',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!-- EXTERNAL JAVASCRIPT -->
 <script src="../script.js"></script>
