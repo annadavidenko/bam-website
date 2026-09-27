@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products &amp; Services | Biophilic Anchor Method</title>
+  <meta name="description" content="BAM products and services. Anchor Stones, Moss Jars, Bioactive Terrariums, Water Gardens, and professional consultations.">
+  <meta name="theme-color" content="#0a0d12">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem;}
+    .product-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2rem;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;display:flex;flex-direction:column;}
+    .product-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-clay),var(--accent-sand));}
+    .product-card:hover{transform:translateY(-6px);border-color:rgba(200,118,90,.5);box-shadow:0 24px 48px -20px var(--accent-clay-glow);}
+    .product-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(200,118,90,.14),rgba(212,165,116,.14));border:1px solid rgba(200,118,90,.3);color:var(--accent-clay);margin-bottom:1.25rem;font-size:1.75rem;}
+    .product-card h3{font-size:1.2rem;margin-bottom:.5rem;color:var(--text-main);}
+    .product-desc{color:var(--text-body);font-size:.92rem;line-height:1.7;margin-bottom:1.5rem;flex-grow:1;}
+    .product-price{font-size:1.5rem;font-weight:800;color:var(--accent-clay);margin-bottom:.35rem;letter-spacing:-.02em;}
+    .product-wholesale{font-size:.78rem;color:var(--text-dim);margin-bottom:1.25rem;letter-spacing:.5px;}
+    .product-tier{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:.25rem .65rem;border-radius:999px;background:rgba(16,185,129,.1);color:var(--accent-bio);border:1px solid rgba(16,185,129,.28);margin-bottom:1rem;}
+    .product-tier.entry{background:rgba(200,118,90,.1);color:var(--accent-clay);border-color:rgba(200,118,90,.28);}
+    .product-tier.premium{background:rgba(245,158,11,.1);color:var(--accent-gold);border-color:rgba(245,158,11,.28);}
+    .service-row{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--border-color);align-items:center;}
+    .service-row:last-child{border-bottom:none;}
+    .service-row h4{font-size:1rem;font-weight:700;color:var(--text-main);margin-bottom:.35rem;}
+    .service-row p{color:var(--text-body);font-size:.88rem;line-height:1.6;margin:0;}
+    .service-price{font-size:1.15rem;font-weight:700;color:var(--accent-clay);text-align:right;}
+    @media(max-width:640px){.service-row{grid-template-columns:1fr;}.service-price{text-align:left;}}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="container">
+  <nav class="nav">
+    <a href="../" class="logo">
+      <img src="../2bam.png" alt="BAM Logo" class="logo-img">
+      <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
+    </a>
+    <div class="nav-links">
+      <a href="../investors/">Investors</a>
+      <a href="../clinical/">Clinicians</a>
+      <a href="../facilitators/">Facilitators</a>
+      <a href="../partners/">Partners</a>
+      <a href="../" class="nav-cta">← Back to Home</a>
+    </div>
+  </nav>
+
+  <header class="page-header" id="main-content">
+    <a href="../" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+    <div class="page-label">Products &amp; Services</div>
+    <h1>
+      The catalog.<br>
+      <span class="gradient">Transparent pricing.</span>
+    </h1>
+    <p class="page-lead">
+      Every BAM product is ethically sourced, engineered for nervous system regulation, and priced to be accessible. Wholesale and consignment available for retail partners.
+    </p>
+  </header>
+
+  <section class="fade-up">
+    <div class="section-header clay">Products</div>
+    <h2>Living ecosystems. Physical anchors.</h2>
+    <p class="section-lead">
+      Each product engages multiple senses — sight, sound, smell, touch, and internal state. All prices are in CAD.
+    </p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon">◈</div>
+        <span class="product-tier entry">Entry Level</span>
+        <h3>Anchor Stone</h3>
+        <p class="product-desc">Hand-polished limestone or slate from local Ontario quarries. Includes protocol card and care guide. The simplest entry point into the BAM method — no maintenance required.</p>
+        <div class="product-price">$35–$55</div>
+        <div class="product-wholesale">Wholesale: $17–$27</div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🌿</div>
+        <span class="product-tier">Most Popular</span>
+        <h3>Moss Jar</h3>
+        <p class="product-desc">Sealed glass jar with living moss, springtails, and a decorative mineral. Self-sustaining micro-ecosystem. Requires only a misting every 1–2 weeks. Includes misting bottle and printed guide.</p>
+        <div class="product-price">$85–$125</div>
+        <div class="product-wholesale">Wholesale: $42–$62</div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">✦</div>
+        <span class="product-tier">Complete Kit</span>
+        <h3>Desktop Sanctuary Kit</h3>
+        <p class="product-desc">The full BAM experience in one box. Moss Jar + Anchor Stone + printed protocol card + 3-month access to the Anchor Club community. Best value for first-time buyers.</p>
+        <div class="product-price">$150–$220</div>
+        <div class="product-wholesale">Wholesale: $75–$110</div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">◇</div>
+        <span class="product-tier premium">Premium</span>
+        <h3>Bioactive Terrarium</h3>
+        <p class="product-desc">10-gallon bioactive setup with substrate, live plants, springtails, isopods, and optionally a peaceful reptile (corn snake or crested gecko). Full habitat with care guide and ongoing support.</p>
+        <div class="product-price">$300–$550</div>
+        <div class="product-wholesale">Wholesale: $150–$275</div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🌊</div>
+        <span class="product-tier premium">Premium</span>
+        <h3>Water Garden</h3>
+        <p class="product-desc">Nano aquarium with live aquatic plants and a peaceful fish. Hypnotic visual anchor with the sound of moving water. Includes filtration, lighting, and maintenance kit.</p>
+        <div class="product-price">$220–$380</div>
+        <div class="product-wholesale">Wholesale: $110–$190</div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">◎</div>
+        <span class="product-tier">Add-On</span>
+        <h3>Hardscape Bundle</h3>
+        <p class="product-desc">A curated set of polished minerals, driftwood, and stone fragments for custom builds or to refresh an existing ecosystem. Sourced from Ontario quarries and forests.</p>
+        <div class="product-price">$45–$95</div>
+        <div class="product-wholesale">Wholesale: $22–$47</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-up">
+    <div class="section-header">Professional Services</div>
+    <h2>Expert guidance. On-site installation.</h2>
+    <p class="section-lead">
+      For clients who want personalized guidance, or who prefer a fully installed ecosystem without DIY assembly.
+    </p>
+
+    <div class="service-row">
+      <div>
+        <h4>Consultation (Video Call)</h4>
+        <p>60-minute video call with a certified facilitator. We discuss your environment, sensory preferences, and goals — then match you with the right ecosystem.</p>
+      </div>
+      <div class="service-price">$95–$175</div>
+    </div>
+
+    <div class="service-row">
+      <div>
+        <h4>In-Home Setup</h4>
+        <p>A certified facilitator delivers, installs, and demonstrates the maintenance protocol in your home. Available in Simcoe County and the GTA.</p>
+      </div>
+      <div class="service-price">$250–$600</div>
+    </div>
+
+    <div class="service-row">
+      <div>
+        <h4>Setup Review</h4>
+        <p>Already have an ecosystem? Send us photos and video. We review your setup and provide detailed recommendations for improvements.</p>
+      </div>
+      <div class="service-price">$50–$95</div>
+    </div>
+
+    <div class="service-row">
+      <div>
+        <h4>Certified Facilitator Program</h4>
+        <p>4-week intensive program. Certification + territory license + access to the BAM Certified Facilitators Co-op. See the Facilitators page for full details.</p>
+      </div>
+      <div class="service-price">$2,500</div>
+    </div>
+  </section>
+
+  <section class="fade-up" style="border-bottom:none;">
+    <div class="cta-panel" style="background:linear-gradient(135deg,rgba(200,118,90,.08) 0%,rgba(16,185,129,.08) 100%);border:1px solid rgba(200,118,90,.3);border-radius:16px;padding:3rem;text-align:center;">
+      <h2 style="margin-bottom:1rem;">Ready to Order or Partner?</h2>
+      <p style="color:var(--text-body);max-width:580px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.7;">
+        For consumer orders, wholesale inquiries, or consignment partnerships, email us directly.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="mailto:info@biophilic-anchor-method.com?subject=Product%20Order" class="btn btn-primary">Place an Order →</a>
+        <a href="../partners/" class="btn btn-ghost">Wholesale &amp; Consignment</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../" class="logo">
+          <img src="../2bam.png" alt="BAM Logo" class="logo-img">
+          <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
+        </a>
+        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="../about/">About BAM</a>
+        <a href="../ecosystem/">Ecosystem</a>
+        <a href="../products/">Products</a>
+        <a href="../faq/">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h5>Audiences</h5>
+        <a href="../investors/">Investors</a>
+        <a href="../clinical/">Clinicians</a>
+        <a href="../facilitators/">Facilitators</a>
+        <a href="../partners/">Partners</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal &amp; Ethics</h5>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal-links">
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
+        <a href="mailto:info@biophilic-anchor-method.com">info@biophilic-anchor-method.com</a>
+      </div>
+      <div class="footer-disclaimer">
+        <strong style="color: var(--text-muted);">Wellness Disclaimer:</strong> BAM is a peer-supported wellness practice. We are not a licensed medical, psychological, or veterinary provider. Nothing on this site constitutes medical advice.
+      </div>
+      <div class="footer-copyright">
+        <div>© 2026 Karma Strategic Intelligence Inc. · Federal Corp #1001472307</div>
+        <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,es,zh-CN,ar,hi,pt,ru,ja,ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
