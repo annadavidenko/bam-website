@@ -30,17 +30,14 @@
     .option-label.selected{border-color:var(--accent-clay);background:rgba(200,118,90,.08);}
     .option-text{font-size:.95rem;color:var(--text-body);}
     .option-text strong{color:var(--text-main);}
-    
     .btn-submit{width:100%;padding:1.25rem;font-size:1.1rem;font-weight:700;background:linear-gradient(135deg,var(--accent-clay),var(--accent-bio));color:#fff;border:none;border-radius:12px;cursor:pointer;transition:transform .2s, box-shadow .2s;}
     .btn-submit:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px var(--accent-clay-glow);}
-    
     #result{display:none;margin-top:3rem;padding:3rem;background:linear-gradient(135deg,rgba(16,185,129,.1) 0%,rgba(200,118,90,.1) 100%);border:2px solid var(--accent-bio);border-radius:16px;text-align:center;animation:fadeIn .5s ease;}
     @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
     #result h2{font-size:2rem;margin-bottom:1rem;color:var(--text-main);}
     #result .result-type{font-size:1.5rem;font-weight:800;color:var(--accent-clay);margin-bottom:1rem;letter-spacing:1px;}
     #result p{font-size:1.05rem;color:var(--text-body);max-width:600px;margin:0 auto 2rem;line-height:1.7;}
     .result-icon{font-size:4rem;margin-bottom:1rem;}
-    
     @media(max-width:900px){
       .options-grid{grid-template-columns:1fr;}
       .quiz-container{padding:1.5rem;}
@@ -48,6 +45,8 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <div class="container">
   <nav class="nav">
     <a href="../" class="logo">
@@ -55,15 +54,18 @@
       <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
     </a>
     <div class="nav-links">
+      <a href="../#how">Method</a>
+      <a href="../about/">About</a>
+      <a href="../products/">Products</a>
+      <a href="../resources/">Resources</a>
       <a href="../investors/">Investors</a>
-      <a href="../clinical/">Clinicians</a>
-      <a href="../facilitators/">Facilitators</a>
-      <a href="../partners/">Partners</a>
-      <a href="../" class="nav-cta">← Back to Home</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../#contact">Contact</a>
+      <a href="../questionnaire/" class="nav-cta">Join Waitlist</a>
     </div>
   </nav>
 
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <a href="../" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
       Back to Home
@@ -79,7 +81,6 @@
 
   <div class="quiz-container">
     <form id="quizForm">
-      <!-- Question 1 -->
       <div class="question-block">
         <div class="question-title">1. What draws you in the most?</div>
         <span class="question-sub">Your primary sensory preference.</span>
@@ -103,7 +104,6 @@
         </div>
       </div>
 
-      <!-- Question 2 -->
       <div class="question-block">
         <div class="question-title">2. How much maintenance do you want?</div>
         <span class="question-sub">Be honest about your daily routine.</span>
@@ -114,7 +114,7 @@
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q2" value="weekly">
-            <div class="option-text"><strong>Weekly</strong><br>A small ritual a few times a week.</div>
+            <div class="option-text"><strong>Weekly</strong><br>A small protocol a few times a week.</div>
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q2" value="daily">
@@ -123,7 +123,6 @@
         </div>
       </div>
 
-      <!-- Question 3 -->
       <div class="question-block">
         <div class="question-title">3. Where will it live?</div>
         <span class="question-sub">The space you have available.</span>
@@ -143,7 +142,6 @@
         </div>
       </div>
 
-      <!-- Question 4 -->
       <div class="question-block">
         <div class="question-title">4. What is your main goal?</div>
         <span class="question-sub">What are you trying to achieve?</span>
@@ -154,11 +152,11 @@
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q4" value="focus">
-            <div class="option-text"><strong>Focus & Grounding</strong><br>Starting the day centered.</div>
+            <div class="option-text"><strong>Focus &amp; Grounding</strong><br>Starting the day centered.</div>
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q4" value="purpose">
-            <div class="option-text"><strong>Purpose & Care</strong><br>Having something that needs me.</div>
+            <div class="option-text"><strong>Purpose &amp; Care</strong><br>Having something that needs me.</div>
           </label>
         </div>
       </div>
@@ -166,7 +164,6 @@
       <button type="submit" class="btn-submit">Calculate My Match →</button>
     </form>
 
-    <!-- Result Div -->
     <div id="result">
       <div class="result-icon">◈</div>
       <h2>Your Match:</h2>
@@ -187,6 +184,16 @@
         </a>
         <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario.</p>
       </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="../about/">About BAM</a>
+        <a href="../ecosystem/">Ecosystem</a>
+        <a href="../products/">Products</a>
+        <a href="../impact/">Charity &amp; Impact</a>
+        <a href="../faq/">FAQ</a>
+      </div>
+
       <div class="footer-col">
         <h5>Audiences</h5>
         <a href="../investors/">Investors</a>
@@ -194,18 +201,20 @@
         <a href="../facilitators/">Facilitators</a>
         <a href="../partners/">Partners</a>
       </div>
+
       <div class="footer-col">
         <h5>Legal &amp; Ethics</h5>
-        <a href="../ethics/index.html">Ethics Charter</a>
-        <a href="../privacy/index.html">Privacy Policy</a>
-        <a href="../terms/index.html">Terms of Use</a>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
       </div>
     </div>
+
     <div class="footer-bottom">
       <div class="footer-legal-links">
-        <a href="../ethics/index.html">Ethics Charter</a>
-        <a href="../privacy/index.html">Privacy Policy</a>
-        <a href="../terms/index.html">Terms of Use</a>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
         <a href="mailto:info@biophilic-anchor-method.com">info@biophilic-anchor-method.com</a>
       </div>
       <div class="footer-disclaimer">
@@ -216,15 +225,27 @@
         <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
       </div>
     </div>
+
+    <div id="google_translate_element"></div>
   </div>
 </footer>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,fr,es,zh-CN,ar,hi,pt,ru,ja,ko',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!-- EXTERNAL JAVASCRIPT -->
 <script src="../script.js"></script>
 
 <!-- PAGE-SPECIFIC QUIZ LOGIC -->
 <script>
-  // Add visual selection state
   function selectOption(label) {
     const name = label.querySelector('input').name;
     document.querySelectorAll(`input[name="${name}"]`).forEach(input => {
@@ -233,7 +254,6 @@
     label.classList.add('selected');
   }
 
-  // Handle Form Submission
   document.getElementById('quizForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -245,13 +265,12 @@
     let type = "";
     let text = "";
 
-    // Simple Logic Engine
     if (q1 === 'tactile' || q2 === 'minimal') {
       type = "The Desk Stone";
       text = "You need low maintenance and high tactile reward. A hand-polished limestone anchor stone on your desk will ground you without requiring any care. It is always there. Always cool. Always quiet.";
     } else if (q1 === 'plant' || q2 === 'weekly') {
       type = "The Moss Jar";
-      text = "You want a living system to tend, but not a daily obligation. A sealed moss jar with springtails provides visual movement and a gentle weekly misting ritual. It asks for little and gives back a whole world.";
+      text = "You want a living system to tend, but not a daily obligation. A sealed moss jar with springtails provides visual movement and a gentle weekly misting protocol. It asks for little and gives back a whole world.";
     } else if (q1 === 'reptile' || q3 === 'floor' || q4 === 'purpose') {
       type = "The Bioactive Terrarium";
       text = "You want a deep connection with a living creature. A bioactive terrarium with a peaceful reptile (like a corn snake) engages your senses of sight, touch, and care. This is a daily practice of quiet observation.";
@@ -263,14 +282,11 @@
       text = "You need a flexible, balanced entry point. The Desktop Sanctuary kit combines a small jar, a stone, and a simple plant. It adapts to your space and your schedule, growing with you as you build your practice.";
     }
 
-    // Display Result
     document.getElementById('resultType').innerText = type;
     document.getElementById('resultText').innerText = text;
     
     const resultDiv = document.getElementById('result');
     resultDiv.style.display = 'block';
-    
-    // Smooth scroll to result
     resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 </script>
