@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Biophilic Anchor Method</title>
+  <meta name="description" content="The BAM Reading List. Books that built the Biophilic Anchor Method.">
+  <meta name="theme-color" content="#0a0d12">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  <style>
+    :root{--bg-dark:#0a0d12;--bg-panel:#131a24;--text-main:#f3f4f6;--text-body:#d4d7dc;--text-muted:#9ca3af;--text-dim:#6b7280;--accent-bio:#10b981;--accent-bio-glow:rgba(16,185,129,.4);--accent-tech:#3b82f6;--accent-tech-glow:rgba(59,130,246,.4);--accent-clay:#c8765a;--border-color:#1c2530;--border-bright:#374151;}
+    *{margin:0;padding:0;box-sizing:border-box;} html{scroll-behavior:smooth;}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background-color:var(--bg-dark);color:var(--text-main);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 50% 0%,rgba(16,185,129,.08),transparent 55%),radial-gradient(circle at 85% 85%,rgba(59,130,246,.05),transparent 50%);pointer-events:none;z-index:0;}
+    .container{max-width:1100px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:1.75rem 0 1.5rem;border-bottom:1px solid var(--border-color);margin-bottom:4rem;}
+    .logo{display:flex;align-items:center;gap:.85rem;font-weight:800;letter-spacing:.03em;font-size:.95rem;text-decoration:none;color:var(--text-main);}
+    .logo-img{width:44px;height:44px;object-fit:contain;display:block;flex-shrink:0;filter:drop-shadow(0 0 12px rgba(16,185,129,.35));}
+    .logo-text{display:flex;align-items:baseline;gap:.15rem;} .logo-text .sep{color:var(--text-dim);font-weight:400;margin:0 .1rem;}
+    .nav-links{display:flex;gap:1.75rem;font-size:.85rem;} .nav-links a{color:var(--text-muted);text-decoration:none;transition:color .2s;font-weight:500;} .nav-links a:hover{color:var(--accent-bio);}
+    .nav-cta{padding:.5rem 1rem;border:1px solid var(--border-bright);border-radius:8px;color:var(--text-main)!important;font-weight:600!important;} .nav-cta:hover{border-color:var(--accent-bio);color:var(--accent-bio)!important;}
+    .page-header{padding-bottom:3rem;position:relative;} .back-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--text-muted);text-decoration:none;font-size:.82rem;font-weight:600;margin-bottom:2rem;transition:color .2s;} .back-link:hover{color:var(--accent-bio);} .back-link svg{width:14px;height:14px;}
+    .page-label{font-size:.72rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent-clay);margin-bottom:1rem;font-weight:700;display:flex;align-items:center;gap:.75rem;} .page-label::before{content:'';width:24px;height:1px;background:var(--accent-clay);}
+    h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;line-height:1.08;letter-spacing:-.035em;margin-bottom:1.5rem;}
+    .page-lead{font-size:1.1rem;color:var(--text-body);max-width:720px;margin-bottom:2rem;line-height:1.7;}
+    section{padding:3rem 0;border-bottom:1px solid var(--border-color);position:relative;}
+    .book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;}
+    .book-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:14px;padding:2rem;display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s;backdrop-filter:blur(12px);}
+    .book-card:hover{transform:translateY(-4px);border-color:var(--accent-bio);box-shadow:0 20px 40px -20px var(--accent-bio-glow);}
+    .book-cover{width:100%;height:180px;background:linear-gradient(135deg,rgba(16,185,129,.1),rgba(59,130,246,.1));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;color:var(--accent-bio);margin-bottom:1.5rem;border:1px solid rgba(16,185,129,.2);}
+    .book-title{font-size:1.15rem;font-weight:700;color:var(--text-main);margin-bottom:.35rem;}
+    .book-author{font-size:.85rem;color:var(--accent-tech);font-weight:600;margin-bottom:1rem;letter-spacing:.5px;}
+    .book-why{font-size:.92rem;color:var(--text-body);line-height:1.6;flex-grow:1;margin-bottom:1.5rem;}
+    .book-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:700;color:var(--accent-bio);text-decoration:none;transition:gap .2s;}
+    .book-link:hover{gap:.65rem;}
+    footer{background:var(--bg-panel);padding:3.5rem 0 2.25rem;border-top:1px solid var(--border-color);position:relative;z-index:1;margin-top:4rem;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem;} .footer-brand p{color:var(--text-body);font-size:.82rem;margin-top:1rem;max-width:320px;line-height:1.6;}
+    .footer-col h5{font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);margin-bottom:.9rem;font-weight:700;} .footer-col a{display:block;color:var(--text-muted);text-decoration:none;font-size:.82rem;margin-bottom:.55rem;transition:color .2s;} .footer-col a:hover{color:var(--accent-bio);}
+    .footer-bottom{padding-top:1.75rem;border-top:1px solid var(--border-color);display:flex;flex-direction:column;gap:.9rem;} .footer-legal-links{display:flex;flex-wrap:wrap;gap:1.5rem;font-size:.75rem;} .footer-legal-links a{color:var(--text-dim);text-decoration:none;transition:color .2s;} .footer-legal-links a:hover{color:var(--accent-bio);}
+    .footer-disclaimer{font-size:.7rem;color:var(--text-dim);line-height:1.6;max-width:900px;padding:.9rem 1.15rem;background:rgba(255,255,255,.02);border-left:2px solid var(--border-bright);border-radius:0 6px 6px 0;}
+    .footer-copyright{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;color:var(--text-dim);font-size:.72rem;padding-top:.4rem;}
+    @media(max-width:900px){ .nav-links{display:none;} .footer-grid{grid-template-columns:1fr;gap:1.75rem;} }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="nav">
+    <a href="../" class="logo">
+      <img src="../2bam.png" alt="BAM Logo" class="logo-img">
+      <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
+    </a>
+    <div class="nav-links">
+      <a href="../investors/">Investors</a>
+      <a href="../clinical/">Clinicians</a>
+      <a href="../facilitators/">Facilitators</a>
+      <a href="../partners/">Partners</a>
+      <a href="../" class="nav-cta">← Back to Home</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <a href="../" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+    <div class="page-label">Resources</div>
+    <h1>The BAM Reading List</h1>
+    <p class="page-lead">
+      The Biophilic Anchor Method is built on decades of research in neuroscience, ecology, and psychology. These are the books that shaped our understanding of how living systems regulate the human nervous system.
+    </p>
+  </header>
+
+  <section>
+    <div class="book-grid">
+      <!-- Book 1 -->
+      <div class="book-card">
+        <div class="book-cover">🌿</div>
+        <div class="book-title">The Nature Fix</div>
+        <div class="book-author">Florence Williams</div>
+        <p class="book-why">Why nature makes us happier, healthier, and more creative. Williams travels the world to uncover the science behind nature's positive effects on the brain.</p>
+        <a href="https://www.amazon.ca/Nature-Fix-Happier-Healthier-Creative/dp/0393355575" target="_blank" class="book-link">View on Amazon →</a>
+      </div>
+      <!-- Book 2 -->
+      <div class="book-card">
+        <div class="book-cover">🐜</div>
+        <div class="book-title">Biophilia</div>
+        <div class="book-author">E.O. Wilson</div>
+        <p class="book-why">The foundational theory that humans have an innate, genetically based tendency to connect with nature and other living systems.</p>
+        <a href="https://www.amazon.ca/Biophilia-Edward-O-Wilson/dp/0674074423" target="_blank" class="book-link">View on Amazon →</a>
+      </div>
+      <!-- Book 3 -->
+      <div class="book-card">
+        <div class="book-cover">🧠</div>
+        <div class="book-title">The Body Keeps the Score</div>
+        <div class="book-author">Bessel van der Kolk</div>
+        <p class="book-why">Explains how trauma is stored in the body and why sensory, bottom-up approaches (like BAM) are essential for nervous system regulation.</p>
+        <a href="https://www.amazon.ca/Body-Keeps-Score-Healing-Trauma/dp/0143127748" target="_blank" class="book-link">View on Amazon →</a>
+      </div>
+      <!-- Book 4 -->
+      <div class="book-card">
+        <div class="book-cover">🌳</div>
+        <div class="book-title">Last Child in the Woods</div>
+        <div class="book-author">Richard Louv</div>
+        <p class="book-why">Introduces the concept of "nature-deficit disorder" and argues that direct exposure to nature is essential for healthy childhood development.</p>
+        <a href="https://www.amazon.ca/Last-Child-Woods-Children-Nature-Deficit/dp/156512605X" target="_blank" class="book-link">View on Amazon →</a>
+      </div>
+      <!-- Book 5 -->
+      <div class="book-card">
+        <div class="book-cover">🌊</div>
+        <div class="book-title">Blue Mind</div>
+        <div class="book-author">Wallace J. Nichols</div>
+        <p class="book-why">The surprising science that shows how being near, in, on, or under water can make you happier, healthier, and more connected.</p>
+        <a href="https://www.amazon.ca/Blue-Mind-Surprising-Science-Happier/dp/0316252083" target="_blank" class="book-link">View on Amazon →</a>
+      </div>
+      <!-- Book 6 -->
+      <div class="book-card">
+        <div class="book-cover">🧘</div>
+        <div class="book-title">The Experience of Nature</div>
+        <div class="book-author">Rachel & Stephen Kaplan</div>
+        <p class="book-why">The original research on Attention Restoration Theory (ART). Explains why natural environments restore our directed attention and reduce mental fatigue.</p>
+        <a href="https://www.amazon.ca/Experience-Nature-Psychological-Perspective/dp/0521341399" target="_blank" class="book-link">View on Amazon →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../" class="logo">
+          <img src="../2bam.png" alt="BAM Logo" class="logo-img">
+          <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
+        </a>
+        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Audiences</h5>
+        <a href="../investors/">Investors</a>
+        <a href="../clinical/">Clinicians</a>
+        <a href="../facilitators/">Facilitators</a>
+        <a href="../partners/">Partners</a>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <a href="../resources/index.html">Reading List</a>
+        <a href="../about/index.html">About BAM</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal &amp; Ethics</h5>
+        <a href="../ethics/index.html">Ethics Charter</a>
+        <a href="../privacy/index.html">Privacy Policy</a>
+        <a href="../terms/index.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal-links">
+        <a href="../ethics/index.html">Ethics Charter</a>
+        <a href="../privacy/index.html">Privacy Policy</a>
+        <a href="../terms/index.html">Terms of Use</a>
+        <a href="mailto:toronto.anna@hotmail.com">toronto.anna@hotmail.com</a>
+      </div>
+      <div class="footer-disclaimer">
+        <strong style="color: var(--text-muted);">Wellness Disclaimer:</strong> BAM is a peer-supported wellness practice. We are not a licensed medical, psychological, or veterinary provider. Nothing on this site constitutes medical advice. Animals carry naturally occurring bacteria — always follow the hygiene protocol. Please speak with a qualified professional for any health concern.
+      </div>
+      <div class="footer-copyright">
+        <div>© 2026 Karma Strategic Intelligence Inc. · Federal Corp #1001472307</div>
+        <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
