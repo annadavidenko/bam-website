@@ -22,20 +22,15 @@
 
   <!-- PAGE-SPECIFIC STYLES -->
   <style>
-    /* SUMMARY PANEL */
     .summary-panel{background:linear-gradient(135deg,rgba(19,26,36,.95) 0%,rgba(10,13,18,.95) 100%);border:1px solid var(--border-bright);border-radius:16px;padding:2.5rem;position:relative;overflow:hidden;}
     .summary-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent-clay),var(--accent-bio));}
     .summary-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:start;}
     .summary-text h3{font-size:1.25rem;margin-bottom:1rem;}
     .summary-text p{color:var(--text-body);font-size:.95rem;line-height:1.75;margin-bottom:1rem;}
-
-    /* CTA CARD */
     .deck-card{background:linear-gradient(180deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-bright);border-radius:14px;padding:2rem;text-align:center;position:relative;}
     .deck-card h4{font-size:1.05rem;margin-bottom:.65rem;color:var(--text-main);}
     .deck-card p{color:var(--text-body);font-size:.88rem;line-height:1.65;margin-bottom:1.5rem;}
     .btn-block{width:100%;justify-content:center;}
-
-    /* PHASE GRID */
     .phase-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;}
     .phase-card{background:linear-gradient(180deg,rgba(28,37,48,.7) 0%,rgba(19,26,36,.7) 100%);border:1px solid var(--border-color);border-radius:12px;padding:1.5rem;position:relative;}
     .phase-card h4{font-size:.95rem;font-weight:700;margin-bottom:.5rem;color:var(--text-main);}
@@ -43,19 +38,17 @@
     .phase-num{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-clay);margin-bottom:.65rem;}
     .phase-card.active{border-color:var(--accent-bio);background:linear-gradient(180deg,rgba(16,185,129,.06) 0%,rgba(28,37,48,.6) 100%);}
     .phase-card.active .phase-num{color:var(--accent-bio);}
-
-    /* FINAL CTA PANEL */
     .cta-panel{background:linear-gradient(135deg,rgba(200,118,90,.08) 0%,rgba(16,185,129,.08) 100%);border:1px solid rgba(200,118,90,.3);border-radius:16px;padding:3rem;text-align:center;position:relative;overflow:hidden;}
     .cta-panel h2{margin-bottom:1rem;}
     .cta-panel p{color:var(--text-body);max-width:580px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.7;}
     .cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
-
     @media(max-width:900px){
       .summary-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <div class="container">
 
@@ -65,15 +58,18 @@
       <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
     </a>
     <div class="nav-links">
-      <a href="#gap">The Gap</a>
-      <a href="#pilot">Pilot Structure</a>
-      <a href="#ethics">Ethics</a>
-      <a href="#cta">Partner With Us</a>
-      <a href="../" class="nav-cta">← Back to Home</a>
+      <a href="../#how">Method</a>
+      <a href="../about/">About</a>
+      <a href="../products/">Products</a>
+      <a href="../resources/">Resources</a>
+      <a href="../investors/">Investors</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../#contact">Contact</a>
+      <a href="../questionnaire/" class="nav-cta">Join Waitlist</a>
     </div>
   </nav>
 
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <a href="../" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
       Back to Home
@@ -125,7 +121,7 @@
       <div class="card bio">
         <div class="card-icon">◉</div>
         <h3>Scaffolding for Therapy</h3>
-        <p>When a patient's nervous system is anchored by a daily sensory ritual, they arrive at their therapy sessions with a lower baseline of anxiety. BAM acts as scaffolding, making the clinical work more accessible and effective.</p>
+        <p>When a patient's nervous system is anchored by a daily sensory protocol, they arrive at their therapy sessions with a lower baseline of anxiety. BAM acts as scaffolding, making the clinical work more accessible and effective.</p>
       </div>
     </div>
 
@@ -144,13 +140,13 @@
     <div class="phase-grid">
       <div class="phase-card active">
         <div class="phase-num">Phase 1 · Weeks 1-2</div>
-        <h4>Baseline & Screening</h4>
+        <h4>Baseline &amp; Screening</h4>
         <p>Participants complete the EcoPet Suitability Questionnaire and the GAD-7 anxiety scale. We match each participant with the appropriate BAM ecosystem (Desk Stone, Moss Jar, or Bioactive Terrarium).</p>
       </div>
       <div class="phase-card">
         <div class="phase-num">Phase 2 · Weeks 3-11</div>
         <h4>Implementation</h4>
-        <p>Participants engage in the daily 1-5 minute BAM ritual (Observe, Tend, Mirror). Your clinical staff check in weekly. We provide ongoing support and troubleshooting for the living systems.</p>
+        <p>Participants engage in the daily 1-5 minute BAM protocol (Observe, Tend, Mirror). Your clinical staff check in weekly. We provide ongoing support and troubleshooting for the living systems.</p>
       </div>
       <div class="phase-card">
         <div class="phase-num">Phase 3 · Week 12</div>
@@ -245,34 +241,35 @@
       </div>
 
       <div class="footer-col">
-        <h5>Clinical</h5>
-        <a href="#gap">The Gap</a>
-        <a href="#pilot">Pilot Structure</a>
-        <a href="#ethics">Ethics</a>
-        <a href="#cta">Partner With Us</a>
+        <h5>Company</h5>
+        <a href="../about/">About BAM</a>
+        <a href="../ecosystem/">Ecosystem</a>
+        <a href="../products/">Products</a>
+        <a href="../impact/">Charity &amp; Impact</a>
+        <a href="../faq/">FAQ</a>
       </div>
 
       <div class="footer-col">
-        <h5>Other Pages</h5>
-        <a href="../">Home</a>
-        <a href="../investors/">For Investors</a>
-        <a href="../facilitators/">For Facilitators</a>
-        <a href="../partners/">For Partners</a>
+        <h5>Audiences</h5>
+        <a href="../investors/">Investors</a>
+        <a href="../clinical/">Clinicians</a>
+        <a href="../facilitators/">Facilitators</a>
+        <a href="../partners/">Partners</a>
       </div>
 
       <div class="footer-col">
         <h5>Legal &amp; Ethics</h5>
-        <a href="../ethics/index.html">Ethics Charter</a>
-        <a href="../privacy/index.html">Privacy Policy</a>
-        <a href="../terms/index.html">Terms of Use</a>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="footer-legal-links">
-        <a href="../ethics/index.html">Ethics Charter</a>
-        <a href="../privacy/index.html">Privacy Policy</a>
-        <a href="../terms/index.html">Terms of Use</a>
+        <a href="../ethics/">Ethics Charter</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Use</a>
         <a href="mailto:info@biophilic-anchor-method.com">info@biophilic-anchor-method.com</a>
       </div>
       <div class="footer-disclaimer">
@@ -283,10 +280,22 @@
         <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
       </div>
     </div>
+
+    <div id="google_translate_element"></div>
   </div>
 </footer>
 
-<!-- EXTERNAL JAVASCRIPT -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,fr,es,zh-CN,ar,hi,pt,ru,ja,ko',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <script src="../script.js"></script>
 
 </body>
