@@ -5,37 +5,69 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- Mobile Nav Toggle ---------- */
+  /* =========================================
+     1. Mobile Nav Toggle
+     ========================================= */
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks  = document.querySelector('.nav-links');
 
+  const closeMenu = () => {
+    if (!navToggle || !navLinks) return;
+    navToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
-      const isOpen = navLinks.classList.contains('open');
-      navToggle.setAttribute('aria-expanded', isOpen);
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const willOpen = !navLinks.classList.contains('open');
+      navToggle.classList.toggle('open', willOpen);
+      navLinks.classList.toggle('open', willOpen);
+      navToggle.setAttribute('aria-expanded', String(willOpen));
+      document.body.style.overflow = willOpen ? 'hidden' : '';
     });
 
-    // Close menu when a link is tapped
+    // Close when any nav link is tapped
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('open');
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        closeMenu();
+        navToggle.focus();
+      }
+    });
+
+    // Close when clicking outside the nav
+    document.addEventListener('click', (e) => {
+      if (!navLinks.classList.contains('open')) return;
+      if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Reset when resizing back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && navLinks.classList.contains('open')) {
+        closeMenu();
+      }
     });
   }
 
-  /* ---------- Fade-up on scroll ---------- */
+  /* =========================================
+     2. Fade-up on Scroll
+     ========================================= */
   const fadeEls = document.querySelectorAll('.fade-up');
 
   if (fadeEls.length) {
-    // Respect users who prefer reduced motion
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (prefersReduced || !('IntersectionObserver' in window)) {
-      // Just reveal everything immediately
+      // Reveal everything immediately for accessibility / old browsers
       fadeEls.forEach(el => el.classList.add('visible'));
     } else {
       const observer = new IntersectionObserver((entries) => {
@@ -45,7 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -60px 0px'
+      });
 
       fadeEls.forEach(el => observer.observe(el));
     }
