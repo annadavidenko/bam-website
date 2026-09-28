@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* =========================================
-     1. Mobile Nav Toggle
+     1. Mobile Nav Toggle + polish
      ========================================= */
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks  = document.querySelector('.nav-links');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close when clicking outside the nav
+    // Close when clicking outside
     document.addEventListener('click', (e) => {
       if (!navLinks.classList.contains('open')) return;
       if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =========================================
-     2. Fade-up on Scroll
+     2. Fade-up on Scroll  ← 🔴 THE FIX
      ========================================= */
   const fadeEls = document.querySelectorAll('.fade-up');
 
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (prefersReduced || !('IntersectionObserver' in window)) {
-      // Reveal everything immediately for accessibility / old browsers
+      // Show instantly for accessibility / old browsers
       fadeEls.forEach(el => el.classList.add('visible'));
     } else {
       const observer = new IntersectionObserver((entries) => {
