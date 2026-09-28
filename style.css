@@ -68,6 +68,28 @@ body::after{
 .nav-cta{padding:.5rem 1rem;border:1px solid var(--accent-bio);border-radius:8px;color:var(--accent-bio)!important;font-weight:600!important;background:rgba(16,185,129,.06);}
 .nav-cta:hover{background:rgba(16,185,129,.12);}
 
+/* BACK TO HOME LINK */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: var(--accent-clay);
+}
+.back-link svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  display: block;
+}
+
 /* HERO */
 header{padding-bottom:5rem;position:relative;}
 .hero-visual{position:absolute;top:0;right:-10%;width:55%;height:100%;pointer-events:none;z-index:0;opacity:.35;
