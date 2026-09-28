@@ -3,37 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The BAM Ecosystem | Biophilic Anchor Method</title>
-  <meta name="description" content="The BAM Ecosystem. Three entities working together — for-profit, charity, and facilitator co-op.">
+  <title>For Clinicians | Biophilic Anchor Method</title>
+  <meta name="description" content="BAM clinical partnerships. A peer-supported, sensory-first wellness protocol for therapists, rehabilitation centres, and clinical partners.">
   <meta name="theme-color" content="#0a0d12">
+  <meta property="og:title" content="For Clinicians | Biophilic Anchor Method">
+  <meta property="og:description" content="Bringing BAM into clinical practice. A sensory-first wellness protocol.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../2bam.png">
+
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" href="../favicon.ico">
   <link rel="manifest" href="../site.webmanifest">
+
+  <!-- EXTERNAL STYLESHEET -->
   <link rel="stylesheet" href="../style.css">
+
+  <!-- PAGE-SPECIFIC STYLES -->
   <style>
-    .entity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;}
-    .entity-card{background:linear-gradient(180deg,rgba(28,37,48,.8) 0%,rgba(19,26,36,.8) 100%);border:1px solid var(--border-color);border-radius:16px;padding:2rem;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;}
-    .entity-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-clay),var(--accent-sand));}
-    .entity-card:hover{transform:translateY(-4px);border-color:rgba(200,118,90,.5);box-shadow:0 24px 48px -20px var(--accent-clay-glow);}
-    .entity-card.bio::before{background:linear-gradient(90deg,var(--accent-bio),var(--accent-sand));}
-    .entity-card.bio:hover{border-color:rgba(16,185,129,.5);box-shadow:0 24px 48px -20px var(--accent-bio-glow);}
-    .entity-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;background:rgba(200,118,90,.1);color:var(--accent-clay);border:1px solid rgba(200,118,90,.28);margin-bottom:1.25rem;}
-    .entity-card.bio .entity-tag{background:rgba(16,185,129,.1);color:var(--accent-bio);border-color:rgba(16,185,129,.28);}
-    .entity-card h3{font-size:1.25rem;margin-bottom:.5rem;color:var(--text-main);}
-    .entity-card p{color:var(--text-body);font-size:.92rem;line-height:1.7;margin-bottom:1rem;}
-    .entity-card ul{color:var(--text-body);font-size:.88rem;line-height:1.8;padding-left:1.2rem;margin-bottom:1rem;}
-    .entity-role{font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:.75rem;}
-    .flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem;}
-    .flow-item{background:rgba(28,37,48,.5);border:1px solid var(--border-color);border-radius:12px;padding:1.5rem;border-left:3px solid var(--accent-clay);}
-    .flow-item h4{font-size:.95rem;font-weight:700;margin-bottom:.5rem;color:var(--text-main);}
-    .flow-item p{color:var(--text-body);font-size:.85rem;line-height:1.6;margin:0;}
+    .summary-panel{background:linear-gradient(135deg,rgba(19,26,36,.95) 0%,rgba(10,13,18,.95) 100%);border:1px solid var(--border-bright);border-radius:16px;padding:2.5rem;position:relative;overflow:hidden;}
+    .summary-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent-clay),var(--accent-bio));}
+    .summary-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:start;}
+    .summary-text h3{font-size:1.25rem;margin-bottom:1rem;}
+    .summary-text p{color:var(--text-body);font-size:.95rem;line-height:1.75;margin-bottom:1rem;}
+    .deck-card{background:linear-gradient(180deg,rgba(28,37,48,.6) 0%,rgba(19,26,36,.4) 100%);border:1px solid var(--border-bright);border-radius:14px;padding:2rem;text-align:center;position:relative;}
+    .deck-card h4{font-size:1.05rem;margin-bottom:.65rem;color:var(--text-main);}
+    .deck-card p{color:var(--text-body);font-size:.88rem;line-height:1.65;margin-bottom:1.5rem;}
+    .btn-block{width:100%;justify-content:center;}
+    .phase-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;}
+    .phase-card{background:linear-gradient(180deg,rgba(28,37,48,.7) 0%,rgba(19,26,36,.7) 100%);border:1px solid var(--border-color);border-radius:12px;padding:1.5rem;position:relative;}
+    .phase-card h4{font-size:.95rem;font-weight:700;margin-bottom:.5rem;color:var(--text-main);}
+    .phase-card p{color:var(--text-body);font-size:.85rem;line-height:1.6;margin-bottom:.9rem;}
+    .phase-num{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-clay);margin-bottom:.65rem;}
+    .phase-card.active{border-color:var(--accent-bio);background:linear-gradient(180deg,rgba(16,185,129,.06) 0%,rgba(28,37,48,.6) 100%);}
+    .phase-card.active .phase-num{color:var(--accent-bio);}
+    .cta-panel{background:linear-gradient(135deg,rgba(200,118,90,.08) 0%,rgba(16,185,129,.08) 100%);border:1px solid rgba(200,118,90,.3);border-radius:16px;padding:3rem;text-align:center;position:relative;overflow:hidden;}
+    .cta-panel h2{margin-bottom:1rem;}
+    .cta-panel p{color:var(--text-body);max-width:580px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.7;}
+    .cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    @media(max-width:900px){
+      .summary-grid{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
+
 <div class="container">
+
   <nav class="nav">
     <a href="../" class="logo">
       <img src="../2bam.png" alt="BAM Logo" class="logo-img">
@@ -56,113 +74,159 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
       Back to Home
     </a>
-    <div class="page-label">The BAM Ecosystem</div>
+
+    <div class="page-label">For Clinicians</div>
     <h1>
-      Three entities.<br>
-      <span class="gradient">One mission.</span>
+      Bringing BAM into<br>
+      <span class="gradient">Clinical Practice.</span>
     </h1>
     <p class="page-lead">
-      BAM is not a single company. It is a circular ecosystem of three entities working together — a for-profit engine, a charity arm, and a facilitator co-op. Each feeds the others. None subsidizes another.
-    </p>
-  </header>
-
-  <section class="fade-up">
-    <div class="section-header clay">The Structure</div>
-    <h2>The three entities.</h2>
-    <p class="section-lead">
-      Each entity has its own legal structure, its own board, and its own mission. Together, they form a self-sustaining ecosystem where every dollar serves two purposes: revenue and impact.
+      A peer-supported, sensory-first wellness protocol for therapists, rehabilitation centres, and clinical partners. 
+      <strong>We do not replace clinical care. We provide the physical infrastructure that makes clinical care easier to receive.</strong>
     </p>
 
-    <div class="entity-grid">
-      <div class="entity-card">
-        <span class="entity-tag">For-Profit</span>
-        <div class="entity-role">Karma Strategic Intelligence Inc.</div>
-        <h3>The Engine</h3>
-        <p>The for-profit arm handles all revenue-generating activity. It funds the ecosystem through paid services, products, and licensing.</p>
-        <ul>
-          <li>Media (YouTube, Instagram, LinkedIn)</li>
-          <li>Products (Anchor Stones, Moss Jars, Terrariums)</li>
-          <li>Services (consultations, in-home setups)</li>
-          <li>Expos (vendor-funded events)</li>
-          <li>B2B Licensing (white-label curriculum)</li>
-          <li>Certified Facilitator Program</li>
-        </ul>
+    <div class="metrics-strip">
+      <div class="metric">
+        <div class="metric-value">90-Day</div>
+        <div class="metric-label">Pilot Program Structure</div>
       </div>
-
-      <div class="entity-card bio">
-        <span class="entity-tag">Charity</span>
-        <div class="entity-role">Biophilic Anchor Foundation (in progress)</div>
-        <h3>The Mission</h3>
-        <p>The charity arm runs free programs for vulnerable populations. It is funded by grants, donations, and corporate gifts — never by the for-profit.</p>
-        <ul>
-          <li>Free ecosystems for recovery programs</li>
-          <li>Free Anchor Stones for clinical pilots</li>
-          <li>Free workshops for seniors and youth</li>
-          <li>Library lending program</li>
-          <li>Research and evaluation (GAD-7)</li>
-        </ul>
+      <div class="metric">
+        <div class="metric-value">GAD-7</div>
+        <div class="metric-label">Standardized Evaluation</div>
       </div>
-
-      <div class="entity-card">
-        <span class="entity-tag">Co-op</span>
-        <div class="entity-role">BAM Certified Facilitators Co-op</div>
-        <h3>The Network</h3>
-        <p>The co-op is the distribution layer. Every certified facilitator is a licensed operator in their own territory, sharing marketing, insurance, and peer support.</p>
-        <ul>
-          <li>Territory licensing</li>
-          <li>Shared marketing assets</li>
-          <li>Group insurance rates</li>
-          <li>Peer support forum</li>
-          <li>Closed-loop supply chain</li>
-        </ul>
+      <div class="metric">
+        <div class="metric-value">10–20</div>
+        <div class="metric-label">Participant Cohort</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">100%</div>
+        <div class="metric-label">Ethics Charter Compliant</div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="fade-up">
-    <div class="section-header">How It Works</div>
-    <h2>The circular economy.</h2>
+  <section id="gap" class="fade-up">
+    <div class="section-header clay">The Clinical Gap</div>
+    <h2>Why traditional therapy needs a physical anchor.</h2>
     <p class="section-lead">
-      Every part of BAM feeds another part. The for-profit generates revenue. The revenue funds the charity and the co-op. The charity earns credibility and grants. The co-op delivers the method at scale.
+      Talk therapy is essential, but it relies heavily on cognitive processing. For patients in recovery, or those suffering from severe burnout, the nervous system is often too dysregulated to "think" its way to calm. 
     </p>
 
-    <div class="flow-grid">
-      <div class="flow-item">
-        <h4>1. For-Profit Generates Revenue</h4>
-        <p>Products, services, expos, and licensing create cash flow. This is the engine.</p>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">◈</div>
+        <h3>Non-Verbal Entry Point</h3>
+        <p>BAM provides a physical, non-verbal entry point. You sit near a living system. You watch it. You touch a smooth stone. The body settles without needing to articulate the trauma or the stress. It is a bottom-up approach to regulation.</p>
       </div>
-      <div class="flow-item">
-        <h4>2. Revenue Funds the Mission</h4>
-        <p>A portion of for-profit revenue funds free programs. Grant funding accelerates the charity arm.</p>
-      </div>
-      <div class="flow-item">
-        <h4>3. Charity Earns Credibility</h4>
-        <p>Clinical pilots and free programs produce data, white papers, and trust with grant officers.</p>
-      </div>
-      <div class="flow-item">
-        <h4>4. Co-op Delivers at Scale</h4>
-        <p>Certified facilitators expand the method into new territories. They pay licensing back to the for-profit.</p>
+      <div class="card bio">
+        <div class="card-icon">◉</div>
+        <h3>Scaffolding for Therapy</h3>
+        <p>When a patient's nervous system is anchored by a daily sensory protocol, they arrive at their therapy sessions with a lower baseline of anxiety. BAM acts as scaffolding, making the clinical work more accessible and effective.</p>
       </div>
     </div>
 
     <div class="highlight-box bio" style="margin-top: 2rem;">
-      <strong>Why this matters:</strong> Most wellness companies are either for-profit or non-profit. BAM is both. This hybrid structure creates financial resilience, social impact, and scalability — without compromising either mission.
+      <strong>Who this serves:</strong> Therapists, rehabilitation centres, addiction counsellors, EAP providers, and occupational health departments looking for measurable, low-cost, non-pharmacological interventions for high-stress populations.
     </div>
   </section>
 
-  <section class="fade-up" style="border-bottom:none;">
-    <div class="cta-panel" style="background:linear-gradient(135deg,rgba(200,118,90,.08) 0%,rgba(16,185,129,.08) 100%);border:1px solid rgba(200,118,90,.3);border-radius:16px;padding:3rem;text-align:center;">
-      <h2 style="margin-bottom:1rem;">Want to Be Part of the Ecosystem?</h2>
-      <p style="color:var(--text-body);max-width:580px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.7;">
-        Whether you want to invest, partner, become a facilitator, or support the charity — there is a place for you.
-      </p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="../investors/" class="btn btn-primary">For Investors →</a>
-        <a href="../facilitators/" class="btn btn-ghost">Become a Facilitator</a>
-        <a href="../impact/" class="btn btn-ghost">Support the Charity</a>
+  <section id="pilot" class="fade-up">
+    <div class="section-header">Pilot Structure</div>
+    <h2>A 90-Day Integrative Pilot.</h2>
+    <p class="section-lead">
+      We partner with your facility to run a structured 90-day pilot program. We provide the physical ecosystems, the facilitator training, and the evaluation framework. You provide the clinical oversight and the participant cohort.
+    </p>
+
+    <div class="phase-grid">
+      <div class="phase-card active">
+        <div class="phase-num">Phase 1 · Weeks 1-2</div>
+        <h4>Baseline &amp; Screening</h4>
+        <p>Participants complete the EcoPet Suitability Questionnaire and the GAD-7 anxiety scale. We match each participant with the appropriate BAM ecosystem (Desk Stone, Moss Jar, or Bioactive Terrarium).</p>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">Phase 2 · Weeks 3-11</div>
+        <h4>Implementation</h4>
+        <p>Participants engage in the daily 1-5 minute BAM protocol (Observe, Tend, Mirror). Your clinical staff check in weekly. We provide ongoing support and troubleshooting for the living systems.</p>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">Phase 3 · Week 12</div>
+        <h4>Evaluation</h4>
+        <p>Participants complete the post-intervention GAD-7. We compile the data, produce a white paper, and present the findings to your team to determine if a permanent installation is warranted.</p>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top: 2.5rem;">
+      <div class="card">
+        <h3>What BAM Provides</h3>
+        <ul style="color: var(--text-body); font-size: .9rem; line-height: 1.8; margin-top: 1rem; padding-left: 1.2rem;">
+          <li>All living ecosystems and Anchor Stones</li>
+          <li>Printed intake and care guides</li>
+          <li>Staff orientation on the BAM method</li>
+          <li>GAD-7 evaluation templates</li>
+          <li>Ongoing animal/plant welfare support</li>
+        </ul>
+      </div>
+      <div class="card bio">
+        <h3>What Your Facility Provides</h3>
+        <ul style="color: var(--text-body); font-size: .9rem; line-height: 1.8; margin-top: 1rem; padding-left: 1.2rem;">
+          <li>10–20 consenting participants</li>
+          <li>A dedicated space for the ecosystems</li>
+          <li>Clinical oversight and crisis response</li>
+          <li>Collection of pre/post GAD-7 data</li>
+          <li>Feedback on the integration process</li>
+        </ul>
       </div>
     </div>
   </section>
+
+  <section id="ethics" class="fade-up">
+    <div class="section-header clay">Ethics &amp; Safety First</div>
+    <h2>Rigorous screening. Closed-loop ethics.</h2>
+    <p class="section-lead">
+      BAM is a peer-supported wellness practice. We do not diagnose, treat, cure, or prevent any medical condition. Our clinical partnerships are built on a foundation of strict ethical boundaries and safety protocols.
+    </p>
+
+    <div class="summary-panel">
+      <div class="summary-grid">
+        <div class="summary-text">
+          <h3>Our Clinical Commitments</h3>
+          <p>
+            <strong>1. No active crisis intervention.</strong> We do not interview or enrol people in active addiction or acute crisis. BAM is a complementary practice for the stabilization and maintenance phases of recovery, or for high-stress professionals seeking preventative regulation.
+          </p>
+          <p>
+            <strong>2. Autonomy and Choice.</strong> Every participant completes our Suitability Questionnaire. If the data indicates that a living ecosystem is not a match for their baseline, we do not force the intervention. Complete autonomous choice is built into the protocol.
+          </p>
+          <p>
+            <strong>3. Animal Welfare.</strong> We operate a closed-loop supply chain. Animals are sourced from vetted captive breeders. If a participant can no longer care for their ecosystem, we have a return protocol to ensure the animal is rehomed ethically.
+          </p>
+          <p>
+            <strong>4. Transparency.</strong> Our Ethics Charter is public. We clearly state that we are not a licensed medical provider. Every clinical pilot is conducted in partnership with licensed providers, never as a standalone intervention.
+          </p>
+        </div>
+        <div class="deck-card" style="text-align: left; padding: 2rem;">
+          <h4>Download the Clinical Pack</h4>
+          <p>Includes the Ethics Charter, the EcoPet Suitability Questionnaire, the GAD-7 pilot framework, and the BAM Impact Report.</p>
+          <a href="mailto:info@biophilic-anchor-method.com?subject=Clinical%20Pack%20Request" class="btn btn-primary btn-block" style="margin-top: 1rem;">Request the Clinical Pack →</a>
+          <p style="margin-top: 1.25rem; font-size: .78rem; color: var(--text-dim); line-height: 1.55;">We respond to all serious inquiries within 2 business days. Please include your name, organization, and clinical role.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" style="border-bottom:none;" class="fade-up">
+    <div class="cta-panel">
+      <h2>Ready to Run a Pilot?</h2>
+      <p>
+        We are currently seeking clinical partners in Simcoe County and the Greater Toronto Area to run our first 90-day GAD-7 pilots. If your facility serves high-stress professionals, recovery patients, or seniors, we want to hear from you.
+      </p>
+
+      <div class="cta-row">
+        <a href="mailto:info@biophilic-anchor-method.com?subject=Clinical%20Pilot%20Inquiry" class="btn btn-primary">Book a Pilot Call →</a>
+        <a href="mailto:info@biophilic-anchor-method.com?subject=Clinical%20Question" class="btn btn-ghost">Ask a Question</a>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <footer>
@@ -173,23 +237,26 @@
           <img src="../2bam.png" alt="BAM Logo" class="logo-img">
           <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
         </a>
-        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc.</p>
+        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario.</p>
       </div>
+
       <div class="footer-col">
         <h5>Company</h5>
         <a href="../about/">About BAM</a>
-        <a href="./">Ecosystem</a>
+        <a href="../ecosystem/">Ecosystem</a>
         <a href="../products/">Products</a>
         <a href="../impact/">Charity &amp; Impact</a>
         <a href="../faq/">FAQ</a>
       </div>
+
       <div class="footer-col">
         <h5>Audiences</h5>
         <a href="../investors/">Investors</a>
-        <a href="../clinical/">Clinicians</a>
+        <a href="./">Clinicians</a>
         <a href="../facilitators/">Facilitators</a>
         <a href="../partners/">Partners</a>
       </div>
+
       <div class="footer-col">
         <h5>Legal &amp; Ethics</h5>
         <a href="../ethics/">Ethics Charter</a>
@@ -197,6 +264,7 @@
         <a href="../terms/">Terms of Use</a>
       </div>
     </div>
+
     <div class="footer-bottom">
       <div class="footer-legal-links">
         <a href="../ethics/">Ethics Charter</a>
@@ -205,13 +273,14 @@
         <a href="mailto:info@biophilic-anchor-method.com">info@biophilic-anchor-method.com</a>
       </div>
       <div class="footer-disclaimer">
-        <strong style="color: var(--text-muted);">Wellness Disclaimer:</strong> BAM is a peer-supported wellness practice. We are not a licensed medical, psychological, or veterinary provider. Nothing on this site constitutes medical advice.
+        <strong style="color: var(--text-muted);">Wellness Disclaimer:</strong> BAM is a peer-supported wellness practice. We are not a licensed medical, psychological, or veterinary provider. Nothing on this site constitutes medical advice. Animals carry naturally occurring bacteria — always follow the hygiene protocol. Please speak with a qualified professional for any health concern.
       </div>
       <div class="footer-copyright">
         <div>© 2026 Karma Strategic Intelligence Inc. · Federal Corp #1001472307</div>
         <div>Biophilic Anchor Method™ · Trademark Pending · All Rights Reserved</div>
       </div>
     </div>
+
     <div id="google_translate_element"></div>
   </div>
 </footer>
@@ -228,5 +297,6 @@ function googleTranslateElementInit() {
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script src="../script.js"></script>
+
 </body>
 </html>
