@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensory & Interoceptive Profile | Biophilic Anchor Method</title>
-  <meta name="description" content="Find your sensory match. A 3-minute clinical prototype to discover your ideal Biophilic Anchor for nervous system regulation.">
+  <meta name="description" content="System diagnostics. A 3-minute clinical prototype to discover your ideal Biophilic Anchor for nervous system regulation.">
   <meta name="theme-color" content="#0a0d12">
   
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -61,7 +61,7 @@
       <span></span>
     </button>
     <div class="nav-links">
-      <a href="../#how">Method</a>
+      <a href="../#framework">The Science</a>
       <a href="../about/">About</a>
       <a href="../products/">Products</a>
       <a href="../resources/">Resources</a>
@@ -77,10 +77,10 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
       Back to Home
     </a>
-    <div class="page-label">Interactive Prototype · Beta</div>
+    <div class="page-label">System Diagnostics · Beta</div>
     <h1>Sensory &amp; Interoceptive Profile</h1>
     <p class="page-lead">
-      This is a working prototype of our clinical matching engine. Answer four simple questions to discover which BAM ecosystem aligns with your Window of Tolerance. 
+      This is a working prototype of our clinical matching engine. Answer four questions to identify which BAM hardware aligns with your Window of Tolerance. 
       <br><br>
       <strong style="color:var(--accent-clay);font-size:.9rem;">Note: This is a non-clinical demonstration. The full clinical version (incorporating MAIA-2 and GAD-7 metrics) is currently in development.</strong>
     </p>
@@ -89,8 +89,8 @@
   <div class="quiz-container">
     <form id="quizForm">
       <div class="question-block">
-        <div class="question-title">1. What is your primary sensory anchor?</div>
-        <span class="question-sub">When you are overwhelmed, what sensory input grounds you fastest?</span>
+        <div class="question-title">1. Select your primary sensory input channel.</div>
+        <span class="question-sub">When the nervous system is overwhelmed, which input grounds you fastest?</span>
         <div class="options-grid">
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q1" value="visual" required>
@@ -112,12 +112,12 @@
       </div>
 
       <div class="question-block">
-        <div class="question-title">2. What is your maintenance capacity?</div>
-        <span class="question-sub">Be honest about your daily routine. A dysregulated nervous system often over-commits.</span>
+        <div class="question-title">2. Select your maintenance capacity.</div>
+        <span class="question-sub">Be precise about your daily routine. A dysregulated system often over-commits.</span>
         <div class="options-grid">
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q2" value="minimal" required>
-            <div class="option-text"><strong>Minimal / Passive</strong>I want to observe only. Zero daily tasks.</div>
+            <div class="option-text"><strong>Minimal / Passive</strong>I require observation only. Zero daily tasks.</div>
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q2" value="low">
@@ -125,18 +125,18 @@
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q2" value="high">
-            <div class="option-text"><strong>High / Daily</strong>I need a daily ritual to regulate my day.</div>
+            <div class="option-text"><strong>High / Daily</strong>I require a daily ritual to calibrate my day.</div>
           </label>
         </div>
       </div>
 
       <div class="question-block">
-        <div class="question-title">3. Where will your anchor live?</div>
-        <span class="question-sub">The physical space you have available.</span>
+        <div class="question-title">3. Select deployment location.</div>
+        <span class="question-sub">The physical footprint available for your hardware.</span>
         <div class="options-grid">
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q3" value="desk" required>
-            <div class="option-text"><strong>On my desk</strong>Small footprint, close to me.</div>
+            <div class="option-text"><strong>On my desk</strong>Small footprint, close proximity.</div>
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q3" value="shelf">
@@ -144,36 +144,36 @@
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q3" value="floor">
-            <div class="option-text"><strong>On the floor</strong>I have space for something larger.</div>
+            <div class="option-text"><strong>On the floor</strong>I have space for a larger installation.</div>
           </label>
         </div>
       </div>
 
       <div class="question-block">
-        <div class="question-title">4. What is your therapeutic goal?</div>
-        <span class="question-sub">What are you trying to achieve with Ecological Interoceptive Therapy™?</span>
+        <div class="question-title">4. Select primary regulation goal.</div>
+        <span class="question-sub">What is the target outcome for your Ecological Interoceptive Therapy™ deployment?</span>
         <div class="options-grid">
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q4" value="anxiety" required>
-            <div class="option-text"><strong>Anxiety Reduction</strong>Stopping panic spirals and racing thoughts.</div>
+            <div class="option-text"><strong>Sympathetic De-escalation</strong>Stopping panic spirals and racing thoughts.</div>
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q4" value="dissociation">
-            <div class="option-text"><strong>Grounding</strong>Stepping out of dissociation and feeling real.</div>
+            <div class="option-text"><strong>Somatic Grounding</strong>Stepping out of dissociation and feeling real.</div>
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q4" value="purpose">
-            <div class="option-text"><strong>Purpose &amp; Care</strong>Having something that needs me to be present.</div>
+            <div class="option-text"><strong>Purpose &amp; Routine</strong>Having a biological system that requires my presence.</div>
           </label>
         </div>
       </div>
 
-      <button type="submit" class="btn-submit">Generate My Sensory Profile →</button>
+      <button type="submit" class="btn-submit">Generate My Profile →</button>
     </form>
 
     <div id="result">
       <div class="result-icon">◈</div>
-      <h2>Your Profile:</h2>
+      <h2>System Prescription:</h2>
       <div class="result-type" id="resultType"></div>
       <p id="resultText"></p>
       <a href="../#contact" class="btn btn-primary">Join the Waitlist →</a>
@@ -193,7 +193,7 @@
           <img src="../2bam.png" alt="BAM Logo" class="logo-img">
           <span class="logo-text">BAM<span class="sep">//</span>Biophilic Anchor Method</span>
         </a>
-        <p>Nervous system regulation, engineered through living systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario.</p>
+        <p>Nervous system calibration, engineered through biological systems. A division of Karma Strategic Intelligence Inc. Based in Midhurst, Ontario.</p>
       </div>
 
       <div class="footer-col">
@@ -283,20 +283,20 @@ function googleTranslateElementInit() {
 
     // Logic Mapping
     if (q1 === 'tactile' || q2 === 'minimal') {
-      type = "The Thermal Anchor (Anchor Stone)";
-      text = "Your profile indicates a need for immediate, low-effort grounding. The Anchor Stone engages <strong>Thermal Grounding</strong>—holding a cool, dense object interrupts a hyper-aroused state by redirecting attention to physical sensation. It requires zero maintenance but provides a constant, predictable anchor for your desk.";
+      type = "System Prescription: Thermal Anchor (Stone)";
+      text = "Your profile indicates a requirement for immediate, low-effort grounding. The Anchor Stone engages <strong>Thermal Grounding</strong>—holding a cool, dense object interrupts a hyper-aroused state by redirecting attention to physical sensation. It requires zero maintenance but provides a constant, predictable anchor for your desk.";
     } else if (q1 === 'olfactory' || q2 === 'low') {
-      type = "The Micro-Ecosystem (Moss Jar)";
-      text = "Your nervous system responds best to <strong>Olfactory-Limbic pathways</strong>. A sealed moss jar releases geosmin (the scent of rain), which bypasses the thalamus and directly calms the amygdala. The weekly misting protocol trains gentle interoceptive awareness while the visual soft fascination allows your prefrontal cortex to rest.";
+      type = "System Prescription: Micro-Ecosystem (Moss Jar)";
+      text = "Your nervous system responds optimally to <strong>Olfactory-Limbic pathways</strong>. A sealed moss jar releases geosmin (the scent of rain), which bypasses the thalamus and directly calms the amygdala. The weekly misting protocol trains gentle interoceptive awareness while the visual soft fascination allows your prefrontal cortex to rest.";
     } else if (q1 === 'chrono' || q3 === 'floor' || q4 === 'purpose') {
-      type = "The Bioactive Habitat (Terrarium)";
-      text = "You require deep <strong>Co-Regulation</strong>. A bioactive terrarium with a peaceful reptile engages Chronoception—forcing you to slow down to the rhythm of the animal. The daily observation and tending builds predictive control, widening your Window of Tolerance and curing the sense of purposelessness.";
+      type = "System Prescription: Bioactive Habitat (Terrarium)";
+      text = "You require deep <strong>Co-Regulation</strong>. A bioactive terrarium with a peaceful reptile engages Chronoception—forcing you to slow down to the rhythm of the animal. The daily observation and tending builds predictive control, widening your Window of Tolerance and establishing a daily routine.";
     } else if (q1 === 'visual' && q3 === 'shelf') {
-      type = "The Aquatic Rhythm (Water Garden)";
-      text = "You are drawn to flow. A nano aquarium creates <strong>Sonic Autonomic Modulation</strong>. The sound of moving water and the fluid movement of fish entrain your autonomic nervous system, slowing your heart rate and breathing. It is a continuous, passive anchor that requires moderate weekly maintenance.";
+      type = "System Prescription: Aquatic Rhythm (Water Garden)";
+      text = "You are drawn to fluid dynamics. A nano aquarium creates <strong>Sonic Autonomic Modulation</strong>. The sound of moving water and the fluid movement of fish entrain your autonomic nervous system, slowing your heart rate and breathing. It is a continuous, passive anchor that requires moderate weekly maintenance.";
     } else {
-      type = "The Desktop Sanctuary (Kit)";
-      text = "You need a flexible, balanced entry point. The Desktop Sanctuary kit combines a small moss jar, an Anchor Stone, and a simple plant. It engages up to 14 of your 22 established senses, allowing you to test which sensory channel (tactile, olfactory, or visual) regulates you best before committing to a larger ecosystem.";
+      type = "System Prescription: Desktop Sanctuary (Starter Kit)";
+      text = "You need a flexible, balanced entry point. The Desktop Sanctuary kit combines a small moss jar, an Anchor Stone, and a simple plant. It engages up to 14 of your 22 established senses, allowing you to test which sensory channel (tactile, olfactory, or visual) regulates you best before committing to a larger installation.";
     }
 
     document.getElementById('resultType').innerText = type;
