@@ -80,7 +80,7 @@
     <div class="page-label">System Diagnostics · Beta</div>
     <h1>Sensory &amp; Interoceptive Profile</h1>
     <p class="page-lead">
-      This is a working prototype of our clinical matching engine. Answer four questions to identify which BAM hardware aligns with your Window of Tolerance. 
+      This is a working prototype of our clinical matching engine. Answer four questions to identify which BAM hardware aligns with your Window of Tolerance and establish your baseline calibration. 
       <br><br>
       <strong style="color:var(--accent-clay);font-size:.9rem;">Note: This is a non-clinical demonstration. The full clinical version (incorporating MAIA-2 and GAD-7 metrics) is currently in development.</strong>
     </p>
@@ -90,7 +90,7 @@
     <form id="quizForm">
       <div class="question-block">
         <div class="question-title">1. Select your primary sensory input channel.</div>
-        <span class="question-sub">When the nervous system is overwhelmed, which input grounds you fastest?</span>
+        <span class="question-sub">When the nervous system is overwhelmed, which input disrupts the entropy loop fastest?</span>
         <div class="options-grid">
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q1" value="visual" required>
@@ -125,7 +125,7 @@
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q2" value="high">
-            <div class="option-text"><strong>High / Daily</strong>I require a daily ritual to calibrate my day.</div>
+            <div class="option-text"><strong>High / Daily</strong>I require a daily protocol to calibrate my day.</div>
           </label>
         </div>
       </div>
@@ -155,25 +155,25 @@
         <div class="options-grid">
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q4" value="anxiety" required>
-            <div class="option-text"><strong>Sympathetic De-escalation</strong>Stopping panic spirals and racing thoughts.</div>
+            <div class="option-text"><strong>De-escalate Sympathetic Overdrive</strong>Stopping panic spirals and racing thoughts.</div>
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q4" value="dissociation">
-            <div class="option-text"><strong>Somatic Grounding</strong>Stepping out of dissociation and feeling real.</div>
+            <div class="option-text"><strong>Interrupt Dissociative Entropy</strong>Stepping out of detachment and feeling grounded.</div>
           </label>
           <label class="option-label" onclick="selectOption(this)">
             <input type="radio" name="q4" value="purpose">
-            <div class="option-text"><strong>Purpose &amp; Routine</strong>Having a biological system that requires my presence.</div>
+            <div class="option-text"><strong>Establish Chronoceptive Structure</strong>Having a biological system that requires daily presence.</div>
           </label>
         </div>
       </div>
 
-      <button type="submit" class="btn-submit">Generate My Profile →</button>
+      <button type="submit" class="btn-submit">Generate Diagnostic Output →</button>
     </form>
 
     <div id="result">
       <div class="result-icon">◈</div>
-      <h2>System Prescription:</h2>
+      <h2>Diagnostic Output:</h2>
       <div class="result-type" id="resultType"></div>
       <p id="resultText"></p>
       <a href="../#contact" class="btn btn-primary">Join the Waitlist →</a>
@@ -283,20 +283,20 @@ function googleTranslateElementInit() {
 
     // Logic Mapping
     if (q1 === 'tactile' || q2 === 'minimal') {
-      type = "System Prescription: Thermal Anchor (Stone)";
-      text = "Your profile indicates a requirement for immediate, low-effort grounding. The Anchor Stone engages <strong>Thermal Grounding</strong>—holding a cool, dense object interrupts a hyper-aroused state by redirecting attention to physical sensation. It requires zero maintenance but provides a constant, predictable anchor for your desk.";
+      type = "Baseline Calibration: Thermal Anchor (Stone)";
+      text = "Your profile indicates a requirement for immediate, low-effort grounding. The Anchor Stone engages <strong>Thermal Grounding</strong>—holding a cool, dense object interrupts a high-entropy, hyper-aroused state by redirecting attention to physical sensation. It requires zero maintenance but provides a constant, predictable physical constraint to anchor your desk.";
     } else if (q1 === 'olfactory' || q2 === 'low') {
-      type = "System Prescription: Micro-Ecosystem (Moss Jar)";
-      text = "Your nervous system responds optimally to <strong>Olfactory-Limbic pathways</strong>. A sealed moss jar releases geosmin (the scent of rain), which bypasses the thalamus and directly calms the amygdala. The weekly misting protocol trains gentle interoceptive awareness while the visual soft fascination allows your prefrontal cortex to rest.";
+      type = "Baseline Calibration: Micro-Ecosystem (Moss Jar)";
+      text = "Your nervous system responds optimally to <strong>Olfactory-Limbic pathways</strong>. A sealed moss jar releases geosmin (the scent of rain), which bypasses the thalamus and directly calms the amygdala. The weekly misting protocol trains gentle interoceptive awareness while the visual soft fascination allows your prefrontal cortex to rest and cohere.";
     } else if (q1 === 'chrono' || q3 === 'floor' || q4 === 'purpose') {
-      type = "System Prescription: Bioactive Habitat (Terrarium)";
-      text = "You require deep <strong>Co-Regulation</strong>. A bioactive terrarium with a peaceful reptile engages Chronoception—forcing you to slow down to the rhythm of the animal. The daily observation and tending builds predictive control, widening your Window of Tolerance and establishing a daily routine.";
+      type = "Baseline Calibration: Bioactive Habitat (Terrarium)";
+      text = "You require deep <strong>Co-Regulation and Entrainment</strong>. A bioactive terrarium with a peaceful reptile engages Chronoception—forcing you to slow down to the rhythm of the animal. The daily observation and tending builds predictive control, widening your Window of Tolerance and establishing a structured, low-entropy daily routine.";
     } else if (q1 === 'visual' && q3 === 'shelf') {
-      type = "System Prescription: Aquatic Rhythm (Water Garden)";
-      text = "You are drawn to fluid dynamics. A nano aquarium creates <strong>Sonic Autonomic Modulation</strong>. The sound of moving water and the fluid movement of fish entrain your autonomic nervous system, slowing your heart rate and breathing. It is a continuous, passive anchor that requires moderate weekly maintenance.";
+      type = "Baseline Calibration: Aquatic Rhythm (Water Garden)";
+      text = "You are drawn to fluid dynamics. A nano aquarium creates <strong>Sonic Autonomic Modulation</strong>. The sound of moving water and the fluid movement of fish entrain your autonomic nervous system, slowing your heart rate and breathing. It is a continuous, passive anchor that facilitates a phase transition out of stress.";
     } else {
-      type = "System Prescription: Desktop Sanctuary (Starter Kit)";
-      text = "You need a flexible, balanced entry point. The Desktop Sanctuary kit combines a small moss jar, an Anchor Stone, and a simple plant. It engages up to 14 of your 22 established senses, allowing you to test which sensory channel (tactile, olfactory, or visual) regulates you best before committing to a larger installation.";
+      type = "Baseline Calibration: Desktop Sanctuary (Starter Kit)";
+      text = "You need a flexible, balanced entry point. The Desktop Sanctuary kit combines a small moss jar, an Anchor Stone, and a simple plant. It engages up to 14 of your 22 established senses, allowing you to test which sensory channel (tactile, olfactory, or visual) provides the best calibration before committing to a larger hardware installation.";
     }
 
     document.getElementById('resultType').innerText = type;
